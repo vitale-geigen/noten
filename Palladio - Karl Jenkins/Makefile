@@ -2,11 +2,12 @@ LY = /usr/bin/lilypond
 PIECE = Palladio\ -\ Karl\ Jenkins
 
 PARTS_DIR = parts
-OUTPUT_DIR = notesheets
+OUTPUT_DIR = target
 
 all: 	clean \
 		output \
 		score \
+		midi \
 		violinOne \
 		violinTwo \
 		violinThree \
@@ -18,6 +19,9 @@ output:
 
 score:
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/score.ly 
+	
+midi:
+	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly 
 	
 violinOne:
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly 	

@@ -1,8 +1,8 @@
 \version "2.18.2"
 
 \include "../globals.ily"
-\include "../notes/violin1.ily"
-\include "../notes/cello.ily"
+\include "../voices/violin1.ily"
+\include "../voices/cello.ily"
 
 \score {
   <<
