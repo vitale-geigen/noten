@@ -3,9 +3,13 @@
 \include "../globals.ily"
 \include "../voices/violin1.ily"
 
+\header {
+  instrument = "Violine 1"
+}
+
 \score {
   <<
-    \new Staff \with { instrumentName = "Violin 1" shortInstrumentName = "Vln.1" } { \violinI  }   
+    \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violinI  }   
   >>
   \layout {
     indent = 1.5\cm

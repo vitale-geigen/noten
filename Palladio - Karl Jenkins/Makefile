@@ -36,7 +36,7 @@ violinFour:
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 4\) $(PARTS_DIR)/violin4.ly 
 
 cello:
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Cello\) $(PARTS_DIR)/cello.ly 
+	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violoncello\) $(PARTS_DIR)/cello.ly 
 			
 clean:
 	rm -rf $(OUTPUT_DIR)

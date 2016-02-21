@@ -4,9 +4,13 @@
 \include "../voices/violin1.ily"
 \include "../voices/cello.ily"
 
+\header {
+  instrument = "Violoncello"
+}
+
 \score {
   <<
-    \new Staff \with { instrumentName = "Violin 1" shortInstrumentName = "Vln.1" } { 
+    \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { 
      \applyContext #(override-color-for-all-grobs (x11-color 'gray))
      \violinI 
     }
