@@ -9,7 +9,7 @@
 
 \score {
   <<
-    \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.1" } { \violinII }
+    \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.2" } { \violinII }
   >>
   \layout {
     indent = 1.5\cm

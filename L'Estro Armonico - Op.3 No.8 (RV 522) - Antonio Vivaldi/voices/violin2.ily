@@ -2,6 +2,11 @@
 
 violinII = \relative c'' { 
 %  I ALLEGRO
+
+  \key c \major
+  \time 4/4
+  \tempo Allegro 4=120
+  
   a'4\f gis a16 g f e d c b a | e'8 e, e fis16 gis a8 a16 b c8 c16 d | e8 e, e fis16 gis a8 a16 b c8 c16 d | 
   \break 
   %4
