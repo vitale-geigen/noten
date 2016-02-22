@@ -1,3 +1,4 @@
+#This is a test.
 LY = lilypond
 PIECE = O\ Halleluja,\ Hevenu\ Shalom\ Alejchem
 
