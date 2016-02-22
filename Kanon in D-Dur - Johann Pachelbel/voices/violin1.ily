@@ -1,29 +1,9 @@
-% Based on template "Ensemble Sheet" v1.1
-
 \version "2.18.2"
+\include "../globals.ily"
 
-%#(set-default-paper-size "a4")
-%#(set-global-staff-size 16)
-
-\header {
-  title = "Kanon in D-Dur"
-  subtitle = ""
-  composer = "Johann Pachelbel"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
-}
-
-globalSettings= {
-  \key d \major
-  \time 4/4
-  %\tempo Moderato 4=66
-  %\partial 4
-  \mergeDifferentlyHeadedOn 
-  \mergeDifferentlyDottedOn
-}
- 
-violinIVoiceI = \relative c'' { 
+violinI = \relative c'' { 
+  \globalSettings
+  \clef treble
   R1*2 | 
   fis4 e d cis | b a b cis | d cis b a | g fis g e | \break
   d8[( fis]) a^4[( g]) fis[( d]) fis[( e]) | d[( b]) d[( a'^4]) g[( b]) a[( g]) | 
@@ -66,54 +46,3 @@ violinIVoiceI = \relative c'' {
   
   
   \bar "|." }
-
-celloVoiceI = \relative c { 
-  d4 a b fis | g4 d g a | 
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d4 a b fis | g4 d g a |
-  d-> r2.
-  \bar "|." }
-
-violinI = \new Voice {
-  \globalSettings
-  \clef treble 
-  << \violinIVoiceI >>
-}
-
-cello = \new Voice {
-  \globalSettings
-  \clef bass 
-  << \celloVoiceI >>
-}
-
-\score {  
-  <<    
-    \new Staff \with { instrumentName = "Violine I" } { \violinI }
-    \new Staff \with { instrumentName = "Cello" } { \cello }
-  >>
-}
