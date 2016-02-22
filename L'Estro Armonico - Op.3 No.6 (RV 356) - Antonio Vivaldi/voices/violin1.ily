@@ -1,20 +1,6 @@
 \version "2.18.2"
 
-#(set-default-paper-size "a4")
-%#(set-global-staff-size 16)
-
-\header {
-  title = "L'Estro Armonico"
-  subtitle= "Concerto in a-Moll"
-  composer = "Antonio Vivaldi"
-  opus = "Op.3 No.6 (RV 356)"
-  %instrument = "Violino"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title - \opus }    
-}
-
-
-violinIVoiceI = \relative c'' { 
+violinI = \relative c'' { 
   {
     \tempo Allegro 4=120
     \key a \minor
@@ -297,22 +283,4 @@ violinIVoiceI = \relative c'' {
     | b[ a' b, gis'] 
     | a2\f\fermata  \bar "|."
   }
-}
-
-violinI = \new Voice {
-  \clef treble 
-  << \violinIVoiceI >>
-}
-
-\paper {
-  indent = 0
-}
-
-\score {  
-  <<    
-    \new Staff \with { midiInstrument = #"violin" } { \violinI }    
-  >>
-  
-  \layout { }
-  \midi { }
 }
