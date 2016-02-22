@@ -18,6 +18,9 @@ midi:
 violinOne:
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
 
-
 clean:
-	rm -rf $(OUTPUT_DIR)
+	@if [ -d "$(OUTPUT_DIR)" ]; then \
+		rm -f $(OUTPUT_DIR)/*.pdf; \
+		rm -f $(OUTPUT_DIR)/*.midi; \
+		rmdir $(OUTPUT_DIR); \
+	fi

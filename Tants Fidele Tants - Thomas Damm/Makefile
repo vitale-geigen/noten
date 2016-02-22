@@ -35,4 +35,8 @@ piano:
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Piano\) $(PARTS_DIR)/piano.ly
 
 clean:
-	rm -rf $(OUTPUT_DIR)
+	@if [ -d "$(OUTPUT_DIR)" ]; then \
+		rm -f $(OUTPUT_DIR)/*.pdf; \
+		rm -f $(OUTPUT_DIR)/*.midi; \
+		rmdir $(OUTPUT_DIR); \
+	fi

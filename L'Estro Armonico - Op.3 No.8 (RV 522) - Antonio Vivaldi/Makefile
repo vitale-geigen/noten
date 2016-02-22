@@ -28,4 +28,8 @@ violinTwo:
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
 	
 clean:
-	rm -rf $(OUTPUT_DIR)
+	@if [ -d "$(OUTPUT_DIR)" ]; then \
+		rm -f $(OUTPUT_DIR)/*.pdf; \
+		rm -f $(OUTPUT_DIR)/*.midi; \
+		rmdir $(OUTPUT_DIR); \
+	fi
