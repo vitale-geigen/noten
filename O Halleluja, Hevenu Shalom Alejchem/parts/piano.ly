@@ -3,8 +3,6 @@
 \include "../globals.ily"
 \include "../voices/guitar.ily"
 \include "../voices/piano.ily"
-\include "../voices/violin1.ily"
-\include "../voices/violin2.ily"
 
 \header {
   instrument = "Piano"
