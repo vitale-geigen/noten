@@ -3,8 +3,8 @@
 \include "../globals.ily"
 
 pianoTreble = \relative c'' { 
-	\globalSettings
-	\clef treble
+  \globalSettings
+  \clef treble
   e8 d | << {c4. d8[ e] f} \\ { c,2. }>> | << {g''4. f8[ e] f}\\{d,2.} >> | << {g'8 f e[ f] g a} \\ { e,2 es4 } >> | << { g'2\fermata e,8 d } \\ {<a d>4 <as ces>4\fermata s} >> | \break 
   %5
   c4. d8 e[ f] | <e g>2 <f a>8 <g b> | <a c>4 <g b> <f a> | <e g>2 <f a>8 <g b> | \break
@@ -24,8 +24,8 @@ pianoTreble = \relative c'' {
 }
 
 pianoBass = \relative c {
-	\globalSettings
-	\clef bass
+  \globalSettings
+  \clef bass
   r4 |
   <<{r4 <g' b>2}\\{c,2.}>> |
   <<{r4 <a' c>2}\\{d,2.}>> |

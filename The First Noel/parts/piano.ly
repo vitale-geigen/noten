@@ -3,10 +3,6 @@
 \include "../globals.ily"
 \include "../voices/piano.ily"
 
-\header {
-  instrument = "Piano"
-}
-
 \score {
   <<  
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." } { << 

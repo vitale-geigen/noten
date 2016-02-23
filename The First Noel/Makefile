@@ -8,12 +8,8 @@ OUTPUT_DIR = target
 
 all: 	clean \
 		hash \
-		score \
 		midi \
-		violinOne \
-		piano \
-		guitar \
-		cello
+		piano
 
 hash: output
 	@if [ `uname` = "Darwin" ]; then \
@@ -27,23 +23,11 @@ output:
 		mkdir $(OUTPUT_DIR); \
 	fi
 
-score: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/score.ly
-
 midi: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly
 
-violinOne: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
-
 piano: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Piano\) $(PARTS_DIR)/piano.ly
-
-guitar: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
-
-cello: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violoncello\) $(PARTS_DIR)/cello.ly
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
