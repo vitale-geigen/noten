@@ -3,8 +3,7 @@
 \include "../globals.ily"
 
 pianoTrebleI = \relative c'' {
-%  \globalSettings
-%  \clef treble
+  \voiceOne
   s16 cis, fis gis
   | a4.cis8 gis4. cis8~ %1
   | <fis, cis'>2. r16 cis fis gis %2
@@ -85,8 +84,7 @@ pianoTrebleI = \relative c'' {
 }
 
 pianoTrebleII = \relative c' {
-%  \globalSettings
-%  \clef treble
+  \voiceTwo
    s4 
   | s1 %1
   | s1 %2
@@ -191,8 +189,7 @@ pianoTrebleII = \relative c' {
 }
 
 pianoTrebleIII = \relative c' {      
-%  \globalSettings
-%  \clef treble
+  \voiceFour
     s16 cis8.~     
   | cis1~ %1  
   | cis2. s16 cis8.~ %2    
@@ -277,8 +274,7 @@ pianoTrebleIII = \relative c' {
 }
 
 pianoBassI = \relative c { 
-%  \globalSettings
-%  \clef bass
+  \voiceOne
     s4
   | fis2 e %1
   | d2. c4\rest %2
@@ -360,8 +356,7 @@ pianoBassI = \relative c {
   | \bar "|."
 }
 pianoBassII = \relative c {
-%  \globalSettings
-%  \clef bass
+  \voiceTwo
     s4
   | s1 %1
   | s1 %2
