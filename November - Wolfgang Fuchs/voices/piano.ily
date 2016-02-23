@@ -83,7 +83,7 @@ pianoTrebleI = \relative c'' {
   | \bar "|."  
 }
 
-pianoTrebleII = \relative c' {
+pianoTrebleII = \relative c'' {
   \voiceTwo
    s4 
   | s1 %1
