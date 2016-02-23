@@ -1,5 +1,5 @@
 LY = lilypond
-PIECE = Petite\ Fleur\ -\ Sidney\ Bechet
+PIECE = November\ -\ Wolfgang\ Fuchs
 
 GLOBALS = globals.ily
 PARTS_DIR = parts
