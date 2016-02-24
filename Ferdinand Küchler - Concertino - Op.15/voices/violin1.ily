@@ -1,17 +1,12 @@
 \version "2.18.2"
 
-\header {
-  title = "CONCERTINO"
-  subtitle = "im Stil von Antonio Vivaldi (1680-1743)"
-  subsubtitle = "I. & III. Position"
-  composer = "Ferdinand Küchler"
-  opus = "Op. 15"
-  instrument = "Violino"
-}
+\include "../globals.ily"
 
-violinIVoiceI = \relative c'' { 
+violinI = \relative c'' { 
+  \key d \major  
+  \clef treble 
   \tempo "Allegro moderato" 
-    \partial 8   
+  \partial 8   
   a8\upbow \f
   | d8 d d d d cis16 b a8 g16 fis %1
   | e4 a fis8 e d a' %2
@@ -166,7 +161,7 @@ violinIVoiceI = \relative c'' {
   | cis8-. a-. fis-. \noBreak %115 
   | g8-. b-. d-. \noBreak %116
   | e16( d) cis b a g \noBreak %117
-  | fis16 e fis g a^0 fis \noBreak %118
+  | fis16 e fis g a^4 fis \noBreak %118
   | g16 fis g a^0 b g \break %119
   
   | a16^0 b cis d e fis \noBreak %120
@@ -236,20 +231,4 @@ violinIVoiceI = \relative c'' {
   | d8-. a-. fis-. \noBreak %178
   | d4 r8 \break %179
   
-}
-
-violinI = \new Voice {
-  \key d \major  
-  \clef treble 
-  << \violinIVoiceI >>
-}
-
-\paper {
-  indent = 0  
-}
-
-\score {  
-  <<    
-    \new Staff { \violinI }    
-  >>
 }
