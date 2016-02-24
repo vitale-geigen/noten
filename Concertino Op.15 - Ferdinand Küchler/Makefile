@@ -1,5 +1,5 @@
 LY = lilypond
-PIECE = Ferdinand\ Küchler\ -\ Concertino\ -\ Op.15
+PIECE = Concertino\ Op.15\ -\ Ferdinand\ Küchler
 
 GLOBALS = globals.ily
 PARTS_DIR = parts
