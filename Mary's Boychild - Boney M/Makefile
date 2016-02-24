@@ -8,7 +8,6 @@ OUTPUT_DIR = target
 
 all: 	clean \
 		hash \
-		score \
 		midi \
 		piano
 		
@@ -23,9 +22,6 @@ output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \
 		mkdir $(OUTPUT_DIR); \
 	fi
-
-score: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/score.ly
 
 midi: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly
