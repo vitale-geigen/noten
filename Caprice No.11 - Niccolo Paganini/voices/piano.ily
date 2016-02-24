@@ -1,28 +1,6 @@
-% Based on template "Ensemble Sheet" v1.5
-
 \version "2.18.2"
 
-%#(set-default-paper-size "a4")
-%#(set-global-staff-size 16)
-
-\header {
-  title = "Caprice No. 11"
-  subtitle = ""
-  composer = "Niccolo Paganini"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
-}
-
-globalSettings= {
-  \key c \major
-  \time 4/4
-  \tempo Andante 4=58
-  %\partial 4
-  \mergeDifferentlyHeadedOn 
-  \mergeDifferentlyDottedOn
-  \numericTimeSignature
-}
+\include "../globals.ily"
 
 pianoTreble = \relative c' { 
   \globalSettings
@@ -169,41 +147,3 @@ pianoBass = \relative c' {
   <b e>4\fermata r4 r2 |
   \bar "|." 
 }
-
-guitarChords = \chordmode { 
-  s1 | s1 | s1 | s1 | s1 | s1 | 
-}
-
-
-\score {
-  <<
-    \new ChordNames { \germanChords \guitarChords }
-    \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." } {
-      <<
-         \new Staff { \pianoTreble }
-         \new Staff { \pianoBass }
-      >>
-    }
-  >>
-  \layout {
-    indent = 1.5\cm
-    short-indent = 0.5\cm
-
-  }
-}
-
-%{
-\score {  
-  \unfoldRepeats {
-    <<    
-      \new Staff \with { midiInstrument = #"violin" } { \violinI }
-      \new Staff \with { midiInstrument = #"violin" } { \violinII }
-      \new Staff \with { midiInstrument = #"violin" } { \violinIII }
-      \new Staff \with { midiInstrument = #"cello" } { \cello }
-      \new PianoStaff \with { midiInstrument = #"acoustic grand" } { << \new Staff { \pianoTreble } \new Staff { \pianoBass } >> }
-      \new Staff \with { midiInstrument = #"acoustic guitar (steel)" } { \guitarVoice }
-    >>
-  }
-  \midi { }   
-}
-%}
