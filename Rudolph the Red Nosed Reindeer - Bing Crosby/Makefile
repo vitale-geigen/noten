@@ -10,8 +10,6 @@ all: 	clean \
 		hash \
 		score \
 		midi \
-		violinTwo \
-		guitar \
 		piano
 
 hash: output
@@ -31,12 +29,6 @@ score: output
 
 midi: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly
-
-violinTwo: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
-
-guitar: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
 
 piano: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Piano\) $(PARTS_DIR)/piano.ly
