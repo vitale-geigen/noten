@@ -116,9 +116,9 @@ pianoTreble = \relative c'' {
   \bar "|." 
 }
 
-pianoBass = \relative c' { \clef treble
+pianoBass = \relative c' { 
   \globalSettings
-  \clef bass
+  \clef treble
   r4 | d8 a' d2 | d,8 a' cis2 | d,8 g b2 | d,8 fis a2 | \break 
   %5
   b,8 fis' a b s4 | gis,8 d' e fis gis4 | a,8 d e g! b4 | a,8 e' g b s4 | \break
