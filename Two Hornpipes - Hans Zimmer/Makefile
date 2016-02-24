@@ -32,7 +32,7 @@ midi: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly
 
 violinOne: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
+	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\) $(PARTS_DIR)/violin1.ly
 
 guitar: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
