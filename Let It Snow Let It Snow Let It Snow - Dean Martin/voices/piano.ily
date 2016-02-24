@@ -55,7 +55,7 @@ pianoTreble = \relative c'' {
   \bar "|." \break
   
   {
-    \partial 4 c4 |  
+    s2. c4 |  
     f8 g a bes <f c'>4 <f c'> |
     <d bes'>4 <f d'> <d g> a'8 bes |
     <f a>4 <a c> f <f a> |
@@ -120,8 +120,10 @@ pianoBass = \relative c {
     { << {a'1} \\ {f4 e d c} >> | } 
     { << {a'2 s4 r4} \\ {f4 c4 f,4 s4 } >> | }
   }
+  \bar "|." \break
+  
   {
-     \partial 4 r4 |  
+     s2. r4 |  
      <f f'>2 <a a'> |
      <bes bes'>2 <bes bes'> |
      <c c'>2 <c a'> |
