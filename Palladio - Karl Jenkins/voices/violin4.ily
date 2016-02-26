@@ -20,7 +20,7 @@ violinIV =  \relative a {
   a8 \f \cresc a8 a8 a8 a8 a8 a8 a8 | % 15
   a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 | % 16
   a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 a16 | % 17
-  a16 a16 a16 a16 a16 a16 a16 a16 a4\ff r4 | % 18
+  a16 a16 a16 a16 a16 a16 a16 a16 <a cis e>4\ff r4 | % 18
   r16^\markup { \box "B" }  a16 g16 a16 f8-. r16 a16 bes16 a16 bes16 r16 r4 | % 19
   r16 bes16 a16 bes16 g8-. r16 bes16 a16 g16 a16 r16 r4 | % 20
   r16 a16 g16 a16 a8-. r16 a16 bes16 a16 bes16 r16 r4 | % 21
