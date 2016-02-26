@@ -70,12 +70,40 @@ case $# in
 		while true
 			do
 				echo -n "Auswahl: "
+				pwd
 				read a
 				if (( $a<0 )) || (( $a>$count )); then
 					echo "Bitte eine zutreffende Auswahl eingeben."
 				else
 				cd "${array[$a]}"
-				make $maketarget
+				break
+				fi
+			done
+
+		# Auswahl des make targets
+		targets=()
+		while IFS=  read -r; do
+			targets+=("$REPLY")
+		done < <(grep : Makefile | awk -F: '{print $1}')
+
+		# Anzahl der gefunden targets
+		count=${#targets[@]}
+
+		# targets zur Auswahl anzeigen
+		echo "targets in "$(pwd)
+		for (( i=0; $i<$count; i++ )); do
+			echo $i":  ${targets[$i]}"
+		done
+
+		# Eingabe der Auswahl durch den Benutzer
+		while true
+			do
+				echo -n "target-Auswahl: "
+				read a
+				if (( $a<0 )) || (( $a>$count )); then
+					echo "Bitte eine zutreffende Auswahl eingeben."
+				else
+				make ${targets[$a]}
 				exit 0
 				fi
 			done
