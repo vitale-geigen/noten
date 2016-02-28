@@ -12,11 +12,10 @@
   instrument = ""
 }
 
+  
 globalSettings= {
-  \key d \minor
   \time 4/4
   \numericTimeSignature
-  \tempo "I Allegretto" 4=90
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
 }

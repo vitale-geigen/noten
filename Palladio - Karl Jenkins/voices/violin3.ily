@@ -3,6 +3,8 @@
 
 violinIII =  \relative a {
   \globalSettings
+  \key d \minor
+  \tempo "I Allegretto" 4=90
   \clef "treble"
   R1*2 | % 2
   r16^\markup { \box "A" } a16\mp g16 a16 a8-. r16 a16 bes16 a16 bes16 r16 r4 | % 3

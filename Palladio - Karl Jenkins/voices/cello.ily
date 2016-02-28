@@ -4,6 +4,8 @@
 
 cello =  \relative d {
   \globalSettings
+  \key d \minor
+  \tempo "I Allegretto" 4=90
   \clef "bass"
   d4-. d4-. d4-. d4-. | % 3
   d4-. d4-. d4-. d4-. | % 5
