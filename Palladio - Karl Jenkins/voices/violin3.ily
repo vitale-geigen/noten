@@ -2,11 +2,11 @@
 \include "../globals.ily"
 
 violinIII = { 
+  \globalSettings
+  \clef "treble"
   \relative a {
-    \globalSettings
     \key d \minor
-    \tempo "I Allegretto" 4=90
-    \clef "treble"
+    %\tempo "I Allegretto" 4=90
     R1*2 | % 2
     r16^\markup { \box "A" } a16\mp g16 a16 a8-. r16 a16 bes16 a16 bes16 r16 r4 | % 3
     r16 bes16 a16 bes16 g8-. r16 bes16 a16 g16 a16 r16 r4 | % 4
@@ -74,73 +74,83 @@ violinIII = {
     << <a d>1 \\ fis4\ffff s2.  >> | % 66
     \bar "|." \break
   }
-  \relative c' {
+  \relative c'' {
+    %\tempo "II Largo" 4=44
     \key c \minor
-    \tempo "I Allegretto" 4=44
+    g8 g4 g8 g g4 g8 | %67
+    fis8 fis4 fis8 fis fis4 fis8 | %68
+    g8 g4 g8 g8 g4 g8 | %69
+    g8 g4 g8 as8 as4 as8 | %70
+    as8 as4 as8 as g4 g8 | %71
     
-    es8 es4 es8 es es4 es8 | %67
-    d8 d4 d8 d d4 d8 | %68
-    c8 c4 c8 c c4 c8 | %69
-    ces8 ces4 ces8 << { es8 es4 es8 } \\ { d8 d4 d8 } >> | %70
-    << {es8 es4 es8}\\{d8 d4 d8} >> bes8 bes4 bes8 | %71
-    c8 c4 c8 b c4 c8 | %72
-    c8 c4 c8 b8 b4 b8 | %73
-    c8 c4 c8 d8 d4 d8 | %74
-    es8^\markup{\box "A"} es4 es8 es es4 es8 | %75
-    d8 d4 d8 d d4 d8 | %76
-    c8 c4 c8 c c4 c8 | %77
-    ces8 ces4 ces8 <<{es8 es4 es8}\\{d8 d4 d8}>> | %78
-    <<{es8 es4 es8 es es4 es8}\\{d8 d4 d8 d c4 c8}>> | %79
-    \barNumberCheck #80 es8 es4 es8 des8 des4 des8 | %80
-    es8 es4 es8 es es4 es8 | %81
-    d8 d4 d8 d d4 d8 | %82
-    f8 f4 f8 es es4 es8 | %83
-    g8 g4 g8 g g4 g8 | %84
-    g8 g4 g8 fis fis4 fis8 | %85
-    des8 ^\markup{\box "B"} des4 des8 d c4 c8 | %86
-    des8 des4 des8 es es4 d8 | %87
-    <<{e8 e4 e8 c c4 c8}\\{bes8 bes4 bes8 c c4 c8}>> | %88
-    cis8 cis4 cis8 d d4 d8 | %89
-    bes8 bes4 bes8 c8 c4 c8 | %90
-    <<{d8 d4 d8 d d4 d8}\\{c8 c4 c8 c c4 c8}>> | %91
-    <<{cis8 cis4 cis8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8 }>> | %92
-    <<{c!8 c4 c8 c c4 c8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %93
-    <<{d8 d4 d8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %94
-    des8 des4 des8 d c4 c8 | %95
-    des8 des4 des8 es8 es4 es8 | %96
-    es8 es4 es8 d d4 d8 | %97
-    es8 es4 es8 d d4 d8 | %98
-    c8 c4 c8 d d4 d8 | %99
-    \barNumberCheck #100 es8 es4 es8 d d4 d8 | %100
-    c8 c4 c8 d d4 d8 | %101
-    es8^\markup{\box "C"} es4 es8 es es4 es8 | %102
-    d8 d4 d8 d d4 d8 | %103
-    c8 c4 c8 c c4 c8 | %104
-    ces8 ces4 ces8 <<{es8 es4 es8}\\{d8 d4 d8}>> | %105
-    <<{es8 es4 es8 es es4 es8}\\{d8 d4 d8d c4 c8}>> | %106
-    es8 es4 es8 d d4 d8 | %107
-    es8 es4 es8 es es4 es8 | %108
-    d8 d4 d8 d d4 d8 | %109
-    f8 f4 f8 es es4 es8 | %110
-    g8 g4 g8 g g4 g8 | %111
-    g8 g4 g8 fis fis4 fis8 | %112
-    des8^\markup{\box "D"} des4 des8 d c4 c8 | %113
-    des8 des4 des8 es8 es4 d8 | %114
-    <<{e8 e4 e8 c c4 c8}\\{bes8 bes4 bes8 c c4 c8}>> | %115
-    cis8 cis4 cis8 d d4 d8 | %116
-    b8 b4 b8 c c4 c8 | %117
-    <<{d8 d4 d8 d d4 d8}\\{c8 c4 c8 c c4 c8}>> | %118
-    <<{cis8 cis4 cis8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %119
-    \barNumberCheck #120 <<{c8 c4 c8 c c4 c8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %120
-    <<{d8 d4 d8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %121
-    des8 des4 des8 d c4 c8 | %122
-    des8 des4 des8 es8 es4 es8 | %123
-    es8 es4 es8 d d4 d8 | %124
-    es8 es4 es8 d d4 d8 | %125
-    c8 c4 c8 d d4 d8 | %126
-    es8 es4 es8 d d4 d8 | %127
-    c8 c4 c8 d d4 d8 | %128
-    es1 | %129
+    g8 f4 f8 f f4 f8 | %72
+    g8 g4 g8 g g4 g8 | %73
+    g8 g4 g8 g g4 g8 | %74
+    g8^\markup{\box "A"} g4 g8 g g4 g8 | %75
+    fis8 fis4 fis8 fis fis4 fis8 | %76
+    g8 g4 g8 g g4 g8 | %77
+    
+    g8 g4 g8 as8 as4 as8 | %78
+    as8 as4 as8 ges8 ges4 ges8 | %79
+    f8 f4 f8 f f4 f8 | %80
+    as8 as4 as8 as as4 as8 | %81
+    ges8 ges4 f8 f f4 f8 | %82
+    g8 g4 g8 g g4 g8 | %83
+    
+    a8 a4 a8 a a4 a8 | %84
+    a8 a4 a8 a a4 a8 | %85
+    bes8^\markup{\box "B"} bes4 bes8 bes as4 g8 | %86
+    f8 f4 g8 f8 f4 f8 | %87
+    bes8 bes4 bes8 bes as4 g8 | %88
+    fis8 fis4 fis8 fis fis4 fis8 | %89
+    
+    g8 g4 g8 g g4 g8 | %90
+    g8 g4 g8 fis fis4 fis8 | %91
+    fis8 fis4 fis8 fis fis4 fis8 | %92
+    f!8 f4 f8 f f4 f8 | %93
+    fis8 fis4 fis8 fis fis4 fis8 | %94
+    bes8 bes4 bes8 bes as4 g8 | %95
+    
+    f8 f4 g8 f f4 f8 | %96
+    f8 f4 f8 f f4 f8 | %97
+    es8 es4 es8 es es4 es8 | %98
+    es8 es4 es8 es es4 es8 | %99
+    es8 es4 es8 es es4 es8 | %100
+    es8 es4 es8 es es4 es8 | %101
+    
+    g8^\markup{\box "C"} g4 g8g g4 g8 | %102
+    fis8 fis4 fis8 fis fis4 fis8 | %103
+    g8 g4 g8 g g4 g8 | %104
+    g8 g4 g8 as as4 as8 | %105
+    as8 as4 as8 ges8 ges4 ges8 | %106
+    
+    f8 f4 g8 f f4 f8 | %107
+    as8 as4 as8 as as4 as8 | %108
+    ges8 ges4 f8 f8 f4 f8 | %109
+    g8 g4 g8 g g4 g8 | %110
+    
+    a8 a4 a8 a a4 a8 | %111
+    a8 a4 a8 a a4 a8 | %112
+    bes8^\markup{\box "D"} bes4  bes8 bes as4 g8 | %113
+    f8 f4 g8 f f4 f8 | %114
+    
+    bes8 bes4 bes8 bes as4 g8 | %115
+    fis8 fis4 fis8 fis fis4 fis8 | %116
+    g8 g4 g8 g g4 g8 | %117
+    g8 g4 g8 fis fis4 fis8 | %118
+    
+    fis8 fis4 fis8 fis fis4 fis8| %119
+    f8 f4 f8 f f4 f8 | %120
+    fis8 fis4 fis8 fis fis4 fis8| %121
+    bes8 bes4 bes8 bes as4 g8 | %122
+    f8 f4 g8 f8 f4 f8 | %123
+    
+    f8 f4 f8 f f4 f8 | %124
+    es8 es4 es8 es es4 es8 | %125
+    es8 es4 es8 es es4 es8 | %126
+    es8 es4 es8 es es4 es8 | %127
+    es8 es4 es8 es es4 es8 | %128
+    es1\fermata %129
     \bar "|."
   }
 }

@@ -2,9 +2,9 @@
 \include "../globals.ily"
 
 violinI =  { 
+  \globalSettings
+  \clef "treble"    
   \relative f' {
-    \globalSettings
-    \clef "treble"
     \key d \minor
     \tempo "I Allegretto" 4=90
     R1*2 | % 2
