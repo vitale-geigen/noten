@@ -49,6 +49,9 @@ violinFour: output
 cello: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violoncello\) $(PARTS_DIR)/cello.ly
 
+guitar: output
+		$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
+
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
