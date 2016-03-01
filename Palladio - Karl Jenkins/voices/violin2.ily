@@ -120,39 +120,38 @@ violinII =  {
     es8 es4 es8 es es4 es8 | %101
     
     g8^\markup{\box "C"} g4 g8g g4 g8 | %102
-    fis8 fis4 fis8 fis fis4 fis8 | %103
-    g8 g4 g8 g g4 g8 | %104
-    g8 g4 g8 as as4 as8 | %105
-    as8 as4 as8 ges8 ges4 ges8 | %106
+    r4 r16 fis d'( c d4) r4 | %103
+    r4 r16 g, c( b c4) r4 | %104
+    r2 r4 r8 des,16( as') | %105
+    \tuplet 3/2 { es'8 es as } es2.~( | %106
     
-    f8 f4 g8 f f4 f8 | %107
-    as8 as4 as8 as as4 as8 | %108
-    ges8 ges4 f8 f8 f4 f8 | %109
-    g8 g4 g8 g g4 g8 | %110
+    es4~ es8. des32 c des8.) r16 r4 | %107
+    r8 as8( \tuplet 3/2 { es'8) es( as)} as8( b,4 bes16 b | %108
+    bes2~ bes8) f( \tuplet 3/2 { bes8) bes( f') }  | %109
+    f4~( f8 f32 b, c d es2) | %110
     
-    a8 a4 a8 a a4 a8 | %111
-    a8 a4 a8 a a4 a8 | %112
-    bes8^\markup{\box "D"} bes4  bes8 bes as4 g8 | %113
-    f8 f4 g8 f f4 f8 | %114
+    r4 r16 g,32( a g fis g a d4~ \tuplet 3/2 { d8) b( c } | %111
+    d8 e4 c16 b a2) | %112
+    r8^\markup{\box "D"} bes,8 \tuplet 3/2 { es8 es bes' } bes16( c32 bes as8~ as) \tuplet 3/2 { g16( as bes } | %113
+    f4~ f16) e32( f \tuplet 5/4 { g32 f e f g } f2) | %114
     
-    bes8 bes4 bes8 bes as4 g8 | %115
-    fis8 fis4 fis8 fis fis4 fis8 | %116
-    g8 g4 g8 g g4 g8 | %117
-    g8 g4 g8 fis fis4 fis8 | %118
+    r8 bes, \tuplet 3/2 { e8 e bes'~( } bes16 c32 bes as8~) as16( bes32 as g16 c) | %115
+    fis,4. <cis cis'>16 <cis cis'> <d d'>8 <d d'>4 r8 | %116
+    r4 r8 <d d'>16 <d d'> <es es'>8 <es es'>4 r8 | %117
+    r4 r8 <e e'>16 <e e'> <fis fis'>8 <fis fis'>4 r8  | %118
     
-    fis8 fis4 fis8 fis fis4 fis8| %119
-    f8 f4 f8 f f4 f8 | %120
-    fis8 fis4 fis8 fis fis4 fis8| %121
-    bes8 bes4 bes8 bes as4 g8 | %122
-    f8 f4 g8 f8 f4 f8 | %123
+    bes2.~( bes8 c | %119
+    d4 bes f4. es16 f32 es | %120
+    d1) | %121
+    \tuplet 3/2 { es'8 es( f) } es8( bes~ bes as~ as16 bes32 as g16 c | %122
+    f,4~ f16) e32( f \tuplet 5/4 { g32 f e f g } f2~ | %123
     
-    f8 f4 f8 f f4 f8 | %124
-    es8 es4 es8 es es4 es8 | %125
-    es8 es4 es8 es es4 es8 | %126
-    es8 es4 es8 es es4 es8 | %127
-    es8 es4 es8 es es4 es8 | %128
-    es1\fermata %129
+    f2.) \tuplet 6/4 { bes,32( f' d' bes' d, f, } bes,8) | %124
+    r8 es'8( bes'[ es,] d bes'4) r8 | %125
+    r8 c,8( es as bes8. c16 bes4) | %126
+    r8 es,8( bes'[ es,] d bes'4) r8 | %127
+    r8 c,8( es as bes8. c16 bes4~ | %128
+    bes1)\fermata %129
     \bar "|."
   }
 }
-
