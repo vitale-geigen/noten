@@ -14,7 +14,8 @@ all: 	clean \
 		violinTwo \
 		violinThree \
 		violinFour \
-		cello
+		cello \
+		guitar
 
 hash: output
 	@if [ `uname` = "Darwin" ]; then \
