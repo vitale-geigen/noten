@@ -107,7 +107,7 @@ violinII =  {
     
     g8 g4 g8 g g4 g8 | %90
     g8 g4 g8 fis fis4 fis8 | %91
-    fis8 fis4 fis8 fis fis4 fis8 | %92
+    fis8\pp fis4 fis8 fis fis4 fis8 | %92
     f!8 f4 f8 f f4 f8 | %93
     fis8 fis4 fis8 fis fis4 fis8 | %94
     bes8 bes4 bes8 bes as4 g8 | %95
@@ -120,7 +120,7 @@ violinII =  {
     es8 es4 es8 es es4 es8 | %101
     
     g8^\markup{\box "C"} g4 g8g g4 g8 | %102
-    r4 r16 fis d'( c d4) r4 | %103
+    r4 r16 fis\mp d'( c d4) r4 | %103
     r4 r16 g, c( b c4) r4 | %104
     r2 r4 r8 des,16( as') | %105
     \tuplet 3/2 { es'8 es as } es2.~( | %106
@@ -128,7 +128,7 @@ violinII =  {
     es4~ es8. des32 c des8.) r16 r4 | %107
     r8 as8( \tuplet 3/2 { es'8) es( as)} as8( b,4 bes16 b | %108
     bes2~ bes8) f( \tuplet 3/2 { bes8) bes( f') }  | %109
-    f4~( f8 f32 b, c d es2) | %110
+    f4~(_\markup{\italic "cresc."} f8 f32 b, c d es2) | %110
     
     r4 r16 g,32( a g fis g a d4~ \tuplet 3/2 { d8) b( c } | %111
     d8 e4 c16 b a2) | %112
@@ -136,11 +136,11 @@ violinII =  {
     f4~ f16) e32( f \tuplet 5/4 { g32 f e f g } f2) | %114
     
     r8 bes, \tuplet 3/2 { e8 e bes'~( } bes16 c32 bes as8~) as16( bes32 as g16 c) | %115
-    fis,4. <cis cis'>16 <cis cis'> <d d'>8 <d d'>4 r8 | %116
+    fis,4. <cis cis'>16_\markup{\italic "cresc."} <cis cis'> <d d'>8 <d d'>4 r8 | %116
     r4 r8 <d d'>16 <d d'> <es es'>8 <es es'>4 r8 | %117
     r4 r8 <e e'>16 <e e'> <fis fis'>8 <fis fis'>4 r8  | %118
     
-    bes2.~( bes8 c | %119
+    bes2.~(\pp bes8 c | %119
     d4 bes f4. es16 f32 es | %120
     d1) | %121
     \tuplet 3/2 { es'8 es( f) } es8( bes~ bes as~ as16 bes32 as g16 c | %122

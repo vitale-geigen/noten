@@ -106,7 +106,7 @@ violinIII = {
     
     g8 g4 g8 g g4 g8 | %90
     g8 g4 g8 fis fis4 fis8 | %91
-    fis8 fis4 fis8 fis fis4 fis8 | %92
+    fis8\pp fis4 fis8 fis fis4 fis8 | %92
     f!8 f4 f8 f f4 f8 | %93
     fis8 fis4 fis8 fis fis4 fis8 | %94
     bes8 bes4 bes8 bes as4 g8 | %95
@@ -127,7 +127,7 @@ violinIII = {
     f8 f4 g8 f f4 f8 | %107
     as8 as4 as8 as as4 as8 | %108
     ges8 ges4 f8 f8 f4 f8 | %109
-    g8 g4 g8 g g4 g8 | %110
+    g8_\markup{\italic "cresc."} g4 g8 g g4 g8 | %110
     
     a8 a4 a8 a a4 a8 | %111
     a8 a4 a8 a a4 a8 | %112
@@ -137,9 +137,9 @@ violinIII = {
     bes8 bes4 bes8 bes as4 g8 | %115
     fis8 fis4 fis8 fis fis4 fis8 | %116
     g8 g4 g8 g g4 g8 | %117
-    g8 g4 g8 fis fis4 fis8 | %118
+    g8_\markup{\italic "cresc."} g4 g8 fis fis4 fis8 | %118
     
-    fis8 fis4 fis8 fis fis4 fis8| %119
+    fis8\pp fis4 fis8 fis fis4 fis8| %119
     f8 f4 f8 f f4 f8 | %120
     fis8 fis4 fis8 fis fis4 fis8| %121
     bes8 bes4 bes8 bes as4 g8 | %122

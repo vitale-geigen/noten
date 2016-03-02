@@ -79,7 +79,7 @@ violinI =  {
     \key c \minor
     \tempo "II Largo" 4=44
     R1*8 | %72
-    es2.~(^\markup { \box "A" } es8 d16 c | %75
+    es2.~(^\markup { \box "A" }\mp es8 d16 c | %75
     d2.~ d8 d16 bes |  %76
     c1) | %77
     b4.( e,8 as2~ | %78
@@ -96,7 +96,7 @@ violinI =  {
     fis2.~ fis8) a16( g) | %89
     g2.~ g8 bes16( a) | %90
     a2.~ a8 c16( bes) | %91
-    bes!1~ | %92
+    bes!1~\pp | %92
     bes~ | %93
     bes4 r4 r2 | %94
     es4(\mp bes4~ bes8[ as~] as[ g] | %95
@@ -114,7 +114,7 @@ violinI =  {
     f2) r8. des32( c \tuplet 3/2 { des16 es f } des32 es f ges | %107
     as1) | %108
     ges8.( as32 ges f4~ f8) r8 \tuplet 3/2 { r4 as8( } | %109
-    g2.) r16 g32( a g fis g a | %110
+    g2.)_\markup{\italic "cresc."} r16 g32( a g fis g a | %110
     d2.~ \tuplet 3/2 { d8) b( c } | %111
     d8 e4 d16 b a2) | %112
     \acciaccatura { es8 } es'4~ ^\markup { \box "D" } \tuplet 3/2 { es4 bes8 } bes16( c32 bes as8~ as) \tuplet 3/2 { g16( as bes } | %113
@@ -123,7 +123,7 @@ violinI =  {
     fis,2. r16 fis32( g a g bes a) | %116
     <g, g'>2. r16 fis'32( g a g bes a) | %117
     <a, a'>2. r16 a'32( g bes a c bes) | %118
-    bes2.~( bes8 c | %119
+    bes2.~(\pp bes8 c | %119
     \barNumberCheck #120 bes1~ | %120
     bes) | %121
     \tuplet 3/2 { es8 es( f) } es8( bes~ bes as~ as16 bes32 as g16 c | %122

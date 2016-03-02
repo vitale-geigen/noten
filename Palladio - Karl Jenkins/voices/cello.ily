@@ -104,7 +104,7 @@ cello = {
     bes8 bes4 bes8 bes bes4 bes8 | %89
     <<{b8 b4 b8 b b4 b8}\\{es,8 es4 es8 es es4 es8}>> | %90
     <<{d'8 d4 d8 d d4 d8}\\{d,8 d4 d8 d d4 d8}>> | %91
-    fis8 fis4 fis8 g g4 g8 | %92
+    fis8\pp fis4 fis8 g g4 g8 | %92
     f8 f4 f8 f f4 f8 | %93
     fis8 fis4 fis8 fis fis4 fis8 | %94
     g8 g4 g8 as as4 as8 | %95
@@ -122,7 +122,7 @@ cello = {
     des8 des4 des8 des des4 des8 | %107
     c8 c4 c8 ces ces4 ces8 | %108
     bes8 bes4 bes8 bes bes4 bes8 | %109
-    es8 es4 es8 es es4 es8 | %110
+    es8_\markup{\italic "cresc."} es4 es8 es es4 es8 | %110
     d8 d4 d8 d d4 d8 | %111
     d8 d4 d8 d d4 d8 | %112
     g,8^\markup { \box "D" } g4 g8 as as4 as8 | %113
@@ -130,8 +130,8 @@ cello = {
     g8 g4 g8 as as4 as8 | %115
     bes8 bes4 bes8 bes bes4 bes8 | %116
     <<{b8 b4 b8 b b4 b8}\\{es,8 es4 es8 es es4 es8}>> | %117
-    <<{d'8 d4 d8 d d4 d8}\\{d,8 d4 d8 d d4 d8}>> | %118
-    fis8 fis4 fis8 g g4 g8 | %119
+    <<{d'8_\markup{\italic "cresc."} d4 d8 d d4 d8}\\{d,8 d4 d8 d d4 d8}>> | %118
+    fis8\pp fis4 fis8 g g4 g8 | %119
     \barNumberCheck #120 f8 f4 f8 f f4 f8 | %120
     fis8 fis4 fis8 fis fis4 fis8 | %121
     g8 g4 g8 as as4 as8 | %122

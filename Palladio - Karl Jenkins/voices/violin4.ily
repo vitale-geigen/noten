@@ -102,7 +102,7 @@ violinIV = {
     cis8 cis4 cis8 d d4 d8 | %89
     bes8 bes4 bes8 c8 c4 c8 | %90
     <<{d8 d4 d8 d d4 d8}\\{c8 c4 c8 c c4 c8}>> | %91
-    <<{cis8 cis4 cis8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8 }>> | %92
+    <<{cis8\pp cis4 cis8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8 }>> | %92
     <<{c!8 c4 c8 c c4 c8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %93
     <<{d8 d4 d8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %94
     des8 des4 des8 d c4 c8 | %95
@@ -120,7 +120,7 @@ violinIV = {
     es8 es4 es8 d d4 d8 | %107
     es8 es4 es8 es es4 es8 | %108
     d8 d4 d8 d d4 d8 | %109
-    f8 f4 f8 es es4 es8 | %110
+    f8_\markup{\italic "cresc."} f4 f8 es es4 es8 | %110
     g8 g4 g8 g g4 g8 | %111
     g8 g4 g8 fis fis4 fis8 | %112
     des8^\markup{\box "D"} des4 des8 d c4 c8 | %113
@@ -128,8 +128,8 @@ violinIV = {
     <<{e8 e4 e8 c c4 c8}\\{bes8 bes4 bes8 c c4 c8}>> | %115
     cis8 cis4 cis8 d d4 d8 | %116
     b8 b4 b8 c c4 c8 | %117
-    <<{d8 d4 d8 d d4 d8}\\{c8 c4 c8 c c4 c8}>> | %118
-    <<{cis8 cis4 cis8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %119
+    <<{d8_\markup{\italic "cresc."} d4 d8 d d4 d8}\\{c8 c4 c8 c c4 c8}>> | %118
+    <<{cis8\pp cis4 cis8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %119
     \barNumberCheck #120 <<{c8 c4 c8 c c4 c8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %120
     <<{d8 d4 d8 d d4 d8}\\{ais8 ais4 ais8 ais ais4 ais8}>> | %121
     des8 des4 des8 d c4 c8 | %122
