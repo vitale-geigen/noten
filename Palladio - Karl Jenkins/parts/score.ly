@@ -13,11 +13,25 @@
 
 \score {
   <<
-    \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violinI }
-    \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.2" } { \violinII }
-    \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.3" } { \violinIII }    
-    \new Staff \with { instrumentName = "Violine 4" shortInstrumentName = "Vln.4" } { \violinIV }    
-    \new Staff \with { instrumentName = "Violoncello" shortInstrumentName = "Vlc." } { \cello }    
+    \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violin_I_I }
+    \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.2" } { \violin_II_I }
+    \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.3" } { \violin_III_I }    
+    \new Staff \with { instrumentName = "Violine 4" shortInstrumentName = "Vln.4" } { \violin_IV_I }    
+    \new Staff \with { instrumentName = "Violoncello" shortInstrumentName = "Vlc." } { \cello_I }    
+  >>
+  \layout {
+    indent = 1.5\cm
+    short-indent = 0.5\cm
+  }
+}
+\pageBreak
+\score {
+  <<
+    \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violin_I_II }
+    \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.2" } { \violin_II_II }
+    \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.3" } { \violin_III_II }    
+    \new Staff \with { instrumentName = "Violine 4" shortInstrumentName = "Vln.4" } { \violin_IV_II }    
+    \new Staff \with { instrumentName = "Violoncello" shortInstrumentName = "Vlc." } { \cello_II }    
   >>
   \layout {
     indent = 1.5\cm

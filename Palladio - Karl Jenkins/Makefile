@@ -9,7 +9,8 @@ OUTPUT_DIR = target
 all: 	clean \
 		hash \
 		score \
-		midi \
+		midi1 \
+		midi2 \
 		violinOne \
 		violinTwo \
 		violinThree \
@@ -32,8 +33,11 @@ output:
 score: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/score.ly
 
-midi: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly
+midi1: output
+	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(I\ Allegro\) $(PARTS_DIR)/midi1.ly
+	
+midi2: output
+	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(II\ Largo\) $(PARTS_DIR)/midi2.ly
 
 violinOne: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly

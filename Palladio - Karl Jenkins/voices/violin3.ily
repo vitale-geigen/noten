@@ -1,7 +1,7 @@
 \version "2.18.2"
 \include "../globals.ily"
 
-violinIII = { 
+violin_III_I = { 
   \globalSettings
   \clef "treble"
   \relative a {
@@ -74,83 +74,88 @@ violinIII = {
     << <a d>1 \\ fis4\ffff s2.  >> | % 66
     \bar "|." \break
   }
+}
+
+violin_III_II = { 
+  \globalSettings
+  \clef "treble"
   \relative c'' {
     %\tempo "II Largo" 4=44
     \key c \minor
-    g8 g4 g8 g g4 g8 | %67
-    fis8 fis4 fis8 fis fis4 fis8 | %68
-    g8 g4 g8 g8 g4 g8 | %69
-    g8 g4 g8 as8 as4 as8 | %70
-    as8 as4 as8 as g4 g8 | %71
+    g8 g4 g8 g g4 g8 | %1
+    fis8 fis4 fis8 fis fis4 fis8 | %2
+    g8 g4 g8 g8 g4 g8 | %3
+    g8 g4 g8 as8 as4 as8 | %4
+    as8 as4 as8 as g4 g8 | %5
     
-    g8 f4 f8 f f4 f8 | %72
-    g8 g4 g8 g g4 g8 | %73
-    g8 g4 g8 g g4 g8 | %74
-    g8^\markup{\box "A"} g4 g8 g g4 g8 | %75
-    fis8 fis4 fis8 fis fis4 fis8 | %76
-    g8 g4 g8 g g4 g8 | %77
+    g8 f4 f8 f f4 f8 | %6
+    g8 g4 g8 g g4 g8 | %7
+    g8 g4 g8 g g4 g8 | %8
+    g8^\markup{\box "A"} g4 g8 g g4 g8 | %9
+    fis8 fis4 fis8 fis fis4 fis8 | %10
+    g8 g4 g8 g g4 g8 | %11
     
-    g8 g4 g8 as8 as4 as8 | %78
-    as8 as4 as8 ges8 ges4 ges8 | %79
-    f8 f4 f8 f f4 f8 | %80
-    as8 as4 as8 as as4 as8 | %81
-    ges8 ges4 f8 f f4 f8 | %82
-    g8 g4 g8 g g4 g8 | %83
+    g8 g4 g8 as8 as4 as8 | %12
+    as8 as4 as8 ges8 ges4 ges8 | %13
+    f8 f4 f8 f f4 f8 | %14
+    as8 as4 as8 as as4 as8 | %15
+    ges8 ges4 f8 f f4 f8 | %16
+    g8 g4 g8 g g4 g8 | %17
     
-    a8 a4 a8 a a4 a8 | %84
-    a8 a4 a8 a a4 a8 | %85
-    bes8^\markup{\box "B"} bes4 bes8 bes as4 g8 | %86
-    f8 f4 g8 f8 f4 f8 | %87
-    bes8 bes4 bes8 bes as4 g8 | %88
-    fis8 fis4 fis8 fis fis4 fis8 | %89
+    a8 a4 a8 a a4 a8 | %18
+    a8 a4 a8 a a4 a8 | %19
+    \barNumberCheck #20 bes8^\markup{\box "B"} bes4 bes8 bes as4 g8 | %20
+    f8 f4 g8 f8 f4 f8 | %21
+    bes8 bes4 bes8 bes as4 g8 | %22
+    fis8 fis4 fis8 fis fis4 fis8 | %23
     
-    g8 g4 g8 g g4 g8 | %90
-    g8 g4 g8 fis fis4 fis8 | %91
-    fis8\pp fis4 fis8 fis fis4 fis8 | %92
-    f!8 f4 f8 f f4 f8 | %93
-    fis8 fis4 fis8 fis fis4 fis8 | %94
-    bes8 bes4 bes8 bes as4 g8 | %95
+    g8 g4 g8 g g4 g8 | %24
+    g8 g4 g8 fis fis4 fis8 | %25
+    fis8\pp fis4 fis8 fis fis4 fis8 | %26
+    f!8 f4 f8 f f4 f8 | %27
+    fis8 fis4 fis8 fis fis4 fis8 | %28
+    bes8 bes4 bes8 bes as4 g8 | %29
     
-    f8 f4 g8 f f4 f8 | %96
-    f8 f4 f8 f f4 f8 | %97
-    es8 es4 es8 es es4 es8 | %98
-    es8 es4 es8 es es4 es8 | %99
-    es8 es4 es8 es es4 es8 | %100
-    es8 es4 es8 es es4 es8 | %101
+    f8 f4 g8 f f4 f8 | %30
+    f8 f4 f8 f f4 f8 | %31
+    es8 es4 es8 es es4 es8 | %32
+    es8 es4 es8 es es4 es8 | %33
+    es8 es4 es8 es es4 es8 | %34
+    es8 es4 es8 es es4 es8 | %35
     
-    g8^\markup{\box "C"} g4 g8g g4 g8 | %102
-    fis8 fis4 fis8 fis fis4 fis8 | %103
-    g8 g4 g8 g g4 g8 | %104
-    g8 g4 g8 as as4 as8 | %105
-    as8 as4 as8 ges8 ges4 ges8 | %106
+    g8^\markup{\box "C"} g4 g8g g4 g8 | %36
+    fis8 fis4 fis8 fis fis4 fis8 | %37
+    g8 g4 g8 g g4 g8 | %38
+    g8 g4 g8 as as4 as8 | %39
+    \barNumberCheck #40 as8 as4 as8 ges8 ges4 ges8 | %40
     
-    f8 f4 g8 f f4 f8 | %107
-    as8 as4 as8 as as4 as8 | %108
-    ges8 ges4 f8 f8 f4 f8 | %109
-    g8_\markup{\italic "cresc."} g4 g8 g g4 g8 | %110
+    f8 f4 g8 f f4 f8 | %41
+    as8 as4 as8 as as4 as8 | %42
+    ges8 ges4 f8 f8 f4 f8 | %43
+    g8_\markup{\italic "cresc."} g4 g8 g g4 g8 | %44
     
-    a8 a4 a8 a a4 a8 | %111
-    a8 a4 a8 a a4 a8 | %112
-    bes8^\markup{\box "D"} bes4  bes8 bes as4 g8 | %113
-    f8 f4 g8 f f4 f8 | %114
+    a8 a4 a8 a a4 a8 | %45
+    a8 a4 a8 a a4 a8 | %46
+    bes8^\markup{\box "D"} bes4  bes8 bes as4 g8 | %47
+    f8 f4 g8 f f4 f8 | %48
     
-    bes8 bes4 bes8 bes as4 g8 | %115
-    fis8 fis4 fis8 fis fis4 fis8 | %116
-    g8 g4 g8 g g4 g8 | %117
-    g8_\markup{\italic "cresc."} g4 g8 fis fis4 fis8 | %118
+    bes8 bes4 bes8 bes as4 g8 | %49
+    fis8 fis4 fis8 fis fis4 fis8 | %50
+    g8 g4 g8 g g4 g8 | %51
+    g8_\markup{\italic "cresc."} g4 g8 fis fis4 fis8 | %52
     
-    fis8\pp fis4 fis8 fis fis4 fis8| %119
-    f8 f4 f8 f f4 f8 | %120
-    fis8 fis4 fis8 fis fis4 fis8| %121
-    bes8 bes4 bes8 bes as4 g8 | %122
-    f8 f4 g8 f8 f4 f8 | %123
+    fis8\pp fis4 fis8 fis fis4 fis8| %53
+    f8 f4 f8 f f4 f8 | %54
+    fis8 fis4 fis8 fis fis4 fis8| %55
+    bes8 bes4 bes8 bes as4 g8 | %56
+    f8 f4 g8 f8 f4 f8 | %57
     
-    f8 f4 f8 f f4 f8 | %124
-    es8 es4 es8 es es4 es8 | %125
-    es8 es4 es8 es es4 es8 | %126
-    es8 es4 es8 es es4 es8 | %127
-    es8 es4 es8 es es4 es8 | %128
-    es1\fermata %129
+    f8 f4 f8 f f4 f8 | %58
+    es8 es4 es8 es es4 es8 | %59
+    \barNumberCheck #60 es8 es4 es8 es es4 es8 | %60
+    es8 es4 es8 es es4 es8 | %61
+    es8 es4 es8 es es4 es8 | %62
+    es1\fermata %63
     \bar "|."
   }
 }

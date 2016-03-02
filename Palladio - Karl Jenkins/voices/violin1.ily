@@ -1,7 +1,7 @@
 \version "2.18.2"
 \include "../globals.ily"
 
-violinI =  { 
+violin_I_I = { 
   \globalSettings
   \clef "treble"    
   \relative f' {
@@ -72,68 +72,73 @@ violinI =  {
     d16-> d16 d16 d16 d16 d16 d16 d16 e16-> e16 e16 e16 e16 e16 e16 e16 | % 63
     d16\fff :32 a16 :32 fis16 :32 a16 d,16 :32 a'16 :32 fis16 :32 a16 :32 d16 :32 a16 :32 fis16 :32 a16 d,16 :32 a'16 :32 fis16 :32 a16 :32 | % 64
     d16 :32 a16 :32 fis16 :32 a16 d,16 :32 a'16 :32 fis16 :32 a16 :32 d16 :32 a16 :32 fis16 :32 a16 d,16 :32 a'16 :32 fis16 :32 a16 :32 | % 65
-    << <fis d'>1\ffff \\ <d, a'>4 s2. | >> %66
+    << <fis d'>1\ffff \\ <d, a'>4 s2. | >> %
     \bar "|." \break
-  } 
+  }  
+}
+
+violin_I_II = {
+  \globalSettings
+  \clef "treble"    
   \relative c'' {
     \key c \minor
     \tempo "II Largo" 4=44
-    R1*8 | %72
-    es2.~(^\markup { \box "A" }\mp es8 d16 c | %75
-    d2.~ d8 d16 bes |  %76
-    c1) | %77
-    b4.( e,8 as2~ | %78
-    as2 ges4. f16 ges | %79
-    \barNumberCheck #80 f2) r4 r8 f16( des | %80
-    as'2.~ as8 g16 a | %81
-    ges4 f2) r8 as( | %82
-    g2.) r8 g( | %83
-    d'1~ | %84
-    d2.) r4 | %85
-    es4(^\markup { \box "B" } bes4~ bes8 as4 g8 | %86
-    f4. g8 f2) | %87
-    bes2~( bes8 as4 g8 | %88
-    fis2.~ fis8) a16( g) | %89
-    g2.~ g8 bes16( a) | %90
-    a2.~ a8 c16( bes) | %91
-    bes!1~\pp | %92
-    bes~ | %93
-    bes4 r4 r2 | %94
-    es4(\mp bes4~ bes8[ as~] as[ g] | %95
-    f4. g8 f2~ | %96
-    f1) | %97
-    es1~ | %98
-    es | %99
-    \barNumberCheck #100 r1 | %100
-    r1 | %101    
-    es''32(^\markup { \box "C" } f es d es8~ es4~ es8.) d32( es f8  es | %102
-    d2.~ d16) c32( d es16 d | %103
-    c2.) \tuplet 3/2 { b8( c d } | %104
-    b4 e,8 f16 g) as2~ | %105
-    as2 ges4~( ges16 f32 ges as ges f ges | %106
-    f2) r8. des32( c \tuplet 3/2 { des16 es f } des32 es f ges | %107
-    as1) | %108
-    ges8.( as32 ges f4~ f8) r8 \tuplet 3/2 { r4 as8( } | %109
-    g2.)_\markup{\italic "cresc."} r16 g32( a g fis g a | %110
-    d2.~ \tuplet 3/2 { d8) b( c } | %111
-    d8 e4 d16 b a2) | %112
-    \acciaccatura { es8 } es'4~ ^\markup { \box "D" } \tuplet 3/2 { es4 bes8 } bes16( c32 bes as8~ as) \tuplet 3/2 { g16( as bes } | %113
-    f4~ f16) e32( f \tuplet 5/4 { g32 f e f g } f2) | %114
-    \acciaccatura { bes,8 } bes'2~( bes16 c32 bes as8~) as16 bes32( as g16 c) | %115
-    fis,2. r16 fis32( g a g bes a) | %116
-    <g, g'>2. r16 fis'32( g a g bes a) | %117
-    <a, a'>2. r16 a'32( g bes a c bes) | %118
-    bes2.~(\pp bes8 c | %119
-    \barNumberCheck #120 bes1~ | %120
-    bes) | %121
-    \tuplet 3/2 { es8 es( f) } es8( bes~ bes as~ as16 bes32 as g16 c | %122
-    f,4~ f16) e32( f \tuplet 5/4 { g f e f g } f2~ | %123
-    f2) \tuplet 6/4 { bes32( d, f, bes, f' d'  } bes'8~ bes4) | %124
-    es1~ | %125
-    es1~ | %126
-    es1~ | %127
-    es1~ | %128
-    es1\fermata | %129
+    R1*8 | %8
+    es2.~(^\markup { \box "A" }\mp es8 d16 c | %9
+    d2.~ d8 d16 bes |  %10
+    c1) | %11
+    b4.( e,8 as2~ | %12
+    as2 ges4. f16 ges | %13
+    f2) r4 r8 f16( des | %14
+    as'2.~ as8 g16 a | %15
+    ges4 f2) r8 as( | %16
+    g2.) r8 g( | %17
+    d'1~ | %18
+    d2.) r4 | %19
+    \barNumberCheck #20 es4(^\markup { \box "B" } bes4~ bes8 as4 g8 | %20
+    f4. g8 f2) | %21
+    bes2~( bes8 as4 g8 | %22
+    fis2.~ fis8) a16( g) | %23
+    g2.~ g8 bes16( a) | %24
+    a2.~ a8 c16( bes) | %25
+    bes!1~\pp | %26
+    bes~ | %27
+    bes4 r4 r2 | %28
+    es4(\mp bes4~ bes8[ as~] as[ g] | %29
+    f4. g8 f2~ | %30
+    f1) | %31
+    es1~ | %32
+    es | %33
+    r1 | %34
+    r1 | %35
+    es''32(^\markup { \box "C" } f es d es8~ es4~ es8.) d32( es f8  es | %36
+    d2.~ d16) c32( d es16 d | %37
+    c2.) \tuplet 3/2 { b8( c d } | %38
+    b4 e,8 f16 g) as2~ | %39
+    \barNumberCheck #40 as2 ges4~( ges16 f32 ges as ges f ges | %40
+    f2) r8. des32( c \tuplet 3/2 { des16 es f } des32 es f ges | %41
+    as1) | %42
+    ges8.( as32 ges f4~ f8) r8 \tuplet 3/2 { r4 as8( } | %43
+    g2.)_\markup{\italic "cresc."} r16 g32( a g fis g a | %44
+    d2.~ \tuplet 3/2 { d8) b( c } | %45
+    d8 e4 d16 b a2) | %46
+    \acciaccatura { es8 } es'4~ ^\markup { \box "D" } \tuplet 3/2 { es4 bes8 } bes16( c32 bes as8~ as) \tuplet 3/2 { g16( as bes } | %47
+    f4~ f16) e32( f \tuplet 5/4 { g32 f e f g } f2) | %48
+    \acciaccatura { bes,8 } bes'2~( bes16 c32 bes as8~) as16 bes32( as g16 c) | %49
+    fis,2. r16 fis32( g a g bes a) | %50
+    <g, g'>2. r16 fis'32( g a g bes a) | %51
+    <a, a'>2. r16 a'32( g bes a c bes) | %52
+    bes2.~(\pp bes8 c | %53
+    bes1~ | %54
+    bes) | %55
+    \tuplet 3/2 { es8 es( f) } es8( bes~ bes as~ as16 bes32 as g16 c | %56
+    f,4~ f16) e32( f \tuplet 5/4 { g f e f g } f2~ | %57
+    f2) \tuplet 6/4 { bes32( d, f, bes, f' d'  } bes'8~ bes4) | %58
+    es1~ | %59
+    \barNumberCheck #60 es1~ | %60
+    es1~ | %61
+    es1~ | %62
+    es1\fermata | %63
     \bar "|."
   } 
 }

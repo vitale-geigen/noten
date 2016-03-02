@@ -5,8 +5,7 @@
 \header {
   title = "Palladio"
   subtitle = ""
-  composer = "Karl Jenkins"
-  opus = "1996"
+  composer = "Karl Jenkins (1996)"  
   copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
   tagline = \markup { \composer - \title }
   instrument = ""
