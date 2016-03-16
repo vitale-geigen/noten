@@ -1,5 +1,9 @@
 LY = lilypond
-PIECE = Partita\ II\ BWV\ 1004\ -\ Giga\ -\ J.S.\ Bach
+
+UUID = 2F30A1FB-46EC-4F11-8D94-7BD66703D29C
+TITLE = Partita\ II\ BWV\ 1004\ -\ Giga
+COMPOSER = J.S.\ Bach
+PIECE = $(TITLE)\ -\ $(COMPOSER)
 
 GLOBALS = globals.ily
 PARTS_DIR = parts
@@ -7,16 +11,22 @@ VOICES_DIR = voices
 OUTPUT_DIR = target
 
 all: 	clean \
-		hash \
+		meta \
 		violinOne \
 		midi \
 
-hash: output
+meta: output
+	@echo $(UUID) >> $(OUTPUT_DIR)/meta.dat; \
+
 	@if [ `uname` = "Darwin" ]; then \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 > $(OUTPUT_DIR)/hash.md5; \
+		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 >> $(OUTPUT_DIR)/meta.dat; \
 	else \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 > $(OUTPUT_DIR)/hash.md5; \
+		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 >> $(OUTPUT_DIR)/meta.dat; \
 	fi
+
+	@echo $(TITLE) >> $(OUTPUT_DIR)/meta.dat; \
+
+	@echo $(COMPOSER) >> $(OUTPUT_DIR)/meta.dat; \
 
 output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \
@@ -33,6 +43,6 @@ clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
 		rm -f $(OUTPUT_DIR)/*.midi; \
-		rm -f $(OUTPUT_DIR)/hash.md5; \
+		rm -f $(OUTPUT_DIR)/meta.dat; \
 		rmdir $(OUTPUT_DIR); \
 	fi

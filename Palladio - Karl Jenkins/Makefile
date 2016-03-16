@@ -1,5 +1,9 @@
 LY = lilypond
-PIECE = Palladio\ -\ Karl\ Jenkins
+
+UUID = A2B49A03-1D33-4637-8B4E-86B0D56CB203
+TITLE = Palladio
+COMPOSER = Karl\ Jenkins
+PIECE = $(TITLE)\ -\ $(COMPOSER)
 
 GLOBALS = globals.ily
 PARTS_DIR = parts
@@ -7,7 +11,7 @@ VOICES_DIR = voices
 OUTPUT_DIR = target
 
 all: 	clean \
-		hash \
+		meta \
 		score \
 		midi1 \
 		midi2 \
@@ -18,12 +22,18 @@ all: 	clean \
 		cello \
 		guitar
 
-hash: output
+meta: output
+	@echo $(UUID) >> $(OUTPUT_DIR)/meta.dat; \
+
 	@if [ `uname` = "Darwin" ]; then \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 > $(OUTPUT_DIR)/hash.md5; \
+		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 >> $(OUTPUT_DIR)/meta.dat; \
 	else \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 > $(OUTPUT_DIR)/hash.md5; \
+		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 >> $(OUTPUT_DIR)/meta.dat; \
 	fi
+
+	@echo $(TITLE) >> $(OUTPUT_DIR)/meta.dat; \
+
+	@echo $(COMPOSER) >> $(OUTPUT_DIR)/meta.dat; \
 
 output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \
@@ -35,7 +45,7 @@ score: output
 
 midi1: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(I\ Allegro\) $(PARTS_DIR)/midi1.ly
-	
+
 midi2: output
 	$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(II\ Largo\) $(PARTS_DIR)/midi2.ly
 
@@ -61,6 +71,6 @@ clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
 		rm -f $(OUTPUT_DIR)/*.midi; \
-		rm -f $(OUTPUT_DIR)/hash.md5; \
+		rm -f $(OUTPUT_DIR)/meta.dat; \
 		rmdir $(OUTPUT_DIR); \
 	fi

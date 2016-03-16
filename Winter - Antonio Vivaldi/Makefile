@@ -1,7 +1,8 @@
 LY = lilypond
-UUID = 802a68076ee09a763d0067c256e97f54
-COMPOSER = Antonio\ Vivaldi
+
+UUID = 6D8D04F7-0760-4CB9-9611-98EE7A8374D0
 TITLE = Die\ Vier\ Jahreszeiten\ Op\ 8\ No.2\ -\ Winter\ Largo
+COMPOSER = Antonio\ Vivaldi
 PIECE = $(TITLE)\ -\ $(COMPOSER)
 
 GLOBALS = globals.ily
@@ -10,7 +11,6 @@ VOICES_DIR = voices
 OUTPUT_DIR = target
 
 all: 	clean \
-		hash \
 		meta \
 		score \
 		midi \
@@ -21,21 +21,17 @@ all: 	clean \
 		cello
 
 meta: output
-	@echo $(UUID) >> $(OUTPUT_DIR)/meta.txt; \
-	echo $(COMPOSER) >> $(OUTPUT_DIR)/meta.txt; \
-	echo $(TITLE) >> $(OUTPUT_DIR)/meta.txt; \
-	if [ `uname` = "Darwin" ]; then \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 >> $(OUTPUT_DIR)/meta.txt; \
+	@echo $(UUID) >> $(OUTPUT_DIR)/meta.dat; \
+
+	@if [ `uname` = "Darwin" ]; then \
+		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 >> $(OUTPUT_DIR)/meta.dat; \
 	else \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 >> $(OUTPUT_DIR)/meta.txt; \
+		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 >> $(OUTPUT_DIR)/meta.dat; \
 	fi
 
-hash: output
-	@if [ `uname` = "Darwin" ]; then \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 > $(OUTPUT_DIR)/hash.md5; \
-	else \
-		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5sum | cut -d' ' -f1 > $(OUTPUT_DIR)/hash.md5; \
-	fi
+	@echo $(TITLE) >> $(OUTPUT_DIR)/meta.dat; \
+
+	@echo $(COMPOSER) >> $(OUTPUT_DIR)/meta.dat; \
 
 output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \
@@ -67,7 +63,6 @@ clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
 		rm -f $(OUTPUT_DIR)/*.midi; \
-		rm -f $(OUTPUT_DIR)/hash.md5; \
-		rm -f $(OUTPUT_DIR)/meta.txt; \
+		rm -f $(OUTPUT_DIR)/meta.dat; \
 		rmdir $(OUTPUT_DIR); \
 	fi
