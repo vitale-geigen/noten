@@ -34,10 +34,10 @@ output:
 	fi
 
 midi: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE) $(PARTS_DIR)/midi.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/midi.ly
 
 score: output
-	$(LY) -o $(OUTPUT_DIR)/$(PIECE) $(PARTS_DIR)/score.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
