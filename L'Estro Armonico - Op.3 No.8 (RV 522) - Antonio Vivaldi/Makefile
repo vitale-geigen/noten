@@ -36,20 +36,21 @@ output:
 	fi
 
 midi: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/midi.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/midi.ly
 
 score: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/score.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
 
 violinOne: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
 
 violinTwo: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
+		rm -f $(OUTPUT_DIR)/*.ps; \
 		rm -f $(OUTPUT_DIR)/*.midi; \
 		rm -f $(OUTPUT_DIR)/meta.dat; \
 		rmdir $(OUTPUT_DIR); \

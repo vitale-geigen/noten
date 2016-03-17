@@ -50,6 +50,7 @@ violin: output
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
+		rm -f $(OUTPUT_DIR)/*.ps; \
 		rm -f $(OUTPUT_DIR)/*.midi; \
 		rm -f $(OUTPUT_DIR)/meta.dat; \
 		rmdir $(OUTPUT_DIR); \

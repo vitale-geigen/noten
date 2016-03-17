@@ -41,35 +41,36 @@ output:
 	fi
 
 score: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Partitur\) $(PARTS_DIR)/score.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
 
 midi1: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(I\ Allegro\) $(PARTS_DIR)/midi1.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(I\ Allegro\) $(PARTS_DIR)/midi1.ly
 
 midi2: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(II\ Largo\) $(PARTS_DIR)/midi2.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(II\ Largo\) $(PARTS_DIR)/midi2.ly
 
 violinOne: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
 
 violinTwo: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
 
 violinThree: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 3\) $(PARTS_DIR)/violin3.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 3\) $(PARTS_DIR)/violin3.ly
 
 violinFour: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violine\ 4\) $(PARTS_DIR)/violin4.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 4\) $(PARTS_DIR)/violin4.ly
 
 cello: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Violoncello\) $(PARTS_DIR)/cello.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violoncello\) $(PARTS_DIR)/cello.ly
 
 guitar: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ -\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
 		rm -f $(OUTPUT_DIR)/*.pdf; \
+		rm -f $(OUTPUT_DIR)/*.ps; \
 		rm -f $(OUTPUT_DIR)/*.midi; \
 		rm -f $(OUTPUT_DIR)/meta.dat; \
 		rmdir $(OUTPUT_DIR); \

@@ -8,8 +8,6 @@ import sys
 import logging as log
 import shutil as sh
 
-# TODO: *.ps Dateien sollten bei clean mit beseitigt werden
-
 log.basicConfig(level=log.INFO)
 
 class Notesheet:
