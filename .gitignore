@@ -2,4 +2,6 @@
 *.ps
 *.midi
 *.mid
+*.log
 meta.dat
+publish/*
