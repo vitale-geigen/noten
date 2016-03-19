@@ -11,10 +11,10 @@
   \unfoldRepeats {
     <<    
       \new Staff \with { midiInstrument = #"violin" } { \violinI }
-      \new Staff \with { midiInstrument = #"violin" } { \violinII }
-      \new Staff \with { midiInstrument = #"violin" } { \violinIII }
-      \new Staff \with { midiInstrument = #"violin" } { \violinIV }
-      \new Staff \with { midiInstrument = #"cello" } { \cello }
+      \new Staff \with { midiInstrument = #"pizzicato strings" } { \violinII }
+      \new Staff \with { midiInstrument = #"pizzicato strings" } { \violinIII }
+      \new Staff \with { midiInstrument = #"pizzicato strings" } { \violinIV }
+      \new Staff \with { midiInstrument = #"pizzicato strings" } { \cello }
     >>
   }
   \midi { }   
