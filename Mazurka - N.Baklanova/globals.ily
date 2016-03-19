@@ -5,8 +5,9 @@
 \header {
   title = "МАЗУРКА"
   subtitle = "Mazurka"
+  composer = "N. Baklanova"
   copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \title - (\subtitle) }
+  tagline = \markup { \title - (\subtitle) - \composer }
 }
 
 globalSettings= {
