@@ -20,7 +20,7 @@
     \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violinI }
     \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.2" } { \violinII }
     \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.3" } { \violinIII }
-    \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.4" } { \violinIV }
+    \new Staff \with { instrumentName = "Violine 4" shortInstrumentName = "Vln.4" } { \violinIV }
     \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.5" } { \violinV }
     
   >>
