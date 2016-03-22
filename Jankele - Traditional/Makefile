@@ -18,7 +18,8 @@ all: 	clean \
 		violinTwo \
 		violinThree \
 		violinFour \
-		violinFive
+		violinFive \
+		piano
 
 meta: output
 	@echo $(UUID) >> $(OUTPUT_DIR)/meta.dat; \
@@ -58,6 +59,9 @@ violinFour: output
 
 violinFive: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 5\) $(PARTS_DIR)/violin5.ly
+
+piano: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Piano\) $(PARTS_DIR)/piano.ly
 
 
 clean:

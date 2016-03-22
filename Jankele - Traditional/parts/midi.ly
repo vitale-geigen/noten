@@ -6,6 +6,7 @@
 \include "../voices/violin3.ily"
 \include "../voices/violin4.ily"
 \include "../voices/violin5.ily"
+\include "../voices/piano.ily"
 
 \score {  
   \unfoldRepeats {
@@ -15,6 +16,12 @@
       \new Staff \with { midiInstrument = #"violin" } { \violinIII }
       \new Staff \with { midiInstrument = #"violin" } { \violinIV }
       \new Staff \with { midiInstrument = #"violin" } { \violinV }
+      \new PianoStaff \with { midiInstrument = #"acoustic grand" } {  
+      <<
+        \new Staff { \pianoTreble }
+        \new Staff { \pianoBass }
+      >>
+    }
     >>
   }
   \midi { }   

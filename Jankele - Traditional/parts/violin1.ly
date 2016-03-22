@@ -11,7 +11,6 @@
 
 \score {
   <<
-    \new ChordNames { \germanChords \guitarChords }
     \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violinI }
   >>
   \layout {

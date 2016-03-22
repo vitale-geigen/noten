@@ -7,22 +7,26 @@
 \include "../voices/violin4.ily"
 \include "../voices/violin5.ily"
 \include "../voices/guitar.ily"
-
+\include "../voices/piano.ily"
 
 \header {
   instrument = "Partitur"
 }
 
-
 \score {
-  <<
-    \new ChordNames { \germanChords \guitarChords }
+  <<    
     \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violinI }
     \new Staff \with { instrumentName = "Violine 2" shortInstrumentName = "Vln.2" } { \violinII }
     \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.3" } { \violinIII }
     \new Staff \with { instrumentName = "Violine 4" shortInstrumentName = "Vln.4" } { \violinIV }
     \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.5" } { \violinV }
-    
+    \new ChordNames { \germanChords \guitarChords }
+    \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." } {  
+      <<
+        \new Staff { \pianoTreble }
+        \new Staff { \pianoBass }
+      >>
+    }
   >>
   \layout {
     indent = 1.5\cm
