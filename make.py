@@ -9,18 +9,81 @@ import xml.dom
 import logging as log
 import shutil as sh
 import datetime as dt
+import argparse
 
- # Geschwaetzigkeit: (i)nfo / (d)ebug / (c)ritical
-LOG_LEVEL = 'c'
+parser = argparse.ArgumentParser(description='Baut Lilypond Projekte und \
+    erzeugt eine XML Datei zur Beschreibung und Veroeffentlichung der \
+    Notenblaetter.')
+
+parser.add_argument('-i', '--input-dir', \
+    dest='input_dir', default='.', \
+    help='Pfad des input-Verzeichnisses, in dem nach Projekten gesucht wird. \
+    Standard ist "."')
+
+parser.add_argument('-o', '--ouput-dir', \
+    dest='output_dir', default='publish', \
+    help='Pfad des output-Verzeichnisses, Standard ist "./publish"')
+
+parser.add_argument('-v', '--verbose', \
+    dest='verbose', nargs='?', default=False, const=True, \
+    help='Erzeugt sehr detaillierte Ausgaben')
+
+parser.add_argument('-s', '--silent', \
+    dest='silent', nargs='?', default=False, const=True, \
+    help='Erzeugt keinerlei Ausgaben ausser Fehlermeldungen')
+
+parser.add_argument('-m', '--make-output', \
+    dest='make_output', default='/dev/null', \
+    help='Umleitung der Ausgaben von make, Standard ist "/dev/null"')
+
+parser.add_argument('-n', '--notesheets-xml-file', dest='notesheets_xml', \
+    help='Lokaler Pfad oder HTTP URL der vorhandenen notesheets.xml. Wenn \
+    dieser Parameter gesetzt ist, werden nur Projekte gebaut, die in der \
+    notesheets.xml fehlen, oder sich geaendert haben. Wird dieser Parameter \
+    ausgelassen, werden alle Projekte gebaut.')
+
+parser.add_argument('-p', '--proxy-server', dest='http_proxy', \
+    help='Proxy-Server der verwendet werden soll, wenn die notesheets.xml \
+    per HTTP heruntergeladen wird.')
+
+args = parser.parse_args()
+
+# './' am Anfang des Projekte-Verzeichnisses entfernen
+if args.input_dir.startswith('./'):
+    args.input_dir = args.input_dir[2:]
+
+# '/' am Ende des Projekte-Verzeichnisses entfernen
+if len(args.input_dir) > 1 and args.input_dir.endswith('/'):
+    args.input_dir = args.input_dir[:-1]
+
+# './' am Anfang des output-Verzeichnisses entfernen
+if args.output_dir.startswith('./'):
+    args.output_dir = args.output_dir[2:]
+
+# '/' am Ende des Projekte-Verzeichnisses entfernen
+if len(args.output_dir) > 1 and args.output_dir.endswith('/'):
+    args.output_dir = args.output_dir[:-1]
+
+# Geschwaetzigkeit: hoch
+VERBOSE = args.verbose
+
+# Geschwaetzigkeit: gering
+SILENT = args.silent
 
 # Umleitung der Ausgaben von make (relativ zum Makefile, z.B. ../make.log):
-MAKE_LOG = '/dev/null'
+MAKE_LOG = os.path.abspath(args.make_output)
+
+# Absolutes Projekte-Verzeichnis
+INPUT_PATH = os.path.abspath(args.input_dir)
 
 # Publish-Ordner
-PUB_PATH = 'publish'
+PUB_PATH = args.output_dir
 
-# Notesheets-Unterordner
-PUB_PATH_NOTESHEETS = PUB_PATH + '/notesheets'
+# Absoluter Publish-Ordner
+ABS_PUB_PATH = os.path.abspath(PUB_PATH)
+
+# Absoluter Notesheets-Unterordner
+PUB_PATH_NOTESHEETS = os.path.abspath(PUB_PATH + '/notesheets')
 
 # Name der Notesheets XML Datei
 NOTESHEETS_XML = 'notesheets.xml'
@@ -28,9 +91,18 @@ NOTESHEETS_XML = 'notesheets.xml'
 # Aufrufe wie 'make clean' und 'make all' ueberspringen
 DRY_RUN = False
 
-if LOG_LEVEL == 'i': log.basicConfig(level=log.INFO)
-elif LOG_LEVEL == 'd': log.basicConfig(level=log.DEBUG)
-else: log.basicConfig(level=log.WARNING)
+# Wenn VERBOSE Modus, dann Log-Level = DEBUG
+if VERBOSE: log.basicConfig(level=log.DEBUG)
+
+# Wenn SILENT Modus, dann Log-Level = WARNING
+elif SILENT: log.basicConfig(level=log.WARNING)
+
+# Sonst Log-Level = INFO
+else: log.basicConfig(level=log.INFO)
+
+log.debug('Input-Pfad: ' + INPUT_PATH)
+log.debug('Output-Pfad: ' + ABS_PUB_PATH)
+log.debug('Schreibe make-Ausgaben nach: ' + MAKE_LOG)
 
 class Notesheet:
     pass
@@ -137,21 +209,25 @@ try: # Auf Fehler gefasst sein
     notesheets = {}
 
     # wenn publish Verzeichnis existiert, Fehler werfen
-    if os.path.exists('publish'):
+    if os.path.exists(PUB_PATH):
         raise MakeError(MakeError.UNEXPECTED_PUBLISH_PATH)
 
     # publish-Verzeichnis erzeugen
-    log.debug('Erstelle: ' + PUB_PATH)
-    os.mkdir(PUB_PATH)
+    log.debug('Erstelle: ' + ABS_PUB_PATH)
+    os.mkdir(ABS_PUB_PATH)
 
     # publish/notesheets-Verzeichnis erzeugen
     log.debug('Erstelle: ' + PUB_PATH_NOTESHEETS)
     os.mkdir(PUB_PATH_NOTESHEETS)
 
+    # Ins Input-Verzeichnis wechseln
+    log.info('Projekte-Verzeichnis: ' + INPUT_PATH)
+    os.chdir(INPUT_PATH)
+
     # Liste mit Projektverzeichnissen aufbauen
     log.debug('Suche nach Projekten')
 
-    dir_content = os.listdir(".")
+    dir_content = os.listdir('.')
     projects = filter( \
         lambda d: os.path.isdir(d) and d[0] != '.' and d != PUB_PATH, \
         dir_content)
@@ -166,6 +242,12 @@ try: # Auf Fehler gefasst sein
         log.info('Bearbeite Projekt {0}/{1}: {2}' \
             .format(i+1, len(projects), project))
         os.chdir(workdir)
+
+        # Pruefen, ob Makefile existiert. Wenn nicht, Ordner ueberspringen
+        if not os.path.exists('Makefile'):
+            log.info('Kein Makefile gefunden. Ueberspringe Projekt.')
+            os.chdir('..')
+            continue
 
         # make clean aufrufen, um target-Verzeichnis zu entfernen
         log.debug('Bereinige Projekt')
@@ -250,9 +332,9 @@ try: # Auf Fehler gefasst sein
                 notesheet.parts.append(part)
 
                 # Datei nach publish/notesheets/ verschieben (oder kopieren)
-                log.debug(('Kopierte Datei "{0}" nach ' + PUB_PATH_NOTESHEETS) \
-                    .format(part_file))
-                sh.copy('./target/' + part_file, '../' + PUB_PATH_NOTESHEETS)
+                log.debug(('Kopierte Datei "{0}" nach ' + \
+                    PUB_PATH_NOTESHEETS).format(part_file))
+                sh.copy('./target/' + part_file, PUB_PATH_NOTESHEETS)
 
             # notesheet-Eintrag der notesheets-Struktur hinzufuegen / ersetzen
             notesheets[notesheet.uuid] = notesheet
@@ -267,7 +349,7 @@ try: # Auf Fehler gefasst sein
     log.info('Erzeuge ' + NOTESHEETS_XML)
     try:
         xml = toXml(notesheets)
-        with open(PUB_PATH + '/' + NOTESHEETS_XML,'w') as f:
+        with open(ABS_PUB_PATH + '/' + NOTESHEETS_XML,'w') as f:
             f.write(xml)
     except Exception as e:
         raise MakeError(MakeError.XML_GEN_ERROR, e)
