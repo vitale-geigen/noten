@@ -131,9 +131,9 @@ class MakeError(Exception):
             'Datei "{part}" hat keinen gueltigen Dateinamen,' \
             + ' um Stimmen und Typ zu erkennen.',
         XML_GEN_ERROR : \
-            'Fehler beim Erzeugen der XML Datei: '+NOTESHEETS_XML,
+            'Fehler beim Erzeugen der XML Datei: {file}',
         XML_READ_ERROR : \
-            'Fehler beim Lesen der XML Datei: '+OLD_NOTESHEET_XML
+            'Fehler beim Lesen der XML Datei: {file}'
     }
 
     def __init__(self, err_code, err_cause=None, **args):
@@ -152,6 +152,7 @@ def fromXml(notesheet_xml):
             nst = Notesheet()
             nst.uuid = nst_tag.getAttribute('uuid')
             nst.hash = nst_tag.getAttribute('md5')
+            nst.mtime = nst_tag.getAttribute('mtime')
 
             title_tag = nst_tag.getElementsByTagName('title')[0].firstChild
             nst.title = title_tag.wholeText
@@ -173,7 +174,7 @@ def fromXml(notesheet_xml):
 
         return notesheets
     except Exception as e:
-        raise MakeError(MakeError.XML_READ_ERROR, e)
+        raise MakeError(MakeError.XML_READ_ERROR, e, file=notesheet_xml)
 
 def toXml(notesheet_dict, pretty=True):
     # DOM Implementierung anfordern
@@ -197,6 +198,9 @@ def toXml(notesheet_dict, pretty=True):
 
         # MD5 Hash Attribut
         notesheet.setAttribute('md5', nst.hash)
+
+        # Zeitstempel hinzufuegen
+        notesheet.setAttribute('mtime', nst.mtime)
 
         # Title Element
         title = doc.createElement('title')
@@ -308,10 +312,10 @@ try: # Auf Fehler gefasst sein
                 hash = meta.readline().strip()
 
                 # 3. Zeile: Titel
-                title = meta.readline().strip()
+                title = meta.readline().strip().decode('utf-8')
 
                 # 4. Zeile: Komponist
-                composer = meta.readline().strip()
+                composer = meta.readline().strip().decode('utf-8')
         except Exception as e:
             raise MakeError(MakeError.INVALID_META_FILE, e)
 
@@ -336,6 +340,7 @@ try: # Auf Fehler gefasst sein
             notesheet.hash = hash
             notesheet.title = title
             notesheet.composer = composer
+            notesheet.mtime = dt.datetime.now().strftime('%d.%m.%Y %H:%M:%S')
 
             # Liste von erzeugten Dateien im target-Verzeichnis aufbauen
             target_content = os.listdir("./target")
@@ -392,7 +397,7 @@ try: # Auf Fehler gefasst sein
         with open(ABS_PUB_PATH + '/' + NOTESHEETS_XML,'w') as f:
             f.write(xml)
     except Exception as e:
-        raise MakeError(MakeError.XML_GEN_ERROR, e)
+        raise MakeError(MakeError.XML_GEN_ERROR, e, file=NOTESHEETS_XML)
 
     duration = dt.datetime.now() - start_time
 
