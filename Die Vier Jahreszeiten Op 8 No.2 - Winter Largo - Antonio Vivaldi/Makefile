@@ -21,7 +21,7 @@ all: 	clean \
 		cello
 
 meta: output
-	@echo $(UUID) >> $(OUTPUT_DIR)/meta.dat; \
+	@echo $(UUID) > $(OUTPUT_DIR)/meta.dat; \
 
 	@if [ `uname` = "Darwin" ]; then \
 		cat $(PARTS_DIR)/* $(VOICES_DIR)/* $(GLOBALS) | md5 | cut -d' ' -f4 >> $(OUTPUT_DIR)/meta.dat; \
