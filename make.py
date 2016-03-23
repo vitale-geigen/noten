@@ -38,15 +38,11 @@ parser.add_argument('-m', '--make-output', \
     help='Umleitung der Ausgaben von make, Standard ist "/dev/null"')
 
 parser.add_argument('-n', '--notesheets-xml-file', dest='notesheets_xml', \
-    help='Lokaler Pfad oder HTTP URL der vorhandenen notesheets.xml. Wenn \
+    help='Pfad einer vorhandenen notesheets.xml. Wenn \
     dieser Parameter gesetzt ist, werden nur Projekte gebaut, die in der \
     notesheets.xml fehlen, oder sich geaendert haben. Wird dieser Parameter \
     ausgelassen, wird nach vorhandener notesheets.xml im output-Verzeichnis \
     gesucht. Existiert diese auch nicht, werden alle Projekte neu gebaut.')
-
-parser.add_argument('-p', '--proxy-server', dest='http_proxy', \
-    help='Proxy-Server der verwendet werden soll, wenn die notesheets.xml \
-    per HTTP heruntergeladen wird.')
 
 args = parser.parse_args()
 
@@ -90,10 +86,7 @@ PUB_PATH_NOTESHEETS = os.path.abspath(PUB_PATH + '/notesheets')
 # Name der Notesheets XML Datei
 NOTESHEETS_XML = 'notesheets.xml'
 
-# HTTP Proxy Server
-PROXY_SERVER = args.http_proxy
-
-# Pfad oder URL der alten notesheets.xml
+# Pfad der alten notesheets.xml
 OLD_NOTESHEET_XML = args.notesheets_xml
 
 # Wenn keine notesheets.xml per Argument angegeben wurde und im Publish-Ordner
@@ -249,8 +242,6 @@ def toXml(notesheet_dict, pretty=True):
 try: # Auf Fehler gefasst sein
 
     start_time = dt.datetime.now()
-
-    # TODO: notesheets.xml ggf. vom Server herunterladen
 
     # Wenn alte notesheets.xml angegeben, diese in Projektstruktur umwandeln
     if OLD_NOTESHEET_XML is not None:
