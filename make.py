@@ -6,6 +6,7 @@ import os
 import os.path
 import sys
 import xml.dom
+from xml.dom import minidom
 import logging as log
 import shutil as sh
 import datetime as dt
@@ -40,7 +41,8 @@ parser.add_argument('-n', '--notesheets-xml-file', dest='notesheets_xml', \
     help='Lokaler Pfad oder HTTP URL der vorhandenen notesheets.xml. Wenn \
     dieser Parameter gesetzt ist, werden nur Projekte gebaut, die in der \
     notesheets.xml fehlen, oder sich geaendert haben. Wird dieser Parameter \
-    ausgelassen, werden alle Projekte gebaut.')
+    ausgelassen, wird nach vorhandener notesheets.xml im output-Verzeichnis \
+    gesucht. Existiert diese auch nicht, werden alle Projekte neu gebaut.')
 
 parser.add_argument('-p', '--proxy-server', dest='http_proxy', \
     help='Proxy-Server der verwendet werden soll, wenn die notesheets.xml \
@@ -88,6 +90,18 @@ PUB_PATH_NOTESHEETS = os.path.abspath(PUB_PATH + '/notesheets')
 # Name der Notesheets XML Datei
 NOTESHEETS_XML = 'notesheets.xml'
 
+# HTTP Proxy Server
+PROXY_SERVER = args.http_proxy
+
+# Pfad oder URL der alten notesheets.xml
+OLD_NOTESHEET_XML = args.notesheets_xml
+
+# Wenn keine notesheets.xml per Argument angegeben wurde und im Publish-Ordner
+# schon eine alte notesheets.xml existiert, dann diese verwenden
+if OLD_NOTESHEET_XML is None and \
+    os.path.exists(ABS_PUB_PATH + '/' + NOTESHEETS_XML):
+    OLD_NOTESHEET_XML = ABS_PUB_PATH + '/' + NOTESHEETS_XML
+
 # Aufrufe wie 'make clean' und 'make all' ueberspringen
 DRY_RUN = False
 
@@ -112,28 +126,61 @@ class Part:
 
 class MakeError(Exception):
 
-    UNEXPECTED_PUBLISH_PATH = 1
-    INVALID_META_FILE = 2
-    INVALID_PART_NAME = 3
-    XML_GEN_ERROR = 4
+    INVALID_META_FILE = 1
+    INVALID_PART_NAME = 2
+    XML_GEN_ERROR = 3
+    XML_READ_ERROR = 4
 
     __err_msg_dict = {
-        UNEXPECTED_PUBLISH_PATH : \
-            'publish-Verzeichnis existiert bereits. ' \
-            + 'Bitte entfernen und danach erneut versuchen.',
         INVALID_META_FILE : \
             'Fehler beim Lesen der Projekt-Metadaten.',
         INVALID_PART_NAME : \
             'Datei "{part}" hat keinen gueltigen Dateinamen,' \
             + ' um Stimmen und Typ zu erkennen.',
         XML_GEN_ERROR : \
-            'Fehler beim Erzeugen der '+NOTESHEETS_XML+' Datei.'
+            'Fehler beim Erzeugen der XML Datei: '+NOTESHEETS_XML,
+        XML_READ_ERROR : \
+            'Fehler beim Lesen der XML Datei: '+OLD_NOTESHEET_XML
     }
 
     def __init__(self, err_code, err_cause=None, **args):
         self.err_code = err_code
         self.err_cause = err_cause
         self.err_msg = MakeError.__err_msg_dict[err_code].format(**args)
+
+def fromXml(notesheet_xml):
+    try:
+        doc = minidom.parse(notesheet_xml)
+
+        xml_root = doc.documentElement
+        notesheets = {}
+
+        for nst_tag in xml_root.getElementsByTagName('notesheet'):
+            nst = Notesheet()
+            nst.uuid = nst_tag.getAttribute('uuid')
+            nst.hash = nst_tag.getAttribute('md5')
+
+            title_tag = nst_tag.getElementsByTagName('title')[0].firstChild
+            nst.title = title_tag.wholeText
+
+            composer_tag = nst_tag.getElementsByTagName('composer')[0].firstChild
+            nst.composer = composer_tag.wholeText
+
+            parts_tag = nst_tag.getElementsByTagName('parts')[0]
+
+            nst.parts = []
+
+            for part_tag in parts_tag.getElementsByTagName('part'):
+                part = Part()
+                part.type = part_tag.getAttribute('type')
+                part.voices = part_tag.firstChild.wholeText
+                nst.parts.append(part)
+
+            notesheets[nst.uuid] = nst
+
+        return notesheets
+    except Exception as e:
+        raise MakeError(MakeError.XML_READ_ERROR, e)
 
 def toXml(notesheet_dict, pretty=True):
     # DOM Implementierung anfordern
@@ -195,30 +242,32 @@ def toXml(notesheet_dict, pretty=True):
     # XML Struktur zurueckgeben
     # (in formatierter Form sofern pretty Parameter True)
     if pretty:
-        return doc.toprettyxml()
+        return doc.toprettyxml(encoding='utf-8')
     else:
-        return doc.toxml()
+        return doc.toxml(encoding='utf-8')
 
 try: # Auf Fehler gefasst sein
 
     start_time = dt.datetime.now()
 
-    # TODO: notesheets.xml vom Server herunterladen
+    # TODO: notesheets.xml ggf. vom Server herunterladen
 
-    # TODO: XML-Datei parsen und in notesheets-Struktur umwandeln
-    notesheets = {}
-
-    # wenn publish Verzeichnis existiert, Fehler werfen
-    if os.path.exists(PUB_PATH):
-        raise MakeError(MakeError.UNEXPECTED_PUBLISH_PATH)
+    # Wenn alte notesheets.xml angegeben, diese in Projektstruktur umwandeln
+    if OLD_NOTESHEET_XML is not None:
+        log.info('Lese XML-Datei: ' + OLD_NOTESHEET_XML)
+        notesheets = fromXml(OLD_NOTESHEET_XML)
+    # Sonst eine neue Projektstruktur erstellen
+    else: notesheets = {}
 
     # publish-Verzeichnis erzeugen
-    log.debug('Erstelle: ' + ABS_PUB_PATH)
-    os.mkdir(ABS_PUB_PATH)
+    if not os.path.exists(PUB_PATH):
+        log.debug('Erstelle: ' + ABS_PUB_PATH)
+        os.mkdir(ABS_PUB_PATH)
 
     # publish/notesheets-Verzeichnis erzeugen
-    log.debug('Erstelle: ' + PUB_PATH_NOTESHEETS)
-    os.mkdir(PUB_PATH_NOTESHEETS)
+    if not os.path.exists(PUB_PATH_NOTESHEETS):
+        log.debug('Erstelle: ' + PUB_PATH_NOTESHEETS)
+        os.mkdir(PUB_PATH_NOTESHEETS)
 
     # Ins Input-Verzeichnis wechseln
     log.info('Projekte-Verzeichnis: ' + INPUT_PATH)
@@ -280,8 +329,8 @@ try: # Auf Fehler gefasst sein
         log.debug('Titel     : ' + title)
         log.debug('Komponist : ' + composer)
 
-        # TODO: Wenn UUID in Projektstruktur fehlt oder ob Hash abweicht
-        build = True
+        # Wenn UUID in Projektstruktur fehlt oder ob Hash abweicht
+        build = not notesheets.has_key(uuid) or notesheets[uuid].hash != hash
 
         if build:
             # make all aufrufen, um Projekt zu bauen
