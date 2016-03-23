@@ -183,6 +183,12 @@ def toXml(notesheet_dict, pretty=True):
     # XML Dokument Knoten erzeugen
     doc = impl.createDocument(None, 'notesheets', None)
 
+    # XSL-Stylesheet einbinden
+    stylesheet = doc.createProcessingInstruction('xml-stylesheet', \
+        'type="text/xsl" href="/xsl/notesheets.xsl"')
+    root = doc.firstChild
+    doc.insertBefore(stylesheet, root)
+
     # Root-Element notesheets
     notesheets = doc.documentElement
 
