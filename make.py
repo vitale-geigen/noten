@@ -362,7 +362,7 @@ try: # Auf Fehler gefasst sein
             notesheet.parts = []
 
             # Fuer jedes Part:
-            for part_file in part_files:
+            for part_file in sorted(part_files):
                 # Stimmen und Typ ermitteln.
                 # Stimmen stehen am Ende des Dateinamens in Klammern
                 # Typ entspricht der Dateiendung
