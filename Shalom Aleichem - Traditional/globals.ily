@@ -6,13 +6,13 @@
   composer = "Traditional"
   opus = ""
   copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  tagline = \markup { \title }
 }
 
 globalSettings= {
-  \key g \major
+  \key c \major
   \time 4/4
-  \tempo Moderato
+  \tempo Andantino 4=80 
   \mergeDifferentlyHeadedOn 
   \mergeDifferentlyDottedOn
 }

@@ -11,7 +11,11 @@ VOICES_DIR = voices
 OUTPUT_DIR = target
 
 all: 	clean \
-		meta		
+		meta \
+		score \
+		midi \
+		violins \
+		cello		
 
 meta: output
 	@echo $(UUID) > $(OUTPUT_DIR)/meta.dat; \
@@ -30,6 +34,19 @@ output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \
 		mkdir $(OUTPUT_DIR); \
 	fi
+
+score: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
+
+midi: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/midi.ly
+
+violins: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violinen\) $(PARTS_DIR)/violins.ly
+
+cello: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine,\ Cello,\ Gitarre\) $(PARTS_DIR)/cello.ly
+
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
