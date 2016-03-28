@@ -3,10 +3,10 @@
 \header {
   title = "Main Theme"
   subtitle = "The Secret of Monkey Island"
-  composer = "Michael Z. Land, Barney Jones, Andy Newell, Patrick Mundy"
+  composer = "M.Land, B.Jones, A.Newell, P.Mundy"
   opus = ""
   copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  tagline = \markup { \subtitle - \title }
 }
 
 globalSettings= {
@@ -15,6 +15,7 @@ globalSettings= {
   \tempo Moderato 4=120
   \mergeDifferentlyHeadedOn 
   \mergeDifferentlyDottedOn
+  \numericTimeSignature
 }
 
 #(define (override-color-for-all-grobs color)
