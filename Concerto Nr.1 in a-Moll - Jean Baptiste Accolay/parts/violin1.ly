@@ -139,7 +139,7 @@ violinI = {
     a2( \tuplet 3/2 4 { gis8) b,( c d gis b) } |
     b2( \tuplet 3/2 4 { a8) c,^2(\mp d e^0 \< a^1 c) \! } | 
     c2( \tuplet 3/2 4 { b8) d,(\mf e f \< b d^4) \! } |
-    d2^2( \tuplet 3/2 4 { cis8) a,^0( a'^3 \f cis^1\upbow d^1 e) } | \break
+    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1(\upbow d^1 e) } | \break
     
     g4.(^4 \ff _\markup { \italic "ritenuto" } f8)^3 e^3( d cis d) | 
     f( e) b^2([ c)] a( bes) f^3([ d^3)] |
