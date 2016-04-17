@@ -15,5 +15,5 @@
 globalSettings = {
   \tempo Allegro 4=120
   \time 3/4
-  \key f \major
+  \key g \major
 }
