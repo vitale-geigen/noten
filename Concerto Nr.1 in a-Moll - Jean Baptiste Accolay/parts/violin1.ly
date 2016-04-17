@@ -47,7 +47,7 @@ violinI = {
     a2(^2 \tuplet 3/2 4 { gis8)^1 b,(^2 d^0 e^1 gis^1 b)^3 } \break
     
     b2(^3 \tuplet 3/2 4 { a8)^2 c,(^1 e^3 gis^1 a^2 c)^4 } |
-    c2(^4 \! \tuplet 3/2 4 { b8)^3 d,(^0 g^3 gis^4 b d) } |
+    c2(^4 \! \tuplet 3/2 4 { b8)^3 d,(^0 f^3 gis^4 b d) } |
     d2( \tuplet 3/2 4 { cis8) a(\f cis e^0 a g } | \break
     
     \tuplet 3/2 4 { f8) d'(\downbow^4 cis^3 d^4 a^1 f^3 d)^1 g,(^1 b^3 d^1 g^4 f^3 } |
