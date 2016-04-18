@@ -7,7 +7,7 @@ pianoTreble = \relative b' {
  
   \clef treble
   r4 |
-  \repeat volta 2 {
+  \repeat volta 3 {
     r4 <b e> r <b e> | r <d g> r <a d> | r <b e> r <b e> | r <a d> <a d>2 |
     \break
     r4 <b e> r <b e> | r <d g> r <a d> | r <b e > r <a d> | r <b e> <b e>2 |
@@ -22,7 +22,7 @@ pianoTreble = \relative b' {
   }     
   \alternative {
     { r4 <b e> <b e>2 | }
-    { r4 <b e> <b e>2 | }
+    { <b e>1 | }
   }
   \bar "|."
 }
@@ -46,7 +46,7 @@ pianoBass = \relative e, {
   }     
   \alternative {
     { e r r2 | }
-    { e4 r r2 | }
+    { e1 | }
   }
   \bar "|."
 }

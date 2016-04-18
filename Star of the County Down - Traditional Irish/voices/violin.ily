@@ -2,12 +2,12 @@
 
 \include "../globals.ily"
 
-violin = \relative g' {     
-  \globalSettings
+violin = \relative g' {    
   \partial 4
-  \clef treble
+  \globalSettings
+  \clef treble  
   g8( fis) |
-  \repeat volta 2 {
+  \repeat volta 3 {
     e4 e e d8 e | g4 g a g8 a | b4 a8 g e4 e | d2. g8 fis |
     \break
     e4 e e d8 e | g4 g a g8 a | b4 a8 g e4 d | e2. b'4 |
@@ -21,7 +21,7 @@ violin = \relative g' {
     e4 e e d8 e | g4 g a g8 a | b4 a8 g e4 d |
   }     
   \alternative {
-    { e2. g8 fis | }
+    { e2. g8 fis | }   
     { e1 | }
   }
   \bar "|."
