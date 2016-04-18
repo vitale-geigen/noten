@@ -2,6 +2,7 @@
 
 \include "../globals.ily"
 \include "../voices/violin.ily"
+\include "../voices/guitar.ily"
 \include "../voices/accordion.ily"
 
 \header {
@@ -14,6 +15,7 @@
         \applyContext #(override-color-for-all-grobs (x11-color 'gray))
         \violin 
     }
+    \new ChordNames { \germanChords \guitarChords }
     \new PianoStaff \with { instrumentName = "Akkordeon" shortInstrumentName = "Akk." } { << \new Staff { \pianoTreble } \new Staff { \pianoBass } >> }
   >>
   \layout {
