@@ -2,7 +2,7 @@ LY = lilypond
 
 UUID = 85682D6C-71C7-4A67-9F1C-7AFB28A897E0
 TITLE = Tochter\ Zion\ freue\ Dich
-COMPOSER = Georg\ Friedrich\ Händel
+COMPOSER = Georg\ Friedrich\ Haendel
 PIECE = $(TITLE)\ -\ $(COMPOSER)
 
 GLOBALS = globals.ily

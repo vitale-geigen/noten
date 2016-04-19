@@ -2,7 +2,7 @@ LY = lilypond
 
 UUID = C2A5FBE9-FEE5-4FEF-A17A-645255082EB8
 TITLE = Concertino\ Op.15
-COMPOSER = Ferdinand\ Küchler
+COMPOSER = Ferdinand\ Kuechler
 PIECE = $(TITLE)\ -\ $(COMPOSER)
 
 GLOBALS = globals.ily
