@@ -12,7 +12,7 @@
 globalSettings= {
   \key es \major
   \time 4/4
-  \tempo Vivace
+  \tempo Moderato 4=100
   \mergeDifferentlyHeadedOn 
   \mergeDifferentlyDottedOn
   \numericTimeSignature

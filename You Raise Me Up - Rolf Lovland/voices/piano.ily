@@ -51,7 +51,7 @@ pianoTreble = {
     \break
     
     \key f \major
-    << { a4. f8 g4 f8. d16 } \\ { <c f>4 <c f> <bes d> <bes d> } >>
+    << { a4. f8 g4 f8. d16 } \\ { <c f>4 <c f> <bes d> <bes d> } >> |
     << {c8 f4.} \\ {a,4 <a c>} >> <a c f>8 e' <a, c f> a' |
     << {c4. f,8} \\ { <c f>4 <c f> } >> <f bes d> <d f c'> |
     << {a'8 g4.} \\ {<c, f>4 <c f>} >> <g c e>8 c' <e, g c> e' |
