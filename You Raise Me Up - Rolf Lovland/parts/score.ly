@@ -2,14 +2,15 @@
 
 \include "../globals.ily"
 \include "../voices/piano.ily"
+\include "../voices/guitar.ily"
 
 \header {
   instrument = "Partitur"
 }
 
-
 \score {
   <<
+    \new ChordNames { \germanChords \guitarChords }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." } { << \new Staff { \pianoTreble } \new Staff { \pianoBass } >> }        
   >>
   \layout {
