@@ -15,9 +15,9 @@ pianoTreble = \transpose g d {
       \break
       r4 <d g> r <d g> | r <a d> r <a d> | r <b e> r <b e> | r <a d> <a d>2 |
       \break
-      r4 <b e> r <b e> | r <d g> r <a d> | r <b e> r <a c> | r <b e> <b e>2 |
+      r4 <b e> r <b e> | r <d g> r <a d> | r <b e> r <a d> | r <b e> <b e>2 |
       \break
-      r4 <d g> r <d g> | r <a d> r <a d> | r <b e> r <b e> | r <a c> <a c>2 |
+      r4 <d g> r <d g> | r <a d> r <a d> | r <b e> r <b e> | r <a d> <a d>2 |
       \break    
       r4 <b e> r <b e> | r <d g> r <a d> | r <b e> r <a d> | 
     }     
@@ -34,7 +34,7 @@ pianoBass = \transpose g d {
     \clef bass
     r4 |
     \repeat volta 3 {
-      e4 r e r | g r d r | e r e r | d4 r r2 |
+      e'4 r e r | g r d r | e r e r | d4 r r2 |
       \break
       e4 r e r | g r d r | e r d r | e r r2 |
       \break
