@@ -11,7 +11,7 @@ pianoTreble = \relative {
   }
   \break
   \repeat volta 2 {
-    g'2 g4 | g2 g4 | a2 a4 | e2 e4 |
+    g2 g4 | g2 g4 | a2 a4 | e2 e4 |
     \break
     e2 e4 | e2 e4 | b4 b2  | b2 b4  |
   }
