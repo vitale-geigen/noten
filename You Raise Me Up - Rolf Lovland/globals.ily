@@ -15,6 +15,8 @@ globalSettings= {
   \tempo Vivace
   \mergeDifferentlyHeadedOn 
   \mergeDifferentlyDottedOn
+  \numericTimeSignature
+  \partial 4.
 }
 
 #(define (override-color-for-all-grobs color)
