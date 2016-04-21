@@ -12,4 +12,11 @@
   tagline = \markup { \composer - \title }    
 }
 
+globalSettings = {
+  \compressFullBarRests 
+  \key a \minor    
+  \tempo "Allegro moderato" 
+  \partial 16  
+}
+
 
