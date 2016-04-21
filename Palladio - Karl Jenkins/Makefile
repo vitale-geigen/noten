@@ -19,6 +19,7 @@ all: 	clean \
 		violinTwo \
 		violinThree \
 		violinFour \
+		violinFive \
 		cello \
 		guitar
 
@@ -60,6 +61,9 @@ violinThree: output
 
 violinFour: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 4\) $(PARTS_DIR)/violin4.ly
+
+violinFive: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 5\) $(PARTS_DIR)/violin5.ly
 
 cello: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violoncello\) $(PARTS_DIR)/cello.ly
