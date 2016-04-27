@@ -25,7 +25,7 @@ violinI = {
     
     <g, d' b' g'>4.( <d'' f>8) <c e>4\upbow <a f'>\upbow |
     <b d^1>\downbow <gis e'>\upbow <a^0 c^4>\downbow <f^2 d'^3>\upbow |
-    << { e'4(\downbow c8 b4) } \\ { e,2. } >> r4 |
+    << { e'4.(\downbow c8 b4) } \\ { e,2. } >> r4 |
     a,2~\mp\downbow \tuplet 3/2 { a8 c(\upbow e } c'8.^4 b16) |
     gis2(^1 a4)  e8.(^3 \< f16) \! | \break
     
