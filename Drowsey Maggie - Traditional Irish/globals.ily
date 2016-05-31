@@ -9,11 +9,19 @@
   opus = ""
   %instrument = "Violino"
   copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title - \opus }    
+  tagline = \markup { \composer - \title }    
 }
 
 globalSettings = {
   \tempo Allegro 4=120
   \time 4/4
-  \key g \major
+  \key d \major
 }
+
+#(define (override-color-for-all-grobs color)
+  (lambda (context)
+   (let loop ((x all-grob-descriptions))
+    (if (not (null? x))
+     (let ((grob-name (caar x)))
+      (ly:context-pushpop-property context grob-name 'color color)
+      (loop (cdr x)))))))

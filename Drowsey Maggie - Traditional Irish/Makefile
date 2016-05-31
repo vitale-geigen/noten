@@ -13,6 +13,8 @@ OUTPUT_DIR = target
 all: 	clean \
 		meta \
 		score \
+		violin \
+		accordion \
 		midi \
 
 meta: output
@@ -38,6 +40,13 @@ midi: output
 
 score: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
+
+violin: output
+		@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\) $(PARTS_DIR)/violin.ly
+
+accordion: output
+				@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Akkordeon\) $(PARTS_DIR)/accordion.ly
+
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
