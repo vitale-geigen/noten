@@ -12,14 +12,14 @@ violinI = {
     cis8( e a-.) e'( f g-.) f a16( g f e) d8( a) f\upbow |
     d8_0\downbow( f'16^3\downbow) e d^1 f^3  bes a g f e d  c^2 d e d c e^0  a g f e d c | \noBreak
     bes c d c bes d  g f e d cis b  a b cis b a cis  e d cis b a g |
-    f a( g f e d) bes8 d'-.( cis-.)  d,8.\downbow e16\upbow f g  a bes! c d e f | \noBreak
+    f a( g f e d) a8 d'-.( cis-.)  d,8.\downbow e16\upbow f g  a bes! c d e f | \noBreak
     g e c g e g  c g e c e g  a g f g a bes  c d e f g^2 a^1 |
     bes(^2 a bes) d e,^0 g^1  a^2( g a) c d,^2 f^1  g(^2 f g) bes c, e  f( e f) a g f | \noBreak
     e d e f e d  c bes c d c bes  a( bes c) f c a  f( g a) c a f |
     d( es f) bes f d  bes( c d) f d bes  g bes d g bes d  g bes g d bes g | \noBreak
     e!( g c) e g bes  c,( bes c) bes' c, bes'  f,( a c) e f a  c,( bes c) a' c, a' |
     e,( g c) e g bes  c,( bes c) bes' c, bes'  f,( a c) e f a  c,( bes c) a' c, a' | \noBreak
-    bes,(\f^1 d^1 f) a^1 bes d^4  e,(^2 d e) d'^4 e, d'  a,(^0 c^1 e) g^1 a c  d,(^2 c^1 d) c' d, c' |
+    bes,(\f d f) a^1 bes d^4  e,(^2 d e) d'^4 e, d'  a,(^0 c^1 e) g^1 a c  d,(^2 c^1 d) c' d, c' |
     g,(^3 bes d) f g bes  c,(^2 bes c) bes' c, bes'  f,( a c) e f a  c,( bes c) a' f d | \noBreak 
     bes a bes c d bes  g f g a bes g  e d e f g e  c e g c e8~^4 |
     e16 bes( a g f e  d cis b a) g' e  f d f a d cis  d a d f b a | \noBreak
