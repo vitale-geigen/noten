@@ -11,6 +11,9 @@ VOICES_DIR = voices
 OUTPUT_DIR = target
 
 all: 	clean \
+		score \
+		piano \
+		midi \
 		meta		
 
 meta: output
@@ -25,6 +28,16 @@ meta: output
 	@echo $(TITLE) >> $(OUTPUT_DIR)/meta.dat; \
 
 	@echo $(COMPOSER) >> $(OUTPUT_DIR)/meta.dat; \
+
+midi: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/midi.ly
+
+score: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
+	
+piano: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Piano\) $(PARTS_DIR)/piano.ly
+
 
 output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \

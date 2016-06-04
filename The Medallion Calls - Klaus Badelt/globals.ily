@@ -12,7 +12,9 @@
 globalSettings= {
   \key f \major
   \time 4/4
-  \tempo Moderato
+  \tempo Largo 4=50
+  \partial 4
+  \numericTimeSignature
   \mergeDifferentlyHeadedOn 
   \mergeDifferentlyDottedOn
 }
