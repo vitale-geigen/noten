@@ -54,10 +54,16 @@
        <c es g> 	^\markup { \fret-diagram-verbose #'((capo 3)(mute 6)(mute 1)(place-fret 4 5)(place-fret 3 5)(place-fret 2 4)) } | %c:m	
        <c es g a> 	^\markup { \fret-diagram-verbose #'((mute 6)(mute 1)(open 5)(place-fret 4 5)(place-fret 3 5)(place-fret 2 4)) } | %c:m6
        <c es g bes> 	^\markup { \fret-diagram-verbose #'((capo 3)(mute 6)(mute 1)(place-fret 4 5)(place-fret 2 4)) } | %c:m7
-       <d fis a c>1 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 6)(mute 1)(place-fret 4 7)(place-fret 2 7)) } | %d:7 
-       <d f as> 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 6)(mute 1)(place-fret 4 6)(place-fret 3 7)(place-fret 2 6)) } | %d:dim
-       <d f as c> 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 6)(mute 1)(place-fret 4 6)(place-fret 2 6)) } | %d:m7.5-
-       <d fis bes d> 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 1)(place-fret 4 8)(place-fret 3 7)(place-fret 2 7)) } | %d:aug
+       %<d fis a c>1 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 6)(mute 1)(place-fret 4 7)(place-fret 2 7)) } | %d:7        
+       <d fis a c>1 	^\markup { \fret-diagram-verbose #'((mute 6)(mute 5)(open 4)(place-fret 3 2)(place-fret 2 1)(place-fret 1 2)) } | %d:7 
+       
+       %<d f as> 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 6)(mute 1)(place-fret 4 6)(place-fret 3 7)(place-fret 2 6)) } | %d:dim
+       <d f as> 	^\markup { \fret-diagram-verbose #'((mute 6)(mute 5)(open 4)(place-fret 3 1)(place-fret 2 3)(place-fret 1 1)) } | %d:dim 
+       %<d f as c> 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 6)(mute 1)(place-fret 4 6)(place-fret 2 6)) } | %d:m7.5-
+       <d f as c> 	^\markup { \fret-diagram-verbose #'((mute 6)(mute 5)(open 4)(place-fret 3 1)(place-fret 2 1)(place-fret 1 1)) } | %d:m7.5-
+       %<d fis bes d> 	^\markup { \fret-diagram-verbose #'((capo 5)(mute 1)(place-fret 4 8)(place-fret 3 7)(place-fret 2 7)) } | %d:aug
+       <d fis bes d> 	^\markup { \fret-diagram-verbose #'((mute 6)(mute 5)(open 4)(place-fret 3 3)(place-fret 2 3)(place-fret 1 2)) } | %d:aug
+       
        \break
        <e gis b d> 	^\markup { \fret-diagram-verbose #'((open 6)(mute 1)(place-fret 5 2)(open 4)(place-fret 3 1)(open 2)) } | %e:7
        <f a c es> 	^\markup { \fret-diagram-verbose #'((capo 1)(mute 1)(place-fret 5 3)(place-fret 3 2)) } | %f:7
