@@ -12,9 +12,13 @@ OUTPUT_DIR = target
 
 all: 	clean \
 		score \
-		piano \
 		midi \
-		meta		
+		violinOne \
+		violinTwo \
+		violinThree \
+		trumpet \
+		piano \
+		meta
 
 meta: output
 	@echo $(UUID) > $(OUTPUT_DIR)/meta.dat; \
@@ -29,12 +33,25 @@ meta: output
 
 	@echo $(COMPOSER) >> $(OUTPUT_DIR)/meta.dat; \
 
-midi: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/midi.ly
 
 score: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/score.ly
+
+midi: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Partitur\) $(PARTS_DIR)/midi.ly
 	
+violinOne: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 1\) $(PARTS_DIR)/violin1.ly
+
+violinTwo: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
+
+violinThree: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 3\) $(PARTS_DIR)/violin3.ly
+	
+trumpet: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Trompete\) $(PARTS_DIR)/trumpet.ly
+
 piano: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Piano\) $(PARTS_DIR)/piano.ly
 
