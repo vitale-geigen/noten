@@ -6,23 +6,23 @@ pianoTreble = \relative c' {
   \globalSettings
   \clef treble
   \repeat volta 2 {
+    \tempo Largo 4=48
+    r8 <a d f> r <a d f>^\markup { \rounded-box A } r <a d f> r <a d f>  | 
+    r8 <a cis e> r <a cis e> r <a cis e> r <a cis e> | 
+    r8 <bes d g> r <bes d g> r <bes d g> r <bes d g> |
+  }
+  \alternative {
+   { 
+    <bes d g>4 <bes d> <cis e>2 |  
+   }
+   { 
+    <bes d>4 <cis e> <a d f>2~ | 
+    <a d f>2\fermata r2 |
+   }
+  }
+  \repeat volta 2 {
     \repeat volta 2 {
-      \tempo Largo
-      r8 <a d f> r <a d f>^\markup { \rounded-box A } r <a d f> r <a d f>  | 
-      r8 <a cis e> r <a cis e> r <a cis e> r <a cis e> | 
-      r8 <bes d g> r <bes d g> r <bes d g> r <bes d g> |
-    }
-    \alternative {
-     { 
-      <bes d g>4 <bes d> <cis e>2 |  
-     }
-     { 
-      <bes d>4 <cis e> <a d f>2~ | 
-      <a d f>2\fermata r2 |
-     }
-    }
-    \repeat volta 2 {
-      \tempo Allegro
+      \tempo Allegro 4=126
       r8 <a d f> r <a d f>^\markup { \rounded-box B } r <a d f> r <a d f> |
       r8 <a d f> r <a d f> r <a cis e> r <a cis e> |
       <bes d g>4. <c e g>4. <bes d g>4~ | 
@@ -44,7 +44,7 @@ pianoTreble = \relative c' {
     \tuplet 3/2 {<f' a c>2 <f a c>^\markup { \rounded-box C } <f a c>}|
     \tuplet 3/2 {<e g c>2 <e g c> <e g c>} |
     \tuplet 3/2 {<f a c>2 <f a c> <f a c>} |
-
+  
     \tuplet 3/2 {<d g c>2 <d g c> <d g c>} |
     r8 <d f bes> r <d f bes> r <d f bes> r <d f bes> |
     r8 <d g bes> r <d g bes> r <d g bes> r <d g bes> |
@@ -71,13 +71,13 @@ pianoBass = \relative c {
   \globalSettings
   \clef bass
   \repeat volta 2 {
-    \repeat volta 2 {
-      d4 a d a | a e' a, e' | g, d' g, d' | 
-    }
-    \alternative {
-      { g, bes a2 | }
-      { bes4 a d2~ | d2\fermata r2 | }
-    }
+    d4 a d a | a e' a, e' | g, d' g, d' | 
+  }
+  \alternative {
+    { g, bes a2 | }
+    { bes4 a d2~ | d2\fermata r2 | }
+  }
+  \repeat volta 2 {
     \repeat volta 2 {
     d4 a d a | d d a a | g4. c g4~ | 
     g8 c4. g2 | a4 e' a, e' | a, e' a, e' | d a d a |
@@ -95,9 +95,9 @@ pianoBass = \relative c {
     
     g4 d' g, d' | g, d' g, d' | a e' a, e' | 
   }
-  \alternative {
-    { a, a d a | }
-    { a a d \fermata s4 | }
-  }
+\alternative {
+  { a, a d a | }
+  { a a d \fermata s4 | }
+}
   
 }

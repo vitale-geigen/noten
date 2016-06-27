@@ -6,19 +6,19 @@ violinIII = \relative c' {
   \globalSettings
   \clef treble
   \repeat volta 2 {
+    \tempo Largo 4=48
+    d4-. ^\markup { \rounded-box A } d-. d2 |
+    r1 | 
+    g4-. g-. g2
+  }
+  \alternative {
+    { d4 f a2 |
+    \break }
+    { bes4 a f2~ | f2\fermata r8 f f[ f]}
+  }
+  \repeat volta 2 {  
     \repeat volta 2 {
-      \tempo Largo
-      d4-. ^\markup { \rounded-box A } d-. d2 |
-      r1 | 
-      g4-. g-. g2
-    }
-    \alternative {
-      { d4 f a2 |
-      \break }
-      { bes4 a f2~ | f2\fermata r8 f f[ f]}
-    }
-    \repeat volta 2 {
-      \tempo Allegro 
+      \tempo Allegro 4=126
       f4 ^\markup { \rounded-box B } e f d |
       f4 f a8 g f e | 
       \break
@@ -46,8 +46,8 @@ violinIII = \relative c' {
     a4 a a a |
   }
   \alternative {
-    { a8 a4 a8 a r r4^ \markup { \arrow-head #X #RIGHT ##t \rounded-box B } | }
-    { a8 a4 a8 a \fermata s4. | }
+    { a8 a4 a8 a r r4^\markup { \rounded-box B } | }
+    { a8 a4 a8 a \fermata s4.^\markup { \rounded-box A } | }
   }  
   \bar "|." 
 }
