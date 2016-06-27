@@ -6,11 +6,11 @@
 \score {
   \unfoldRepeats {
   <<    
-    %\new Staff \with { midiInstrument = #"violin" } { \violin }    
+    \new Staff \with { midiInstrument = #"violin" } { \violin }    
     \new PianoStaff \with { midiInstrument = #"accordion" } { <<
       \new Staff  { \pianoTreble }
       \new Staff  { \pianoBass }
-    >> }
+     >> }
   >>
   }
   \midi { }

@@ -2,7 +2,10 @@
 \include "../globals.ily"
 
 violin = {
+  
   \globalSettings
+  
+  \transpose c b, {
   \relative c'' {
     r2  c8 d es d | \bar "||" 
     c4. g'8 es g es c |
@@ -97,5 +100,5 @@ violin = {
       }
     }
     \bar "|."       
-  }
+  }}
 }

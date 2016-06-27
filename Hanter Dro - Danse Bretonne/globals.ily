@@ -14,7 +14,7 @@
 globalSettings = {
   \tempo Allegro 4=180
   \time 4/4
-  \key c \minor
+  \key b \minor
 }
 
 #(define (override-color-for-all-grobs color)
