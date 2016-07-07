@@ -1,6 +1,7 @@
 \version "2.18.2"
 
 \include "../globals.ily"
+\include "../voices/guitar.ily"
 \include "../voices/accordion.ily"
 
 \header {
@@ -9,6 +10,7 @@
 
 \score {
   <<    
+    \new ChordNames { \germanChords \guitarChords }
     \new PianoStaff \with { instrumentName = "Akkordeon" shortInstrumentName = "Akk" } { <<
       \new Staff  { \pianoTreble }
       \new Staff  { \pianoBass }

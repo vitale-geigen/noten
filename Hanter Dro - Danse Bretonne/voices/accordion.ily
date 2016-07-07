@@ -6,7 +6,7 @@ pianoTreble = {
   \transpose c b, {
     \relative c'' {
       r2  c8 d es d | \bar "||" 
-      c4. g'8 es g es c |
+      c4._\markup { \circle \musicglyph #"scripts.segno" } g'8 es g es c |
       d4 g f8 g f es |
       d4.  c8 es4 c4 |     
       \break
@@ -53,20 +53,20 @@ pianoTreble = {
         
         g4. g8 f4 bes |
         g es c d8 g |
-        f4. d8 es c d bes | \bar "||"
+        f4. d8 es_\markup {\box "A Coda" } c d bes | \bar "||"
       }
       \alternative {
         {
           c2 c8 d es f
         } {
-          c2 c8 d es d
+          c2 c8 d es d_\markup { \circle \musicglyph #"scripts.segno" }
         }
       } \bar "||"
       \break
       
-      c1~ |
+      c1~_\markup { \musicglyph #"scripts.coda" "CODA" } |
       c4 c c c8 d | \bar "||"
-      es4 c8 c c4 bes |
+      es4_\markup { \box { \musicglyph #"scripts.segno" \musicglyph #"scripts.segno" } } c8 c c4 bes |
       \break
       
       c2 d4 d |
@@ -94,7 +94,7 @@ pianoTreble = {
         { 
           c4 c8 c c4 c |
         }{ 
-          c4 c8 c c4 d |
+          c4_\markup{ \italic fin } c8 c c4 d_\markup { \box { \musicglyph #"scripts.segno" \musicglyph #"scripts.segno" } } |
         }
       }
       \bar "|."       
