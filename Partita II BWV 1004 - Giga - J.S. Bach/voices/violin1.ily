@@ -47,7 +47,7 @@ violinI = {
     bes^1 a'(^3 g^2 f^1 e^4 d)^3  c^2 d^3 e^0 f^1 g^2 bes,^1  a^0 g'(^2 f^1 e^4 d^3 c)^2  bes^1 c^2 d^1 e^2 f^3 a,^2 | \noBreak
     g^1 f'(^3 e^2 d^1 cis^2 b)^1  a b cis d e g, f a d a f a  d, f a f d f |
     bes,(^2 f'^2 d') f^1 e^0 cis^3  a,(^1 f'^2 d')^3 f^1 e^0 cis^3  g,(^0 f'^2 d')^3 f^1 e^0 d^3  bes' a( g f e d) | \noBreak
-    cis e f g a e  d( cis b a) e'( a,)  f( g a) f d' f,  e( f g) e c' e, |
+    cis e f g a e  d( cis b a) e'( g,)  f( g a) f d' f,  e( f g) e c' e, |
     d( e f) d bes'! d,  c(^1 d^2 e) c a' c,  bes(^1 c^2 d)^3 bes g'^2 d^0  g(^2 a^3 bes)^4 g^2 es'^3 g,^2 | \noBreak
     a,(^1 b^2 cis)^3 a^1 g'^3 a,^1  g'(^2 a^3 bes)^4 g^2 cis^1 g^2  f(^1 g^2 a)^3 f^1 d'^2 a^0  d(^2 e^3 f)^4 d^2 b'^3 d,^2 |
     gis,^3 a^0 b cis d e  f( e d cis d)^3 gis,^4  a^0 cis d e f g!  a bes! e,( f g)^2 cis,^3 | \noBreak
