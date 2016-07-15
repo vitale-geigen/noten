@@ -1,7 +1,7 @@
 \version "2.18.2"
 
 violinI = { 
-  \tempo Allegro 4=120
+  \tempo Allegro 4=98
   \key f \major
   \time 4/4  
   \relative g' {
