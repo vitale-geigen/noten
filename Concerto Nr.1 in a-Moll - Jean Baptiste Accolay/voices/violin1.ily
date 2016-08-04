@@ -135,6 +135,41 @@ violinI = {
     
     g4.(^4 \ff _\markup { \italic "ritenuto" } f8)^3 e^3( d cis d) | 
     f( e) b^2([ c)] a( bes) f^3([ d^3)] |
-    c16( e,) f e gis^3 a b c e^4 e,\< c'4^3\fermata( \! \> b8^3) \! | 
+    c16( e,) f e gis^3 a b c e^4 e,\< c'4^3\fermata( \! \> b8^3) \! | \break
+    
+    \tuplet 3/2 4 { a8^0 \p \downbow ^\markup { \bold "a tempo" } c(\upbow a e'->^0) c( a f'->^1) c( a e'->^0) c( a } |
+    \tuplet 3/2 4 { a'->) \< c,( a c'->^4) c,( a b'^\markup { \italic segue }) c,( a a') c,( a \! } |
+    \tuplet 3/2 4 { g'\mf) d( a d,) d'( a g') \> d( a f') d( a } | \break
+    
+    \tuplet 3/2 4 { e'^0) d( b f) d'( b e,) d'( b gis') d( b \!  } |
+    \tuplet 3/2 4 { a')\p c,(\upbow a e'^0) c( a f'_\markup{ \italic cresc. }) c( a e') c( a } |
+    \tuplet 3/2 4 { a') \< c,( a c') c,( a b') c,( a a') c,( a \! } | \break
+    
+    \tuplet 3/2 4 { g')\f d( a d,) d'( a g') \> d( a f') d( a } |    
+    \tuplet 3/2 4 { e'^0) d( b f) d'( b e,) d'( b gis') d( b \!  } |
+    \tuplet 3/2 4 { a')\p c,(\upbow a e'^0) c( a e'_\markup{ \italic cresc. }) c( a a') c,( a } | \break
+    
+    \tuplet 3/2 4 { g') d( b f->) b( d g\prall_\markup{ \italic cresc. }) fis( g b) a( f } |
+    \tuplet 3/2 4 { e) e( c g') e( c g') e( c c') e,( c } |
+    \tuplet 3/2 4 { b') fis( \< dis a) dis( fis b\prall) ais( b c) \! b( a } | \break
+    
+    \tuplet 3/2 4 { gis)\f e( gis b) gis( b d) b( d f) e( d } |
+    \tuplet 3/2 4 { c) e( c a) c( a e) a( e c) e( c } |
+    \tuplet 3/2 4 { b) e( gis b) gis( b d) b( d f) e( d } | \break
+    
+    \tuplet 3/2 4 { c) e( c a^1) c( a e^0) a^3( e c) e^4( c } |
+    \tuplet 3/2 4 { b) ais'^1( b d->) ais( b d->) ais( b d->) ais( b } |
+    \tuplet 3/2 4 { d->) ais( b d->) ais( b d->) ais( b d->) ais( b } | \break
+    
+    \tuplet 3/2 4 { d->^\markup { \bold "  poco   a   poco   rit." }) ais( b d--->) cis-- b-- a gis^2 fis^1 e^0 d cis } |
+    \tuplet 3/2 4 { b a gis fis^2 e dis^1 e^1 fis gis a^0\upbow _\markup { \italic dim. } ( b^1 bis^2) } \break
+    
+    \key a \major
+    \time 4/4
+    
+    cis4.^2\p ^\markup { MAJEUR } ^\markup { \bold "a tempo" } \< d8^3( dis^4 e^0 a gis) \! |
+    b4.^4( \> gis8) e4( \! d) |
+    cis4^2 a^0^4 eis'16^2( fis gis fis eis fis d b) |
+    a2( gis4) r | \pageBreak
   }
 }
