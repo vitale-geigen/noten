@@ -18,13 +18,13 @@ violinI = {
       \break
       
       g4 a bes8 bes4 bes8 |
-      bes4 c a g |
+      bes4 c a f |
       bes4 a8 bes g4. g8 |
       g4 f g2
       \break
       
       g4 a bes8 bes4 bes8 |
-      bes4 c a g |
+      bes4 c a f |
       bes4 a8 bes g4. g8 |
       g4 f g2
   }
