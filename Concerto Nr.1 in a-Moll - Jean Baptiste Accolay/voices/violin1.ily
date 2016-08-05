@@ -128,13 +128,13 @@ violinI = {
     f4.( \> e8) \! \tuplet 3/2 4 { e8( d) c b(^2 ais b) } |
     d2( \tuplet 3/2 4 { c8) a,(^0\upbow\p b^1 c e a)  } | \pageBreak
     
-    a2( \tuplet 3/2 4 { gis8) b,( c d gis b) } |
+    a2( \tuplet 3/2 4 { gis8) b,( c d gis^2 b^2 ) } |
     b2( \tuplet 3/2 4 { a8) c,^2(\mp d e^0 \< a^1 c) \! } | 
-    c2( \tuplet 3/2 4 { b8) d,(\mf e f \< b d^4) \! } |
-    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1(\upbow d^1 e) } | \break
+    c2( \tuplet 3/2 4 { b8) d,^1(\mf e f \< b d^2) \! } |
+    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1\upbow d^1 e } | \break
     
     g4.(^4 \ff _\markup { \italic "ritenuto" } f8)^3 e^3( d cis d) | 
-    f( e) b^2([ c)] a( bes) f^3([ d^3)] |
+    f^4( e^3) b^1([ c)] a^1( bes) f^3([ d^3)] |
     c16( e,) f e gis^3 a b c e^4 e,\< c'4^3\fermata( \! \> b8^3) \! | \break
     
     \tuplet 3/2 4 { a8^0 \p \downbow ^\markup { \bold "a tempo" } c(\upbow a e'->^0) c( a f'->^1) c( a e'->^0) c( a } |
@@ -179,7 +179,7 @@ violinI = {
     
     cis4.\downbow d8( eis^1 fis^1 gis b) |
     a2( fis8) cis'4^3( a8^1) |
-    gis4.(\downbow d'8^4) cis8( b a gis^1) |
+    gis4.^1(\downbow d'8^4) cis8( b a gis^1) |
     b2^2( a4) r | \break
     
     fis4.^3\downbow( gis16 fis eis8) fis( gis a |
@@ -211,7 +211,7 @@ violinI = {
     cis d e fis gis a^1 b cis e,^2(_\markup{ \italic cresc. } a,^0) cis^2 d e^4( a,) cis e^0 |
     fis d a fis d fis a d fis( b,) dis e^0 fis( b,) dis fis | \break
     
-    gis e^0 b gis fis gis b e^0 gis^2( cis,) eis^1 fis^1 gis,( cis) eis^1 gis^2 |
+    gis e^0 b gis fis gis b e^0 gis^2( cis,) eis^1 fis^1 gis( cis,) eis^1 gis^2 |
     a fis cis a fis a cis fis b( e,) gis a^1 b^2( e,^0) b'^1 d | \pageBreak
     
     cis(\f e d cis) b( d cis b) a^1( cis b a) g^2( b a g) |
@@ -220,8 +220,8 @@ violinI = {
     c( a) fis-- d-- fis( a) c-- fis-- b( a gis a) b( a fis d) |
     c( a) fis-- d-- fis( a) c-- fis-- b( a gis a) b( a fis d) | \break
     
-    c( a) fis-- dis-- fis( a) c-- fis-- a( fis c'^4 a) fis( dis^4 c a) |
-    c( a) fis-- dis-- fis( a) c-- fis-- a( fis c'^4 a) fis( dis^4 c a) | \break
+    c( a) fis-- dis-- fis( a) c-- fis-- a( fis c'^4 a) fis( dis^3 c a) |
+    c( a) fis-- dis-- fis( a) c-- fis-- a( fis c'^4 a) fis( dis^3 c a) | \break
     
     e'( fis)\< gis-- a-- gis( a^1) b-- cis-- a( b) cis^1-- d-- cis( d) e-- fis-- |
     e8 fis16-- e-- dis-- e-- fis-- e-- \! e'2^0^3\fermata\ff | \break
