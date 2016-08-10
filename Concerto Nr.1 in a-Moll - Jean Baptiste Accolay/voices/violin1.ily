@@ -197,21 +197,21 @@ violinI = {
     fis e^0 cis a^0 gis16 e d^4 b d8^2\fermata( cis^1) | \break
     
     a16\fp\downbow^\markup { \bold "a tempo" } e' a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
-    cis\downbow  e^0 fis gis^2 a^2( gis b a) cis^4( b a gis fis^4 e d^2 cis^2) | \break
+    cis\downbow  e^0 fis gis a^3( gis b^2 a^1) cis^3( b a^1 gis^2 fis^1 e d cis) | \break
     
-    b\downbow fis b cis d( e^4 cis) d\upbow b b d e^0 fis( g e) fis\upbow |
-    d ais'^1\upbow b cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
+    b\downbow fis b cis d( e^4 cis) d\upbow b b d^1 e^2 fis^3( g^4 e) fis\upbow |
+    d^1 ais'^2\upbow b^2 cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
     
-    a16\fp\downbow^\markup { \bold "a tempo" } e a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
-    cis\downbow  e^0 fis gis^2 a^2( gis b a) cis^4( b a gis fis^4 e d^2 cis^2) | \break
+    a16\downbow e a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
+    cis\downbow  e^0 fis gis a^3( gis b^2 a^1) cis^3( b a^1 gis^2 fis^1 e d cis) | \break
     
-    b\downbow fis b cis d( e^4 cis) d\upbow b b d e^0 fis( g e) fis\upbow |
-    d ais'^1\upbow b cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
+    b\downbow fis b cis d( e^4 cis) d\upbow b b d^1 e^2 fis^3( g^4 e) fis\upbow |
+    d^1 ais'^2\upbow b^2 cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
     
     cis d e fis gis a^1 b cis e,^2(_\markup{ \italic cresc. } a,^0) cis^2 d e^4( a,) cis e^0 |
     fis d a fis d fis a d fis( b,) dis e^0 fis( b,) dis fis | \break
     
-    gis e^0 b gis fis gis b e^0 gis^2( cis,) eis^1 fis^1 gis( cis,) eis^1 gis^2 |
+    gis e^0 b gis e gis b e^0 gis^2( cis,) eis^1 fis^1 gis( cis,) eis^1 gis^2 |
     a fis cis a fis a cis fis b( e,) gis a^1 b^2( e,^0) b'^1 d | \pageBreak
     
     cis(\f e d cis) b( d cis b) a^1( cis b a) g^2( b a g) |
