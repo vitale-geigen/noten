@@ -202,7 +202,7 @@ violinI = {
     b\downbow fis b cis d( e^4 cis) d\upbow b b d^1 e^2 fis^3( g^4 e) fis\upbow |
     d^1 ais'^2\upbow b^2 cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
     
-    a16\downbow e a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
+    cis16\downbow e, a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
     cis\downbow  e^0 fis gis a^3( gis b^2 a^1) cis^3( b a^1 gis^2 fis^1 e d cis) | \break
     
     b\downbow fis b cis d( e^4 cis) d\upbow b b d^1 e^2 fis^3( g^4 e) fis\upbow |
