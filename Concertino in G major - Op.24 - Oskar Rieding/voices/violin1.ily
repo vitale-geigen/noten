@@ -2,233 +2,99 @@
 
 \include "../globals.ily"
 
-violinI = \relative c'' { 
-  \key d \major  
+violinI = \relative g {   
+  \key g \major  
   \clef treble 
-  \tempo "Allegro moderato" 
-  \partial 8   
-  a8\upbow \f
-  | d8 d d d d cis16 b a8 g16 fis %1
-  | e4 a fis8 e d a' %2
-  | fis'8 fis fis fis fis e16 d e8 d16 cis %3
-  \break
-  | b4 e cis8 b a e' %4
-  | a8 a a a a g16 fis b8 a %5 
-  \noBreak
-  | g8 g g g g fis16 e a8 g %6
-  | fis16 a g fis e g fis e d fis e d cis e d cis %7
-  \break
-  | b16 d cis b a cis b gis a8 a, r8 a'\upbow\f %8
-  | a16 d cis d fis e d cis b8-. g-. r8 a\downbow\p %9
-  | a16 d cis d fis e d cis b8-. g-. r8 b8\upbow\f %10
-  \break
-  | b16 e d e g fis e d cis8-. a-. r8 b8\downbow\p %11
-  | b16 e d e g fis e d cis8-. a-. r8 a,\upbow %12
-  | a16 d cis d a d cis d b e d e b e d e %13
-  \break
-  | cis\mf fis e fis cis fis e fis d g fis g d g fis g %14
-  | e a g a e a g a fis b a b fis b a b %15
-  | g\f cis b cis g cis b cis d8-. d,-. r8 a'\upbow %16
-  \break
-  | b8 a16 g a8^4 g16 fis e8 a, r8 a'\downbow\p %17
-  | b8 a16 g a8^4 g16 fis e8 a, r8 a'\upbow\f %18
-  | d8 d d d d cis16 b a8 g16 fis %19
-  \break
-  | e4 a fis8 e d a' %20
-  | fis'8 fis fis fis fis e16 d e8 d16 cis %21
-  | b4 e cis8 b a e' %22
-  | a8 a a a a g16 fis b8 a %23
-  \break
-  | g8 g g g g fis16 e a8 g %24
-  | fis16 a g fis e g fis e d fis e d cis e d cis %25
-  | b16 d cis b a cis b gis a8-. a,-. r8 a'\downbow %26
-  \break
-  | a'16 g fis e d cis b a b8-. g-. r8 b\upbow %27
-  | b'16 a g fis e d cis b cis8-. a-. r8 cis\downbow %28
-  | cis'16^3 b a g fis e d cis^2 d8-. b-. r8 d^1\upbow %29
-  \break
-  | d'16 cis b a g^4 fis e d cis^2 b a b cis d e fis %30
-  | g16 fis e d cis b a g fis e d e fis g a b %31
-  | cis16 b a g fis e d^4 cis d8^0-. d'-. r8 fis,\downbow %32
-  \break
-  | fis8 g16 a^0 b8 a16^4 g fis8 g16 fis cis8 fis %33
-  | g8 a b cis fis d16 cis b8 fis' %34
-  | fis8 g16 a b8 a16 g fis8 g16 fis cis8 fis %35
-  \break
-  | g8 fis e d cis fis16 d b8 fis'\downbow %36
-  | b8 g16 fis e8 fis16 g a8 fis16 e d8 e16 fis %37
-  | g8 e16^4 d cis8 d16 e fis8 d16 cis b8 fis\f %38
-  \break
-  | b8 cis16 d e8 d16 cis b8 d16 cis b8 fis %39
-  | g8 a b cis d d, r8 e\upbow %41
-  | a8^4 a a a a gis16 fis e8 d16^4 cis %42
-  | b4 e4 cis8 b a e' %43
-  \break
-  | cis'8 cis cis cis cis b16 a b8 a16^4 gis %44
-  | fis4 b gis8 fis e b' %45
-  | e8 e e e e d16 cis fis8 e %46  
-  | d8 d d d d cis16 b e8 b %47
-  \break
-  | a16 cis b a g b a g fis a g fis e g fis e %48
-  | d16 fis e d cis e d cis b8-. b'-. r8 fis\f %49
-  | b16( fis d fis) b( fis d fis) b( fis d fis) d'( b fis b) %50
-  \break
-  | cis( g e g) cis( g e g) cis( g e g) e'( cis g cis) %51
-  | b\p( fis d fis) b( fis d fis) b( fis d fis) d'(b fis b)  %52
-  \break
-  | cis16( g e g) cis16( g e g) cis16( g e g) e'( cis g cis) %53
-  | d16 b fis d d' b fis d d' b fis d d' fis d b %54
-  \break
-  | e16 cis g e e' cis g e e' cis g e e'^0 g e cis %55
-  | a16 fis' g fis b, fis' g fis cis16 fis g fis gis fis ais fis %56
-  \break
-  | b16\f fis d b cis e d cis b8-. b,-. r8 a'\upbow %57
-  | d8 d d d d cis16 b a8^0 g16 fis %58
-  | e4 a^4 fis8 e d a'^0 %59
-  \break
-  | fis'8 fis fis fis fis e16 d e8 d16 cis %60
-  | b4 e4 cis8 b a e' %61
-  | a8 a a a a g16 fis b8 a \noBreak %62
-  | g8 g g g g fis16 e a8 g %63
-  \break
-  | fis16 a g fis e d cis b a b cis d e8-. a, %64
-  | d8 d d d d a r8 fis\downbow %65
-  | g8 fis16 e a8^4 a, d4.^2\fermata s8 %66
-  | \bar "|."
-  \break
-  \tempo "Siciliano Larghetto"
-  \time 6/8
-    b'8.^1( cis16 b8) b4( fis8^2) \noBreak %67
-  | cis'8.( d16 cis8) cis4. \noBreak %68
-  | fis8.^1( g16 fis8) e8.^4( d16 cis8) \noBreak %69
-  | d8( cis b) b4. \noBreak %70
-  | d8.^1( e16 d8) d4-.( a8^2) \noBreak %71
-  | e'8.( fis16 e8) e4. \noBreak %72
-  | g8.( fis16 e8) d8.^3( cis16 b8) %73
-  \break
-  | a8^2( b cis) d4.^4^0 \noBreak %74
-  | fis8.^1( g16 fis8) d4( b8) \noBreak %75
-  | fis8.( g16 fis8) d4^4( b8) \noBreak  %76
-  | c8.^1( d16 e8) c'8( d e) \noBreak %77
-  | r8 b8^3( ais) b4.\fermata %78
-  \bar "||" \noBreak  
-  \tempo "Adagio"
-  | e4.^2\downbow a,4^2 b8 \noBreak %79  
-  | cis2.\upbow %80  
-  \bar "||"
-  \time 3/8
-  \tempo "Allegro assai"
-  \break
-    d8-.^3\f fis-. a-. %80
-  | b16( a) g fis e d \noBreak %81
-  | cis8-. e^0-. a \noBreak %82
-  | e8^0-. cis-. a^0-. \noBreak %83
-  | b8-. d-. fis-. \noBreak %84
-  | g16( fis) e^0 d cis b \noBreak %85
-  | a8^0-. cis-. fis-. \noBreak %86
-  | cis8-. a^0-. fis-. \break %87
+  \tempo "Allegro moderato." 
+  \compressFullBarRests
+  R1*8 
+  | g4( \mf b16 d g^1 b) a8^2([ g^1 g'8.^4 fis16)] 
+  | e16^2\<( fis e dis e fis g a) b4.^2\!\f b8( 
+  | d8 c e,^0 fis^1) a( g b, d^1) \break
   
-  | g8-. b-. d-. \noBreak %88
-  | e16( d) cis b a g \noBreak %89
-  | fis16 e fis g a^4 fis \noBreak %90
-  | g16 fis g a^0 b g \noBreak %91
-  | a16 b cis d e^0 fis \noBreak %92
-  | g16 fis g a^1 b cis \noBreak %93
-  | d8-. a-. fis-. \noBreak %94
-  | d4 r8 \break %95
+  | fis8.^3( e16 a,^0\> b^1 c d) c4\!( b8\mf) d,_0( \downbow
+  | g8.[ fis16 a8.^2 g16]) b4^3( a8) a^0(  
+  | e'8.^2[ dis16 e8. g16]) fis4.\< fis8^1^ \!(
+  | g4\f) gis  b8( a) g( e^0) \break 
   
-  | b16\f cis d cis d b \noBreak %96
-  | cis8-. fis4 \noBreak %97
-  | b,16\p cis d cis d b \noBreak %98
-  | cis8-. fis4 \noBreak %99
-  | d16\f e^0 fis e^0 fis d \noBreak %100
-  | e8^0 a4 \noBreak %101
-  | d,16\p^1 e fis e^0 fis d \noBreak %102
-  | e8 a4^0^4 \break %103
+  | d8( cis16 d) e^4( d) c b a\> g fis e d^0 c b a\!
+  | g4 g'16( a b c) d8([ b) e^4( cis)]
+  | d4 b16( c d e) d8([ b') a( g)] \break  
   
-  | b16^2 a g^4 fis e d \noBreak %104
-  | g16^2 fis e d cis b \noBreak %105
-  | a16 g fis g a b \noBreak %106
-  | cis b a b cis e \noBreak %107  
-  | d8-.^3\f fis-. a-. %108
-  | b16( a) g fis e d \noBreak %109
-  | cis8-. e-.^0 a \noBreak %110
-  | e8-.^0 cis-. a-.^0 \break %111
+  | fis4 fis,16( g a b) c8([ a^0) d( b)]
+  | c4 a16( b c d) c8([ a'^0^4) a,^0( d)]
+  | b4 g16( a b c) d8([ b) e( cis)] 
+  | d4 b16\<( c d^1 e) f8^3([ d') e,^2( d'\!)]
+  | c4\f d16( c e,^0 b'^2) a4^1 b16( a e^0 fis^1)
+  | a8([ g) b,( d^1)] fis8.^3\>( e16) d16( a^2 c^4 b\!) \break
   
-  | b8-. d-. fis-. \noBreak %112
-  | g16( fis) e^0 d cis b \noBreak %113
-  | a8-. cis-. fis-. \noBreak %114
-  | cis8-. a-. fis-. \noBreak %115 
-  | g8-. b-. d-. \noBreak %116
-  | e16( d) cis b a g \noBreak %117
-  | fis16 e fis g a^4 fis \noBreak %118
-  | g16 fis g a^0 b g \break %119
+  | g4^1\mf d16^0( fis^2 g b) e8^4( d) b'16( a g fis) 
+  | a8( g) a16( g b, e^4) d8( cis) e16^4( cis a^0 g) 
+  | fis4 d16( e fis g) b8( a^0) d16^1( fis a d) 
+  | cis8( b) cis16( b a g^4) fis8^3 d,16^0\<( e^1 fis e d cis\!)
+  | b8\f b16( d^4) d( cis) cis( e) e( d^0) d( fis) fis( e) e( g) \break
   
-  | a16^0 b cis d e fis \noBreak %120
-  | g16 fis g a^1 b cis \noBreak %121
-  | d8-. a-. fis-. \noBreak %122
-  | d4 r8 \noBreak %123
-  | d,8-.\f fis-. a-.^4 \noBreak %124
-  | fis8-. a-.^0 d-. \noBreak %125
-  | a8-. d-. fis-. \noBreak %126
-  | e8-.^0 a,-.^0 r \noBreak %127
-  | d,8-.\p fis-. a-. \noBreak %128
-  | fis8-. a-. d-. \break %129
+  | fis8 b16 cis d( cis) b a gis( fis) e d e( d) cis b
+  | a8 a16( cis) cis( b) b( d^2) d( cis) cis( e) e( d) d( fis)
+  | e8^3 fis16 gis a( gis) a( b) cis^4 d e fis g a b cis 
+  | d8\f d,16^1( e f g f e d8) d,16^0( e^1 f g f e \break
   
-  | a8-. d-. fis-. \noBreak %130
-  | e8-. a,-. r \noBreak %131
-  | a'8-.\f\downbow e-. cis-. \noBreak %132
-  | fis-. d-. b-. \noBreak %133
-  | cis-. d-. cis-. \noBreak %134
-  | a-. gis-. fis-. \noBreak %135
-  | cis-. fis-. a-. \noBreak %136
-  | cis-. a-. fis-. \noBreak %137
-  | gis-. b-. a-. \noBreak %138
-  | fis4 r8 \break %139
+  | d8)[ d( d'^>) cis(] b^>[) b( b'^>) b](
+  | a8)^> fis16\upbow a,^0 g' a,^0 a'^1 a,^0 b' a,^0 a' a,^0 b' a,^0 cis' a,^0 
+  | d' a,^0 a' a,^0 b' a,^0 cis'^1 a,^0 d' a,^0 cis' a,^0 d' a,^0 e'' a,, \pageBreak
   
-  | a8-.^0 cis-. e-.^0 \noBreak %140
-  | fis16( e) d cis b a^0 \noBreak %141
-  | gis8-. b-. e-.^4 \noBreak %142
-  | b-. gis-. e-. \noBreak %143
-  | fis-. a-.^0 cis-. \noBreak %144
-  | d16( cis) b a gis fis \noBreak %145
-  | e8-. gis-. cis-. \noBreak %146
-  | gis-. e-. cis-. \noBreak %147
-  | d-.^0 fis-. a-.^0 \break %148
+  | fis''8.\f([ e16) e8.( dis16)] fis8( e) e\downbow dis\upbow 
+  | e8\downbow cis4^\markup {\italic rit.} a^1 g^4\>( e8^2\!) \bar "||"
+  | \key d \major d2^1\p cis4^1( d^1) 
+  | fis4.^3( e8) e2 
+  | a,4^0( g'^4) fis( e) \break
   
-  | b16( a) gis fis e d \noBreak %149
-  | cis b cis d e cis \noBreak %150
-  | d cis d e fis d  \noBreak %151
-  | e fis gis a b cis \noBreak %152
-  | d cis d e fis gis \noBreak %153
-  | a8-. e-. cis-. \noBreak %154
-  | a4 r8 \noBreak %155
-  | d16^1\downbow( a^0) fis'\upbow a,^0 e' a,^0 \break %156
+  | d8\mf( d' cis b) a2 
+  | d2\f a4( b)
+  | cis4.( a8) e4^2( dis) 
+  | d8( b' ais b) cis( b gis^2 e^0) 
+  | a4.( gis8) b8\>( a g e^0\!) \break
   
-  | d16^1 a fis' a, d a \noBreak %157
-  | e'^0 a, g' a, fis' a, \noBreak %158
-  | e' a, g' a, e' a, \noBreak %159
-  | fis' a, g' a, a' a,  \noBreak %160
-  | b' a, g' a, e' a, \noBreak %161
-  | a' a, fis' a, a' a,  \noBreak %162
-  | g' a, e' a, cis( a) \break %163
+  | d2^1\p cis4^1( d^1)
+  | fis4.( e8) e2 
+  | a,4^0\<( g'^4) fis4( e\!) 
+  | d8\<( fis^1 a d^2) fis2^4\! 
+  | fis4.\f( cis8) d^2( e16 d cis8 d) 
+  | e4.^3( b8^2) cis( d16 cis b8 cis) \break
   
-  | d8-. fis-. a-. \noBreak %164
-  | b16( a) g fis e d \noBreak %165
-  | cis8-. e-.^0 a-. \noBreak %166
-  | e-.^0 cis-. a-.^0 \noBreak %167
-  | b-. d-. fis-. \noBreak %168
-  | g16( fis) e d cis b \noBreak %169
-  | a8-.^0 cis-. fis-. \noBreak %170
-  | cis-. a-.^0 fis-. \noBreak %171
-  | g-. b-. d-. \break %172
+  | d8.^>( a16) d8.^>( ais16) cis8( b) a( g^4)
+  | fis4^3( g16 fis e fis) g8( b,^1 cis\>^\markup {\italic rit.} e^4\!) \noBreak
+  | d8\mf^\markup {\italic "a tempo."} d,16( e fis8) d'16^1( e fis8^3) d( d') fis,^3(
+  | g8) e,16^1( fis g8) e'16^2( fis g8) e^0( e'^0) b( \break
   
-  | e16( d) cis b a g \noBreak %173
-  | fis e fis g a fis \noBreak %174
-  | g fis g a b g \noBreak %175
-  | a b cis d e fis \noBreak %176
-  | g fis g a^1 b cis \noBreak %177
-  | d8-. a-. fis-. \noBreak %178
-  | d4 r8 \break %179
+  | d16 cis) cis( a) cis( b) b( g^2) b( a) a( fis) a( g) g( e^0) 
+  | g( fis) e^4 d cis( d) e^4 d cis( b) a^4 g a^4( g) fis e \break
+  
+  | d8^0 d16( e fis8) d'16^1( e fis8) d( d') fis,^3(
+  | g8) e,16^1( fis g8) e'16^2( fis g8) e8^0( e'^0) b(
+  | d16 cis) cis( a) cis( b) b( g^2) b( a) a( fis) a( g) g( e^0) \break
+  
+  | g( fis) e^4 d cis( d) e^4 d cis( b) a^4 g a^4( g) fis e
+  | d8 e16( fis) g a b cis d e d cis d fis b a \break
+  
+  | gis8 b16( a) a( gis) gis( fis) fis( e) e( d) d( cis) cis( b) 
+  | a8 b16( cis) d e fis gis a gis a^1 b cis b a cis \break
+  
+  | b8 d16( cis) cis( b) b( a) a( gis^4) gis( fis) fis( eis) gis( eis) 
+  | fis8^3\f fis16( a) a( cis^1) cis( fis) fis8 fis,( fis') e(
+  | d8) d,16^1( fis) fis( b) b( d) d8 d,( d') c( \break
+  
+  | b8) b,16^1( d) d( g) g( b) b8 b,( b') a(
+  | g8)\f e,16( g b e g b^2 cis8^4^0) d,,\downbow^2 cis\downbow b\downbow  
+  | a8\downbow d16^0\upbow fis a^0 d^1 fis a d8 gis,,,\downbow a\downbow b\downbow \break
+  
+  | a8\downbow cis16 e a^0 cis e^0 a^1 cis8 a,,\downbow b\downbow cis\downbow 
+  | d8^4\downbow e16 fis g a^0 b cis d8\upbow e16^0 fis g a^1 b cis 
+  | d4 r r2 
+  | R1*7 \pageBreak
+  
+  | 
+  
+  \bar "|."
   
 }

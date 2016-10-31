@@ -13,7 +13,7 @@ violinI = \relative g {
   \tempo "Allegro moderato." 
   \compressFullBarRests
   R1*8 
-  | g4( \mf b16 d g b) a8^2([ g^1 g'8.^4 fis16)] 
+  | g4( \mf b16 d g^1 b) a8^2([ g^1 g'8.^4 fis16)] 
   | e16^2\<( fis e dis e fis g a) b4.^2\!\f b8( 
   | d8 c e,^0 fis^1) a( g b, d^1) \break
   
@@ -23,7 +23,7 @@ violinI = \relative g {
   | g4\f) gis  b8( a) g( e^0) \break 
   
   | d8( cis16 d) e^4( d) c b a\> g fis e d^0 c b a\!
-  | g4 g'16( a b cis) d8([ b) e^4( cis)]
+  | g4 g'16( a b c) d8([ b) e^4( cis)]
   | d4 b16( c d e) d8([ b') a( g)] \break  
   
   | fis4 fis,16( g a b) c8([ a^0) d( b)]
@@ -49,8 +49,8 @@ violinI = \relative g {
   | d' a,^0 a' a,^0 b' a,^0 cis'^1 a,^0 d' a,^0 cis' a,^0 d' a,^0 e'' a,, \pageBreak
   
   | fis''8.\f([ e16) e8.( dis16)] fis8( e) e\downbow dis\upbow 
-  | e8\downbow dis4^\markup {\italic rit.} a^1 g^4\>( e8^4\!) \bar "||"
-  | \key d \major d2\p cis4( d^1) 
+  | e8\downbow cis4^\markup {\italic rit.} a^1 g^4\>( e8^2\!) \bar "||"
+  | \key d \major d2^1\p cis4^1( d^1) 
   | fis4.^3( e8) e2 
   | a,4^0( g'^4) fis( e) \break
   
@@ -60,11 +60,11 @@ violinI = \relative g {
   | d8( b' ais b) cis( b gis^2 e^0) 
   | a4.( gis8) b8\>( a g e^0\!) \break
   
-  | d2\p cis4( d^1)
+  | d2^1\p cis4^1( d^1)
   | fis4.( e8) e2 
-  | a,4^0\<( g'^4) fis4( e\!) \noBreak
-  | d8\<( fis^1 a d) fis2\! \noBreak
-  | fis4.\f( cis8) d^2( e16 d cis8 d) \noBreak
+  | a,4^0\<( g'^4) fis4( e\!) 
+  | d8\<( fis^1 a d^2) fis2^4\! 
+  | fis4.\f( cis8) d^2( e16 d cis8 d) 
   | e4.^3( b8^2) cis( d16 cis b8 cis) \break
   
   | d8.^>( a16) d8.^>( ais16) cis8( b) a( g^4)
@@ -73,13 +73,13 @@ violinI = \relative g {
   | g8) e,16^1( fis g8) e'16^2( fis g8) e^0( e'^0) b( \break
   
   | d16 cis) cis( a) cis( b) b( g^2) b( a) a( fis) a( g) g( e^0) 
-  | g( fis) e^0 d cis( d) e^4 d cis( b) a^0 g a^4( g) fis e \break
+  | g( fis) e^4 d cis( d) e^4 d cis( b) a^4 g a^4( g) fis e \break
   
   | d8^0 d16( e fis8) d'16^1( e fis8) d( d') fis,^3(
   | g8) e,16^1( fis g8) e'16^2( fis g8) e8^0( e'^0) b(
   | d16 cis) cis( a) cis( b) b( g^2) b( a) a( fis) a( g) g( e^0) \break
   
-  | g( fis) e^0 d cis( d) e^4 d cis( b) a^0 g a^4( g) fis e
+  | g( fis) e^4 d cis( d) e^4 d cis( b) a^4 g a^4( g) fis e
   | d8 e16( fis) g a b cis d e d cis d fis b a \break
   
   | gis8 b16( a) a( gis) gis( fis) fis( e) e( d) d( cis) cis( b) 
@@ -109,7 +109,7 @@ violinI = \relative g {
     \new Staff \with { instrumentName = "" shortInstrumentName = "" } { \violinI }
   >>
   \layout {
-    indent = 1.5\cm
-    short-indent = 0.5\cm
+    indent = 1\cm
+    short-indent = 0\cm
   }
 }
