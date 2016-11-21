@@ -6,6 +6,7 @@
 \include "../voices/violin2.ily"
 \include "../voices/violin3.ily"
 \include "../voices/trumpet.ily"
+\include "../voices/guitar.ily"
 
 \header {
   instrument = "Partitur"
@@ -20,6 +21,7 @@
   \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." } { 
     << \new Staff { \pianoTreble } \new Staff { \pianoBass } >>
   }
+  %\new TabStaff { \tabFullNotation \guitar }
   >>
   \layout {
     indent = 1.5\cm
