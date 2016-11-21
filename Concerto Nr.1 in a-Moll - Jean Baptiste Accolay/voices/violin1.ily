@@ -128,13 +128,125 @@ violinI = {
     f4.( \> e8) \! \tuplet 3/2 4 { e8( d) c b(^2 ais b) } |
     d2( \tuplet 3/2 4 { c8) a,(^0\upbow\p b^1 c e a)  } | \pageBreak
     
-    a2( \tuplet 3/2 4 { gis8) b,( c d gis b) } |
+    a2( \tuplet 3/2 4 { gis8) b,( c d gis^2 b^2 ) } |
     b2( \tuplet 3/2 4 { a8) c,^2(\mp d e^0 \< a^1 c) \! } | 
-    c2( \tuplet 3/2 4 { b8) d,(\mf e f \< b d^4) \! } |
-    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1(\upbow d^1 e) } | \break
+    c2( \tuplet 3/2 4 { b8) d,^1(\mf e f \< b d^2) \! } |
+    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1\upbow d^1 e } | \break
     
     g4.(^4 \ff _\markup { \italic "ritenuto" } f8)^3 e^3( d cis d) | 
-    f( e) b^2([ c)] a( bes) f^3([ d^3)] |
-    c16( e,) f e gis^3 a b c e^4 e,\< c'4^3\fermata( \! \> b8^3) \! | 
+    f^4( e^3) b^1([ c)] a^1( bes) f^3([ d^3)] |
+    c16( e,) f e gis^3 a b c e^4 e,\< c'4^3\fermata( \! \> b8^3) \! | \break
+    
+    \tuplet 3/2 4 { a8^0 \p \downbow ^\markup { \bold "a tempo" } c(\upbow a e'->^0) c( a f'->^1) c( a e'->^0) c( a } |
+    \tuplet 3/2 4 { a'->) \< c,( a c'->^4) c,( a b'^\markup { \italic segue }) c,( a a') c,( a \! } |
+    \tuplet 3/2 4 { g'\mf) d( a d,) d'( a g') \> d( a f') d( a } | \break
+    
+    \tuplet 3/2 4 { e'^0) d( b f) d'( b e,) d'( b gis') d( b \!  } |
+    \tuplet 3/2 4 { a')\p c,(\upbow a e'^0) c( a f'_\markup{ \italic cresc. }) c( a e') c( a } |
+    \tuplet 3/2 4 { a') \< c,( a c') c,( a b') c,( a a') c,( a \! } | \break
+    
+    \tuplet 3/2 4 { g')\f d( a d,) d'( a g') \> d( a f') d( a } |    
+    \tuplet 3/2 4 { e'^0) d( b f) d'( b e,) d'( b gis') d( b \!  } |
+    \tuplet 3/2 4 { a')\p c,(\upbow a e'^0) c( a e'_\markup{ \italic cresc. }) c( a a') c,( a } | \break
+    
+    \tuplet 3/2 4 { g') d( b f->) b( d g\prall_\markup{ \italic cresc. }) fis( g b) a( f } |
+    \tuplet 3/2 4 { e^0) e^3(\upbow c^1 g'^1) e( c g') e( c c'^4) e,( c } |
+    \tuplet 3/2 4 { b'^2) fis^3( \< dis^1 a^0) dis^1( fis^3 b^2\prall) ais( b c) \! b( a } | \break
+    
+    \tuplet 3/2 4 { gis^1)\f e^0\upbow( gis^1 b^2) gis( b^2 d) b( d^2 f) e( d } |
+    \tuplet 3/2 4 { c) e( c a^1) c( a e^0) a( e c) e^4( c } |
+    \tuplet 3/2 4 { b) e^0(\upbow gis^1 b^2) gis( b^2 d) b( d^2 f) e( d } | \break
+    
+    \tuplet 3/2 4 { c) e( c a^1) c( a e^0) a^3( e c) e^4( c } |
+    \tuplet 3/2 4 { b) ais'^1( b d->) ais( b d->) ais( b d->) ais( b } |
+    \tuplet 3/2 4 { d->) ais( b d->) ais( b d->) ais( b d->) ais( b } | \break
+    
+    \tuplet 3/2 4 { d->^\markup { \bold "  poco   a   poco   rit." }) ais( b d--->) cis-- b-- a gis^2 fis^1 e^0 d cis } |
+    \tuplet 3/2 4 { b a gis fis^2 e dis^1 e^1 fis gis a^0\upbow _\markup { \italic dim. } ( b^1 bis^2) } \break
+
+    \key a \major
+    \time 4/4
+    
+    cis4.^2\p ^\markup { MAJEUR } ^\markup { \bold "a tempo" } \< d8^3( dis^4 e^0 a gis) \! | \noBreak
+    b4.^4( \> gis8) e4( \! d) | \noBreak
+    cis4^2( a'^0^4) eis16^2( fis gis fis eis fis d b) | \noBreak
+    a2( gis4) r | \pageBreak
+    
+    d'4.^3\downbow e16\upbow( d cis8 d b' gis) |
+    a4.^1\downbow e8^2( dis e fis gis) |
+    a8( cis4^3) b8( a) e\downbow d--^3\upbow( cis--) |
+    e4.^4( cis8^2 b4) r | \break
+    
+    cis4.\downbow d8( eis^1 fis^1 gis b) |
+    a2( fis8) cis'4^3( a8^1) |
+    gis4.^1(\downbow d'8^4) cis8( b a gis^1) |
+    b2^2( a4) r | \break
+    
+    fis4.^3\downbow( gis16 fis eis8) fis( gis a |
+    b8) e,^4( dis^3 d^3 cis^2) b'4^4( a8^3 |
+    gis8^2) cis,^2( b^1 ais^1 a^0) gis'4^4( fis8^3) |
+    e2^2 dis16^1(\upbow e^2 dis e gis^4 fis^3 e^2 d^1) | \break
+    
+    cis4.^2\p \< d8^3( dis^4 e^0 a gis) \! |
+    b4.^4( \> gis8) e4( \! d) |
+    cis4^2( a'^0^4) eis16^2( fis gis fis eis fis d b) |
+    a2( gis4) r | \break
+    
+    b2^3\downbow(_\markup { \italic cresc. } ais8) g'8^4( fis e) |
+    e8(\f d) d' _\markup { \italic largamente } cis b a gis^2 fis |
+    fis e^0 cis a^0 gis16 e d^4 b d8^2\fermata( cis^1) | \break
+    
+    a16\fp\downbow^\markup { \bold "a tempo" } e' a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
+    cis\downbow  e^0 fis gis a^3( gis b^2 a^1) cis^3( b a^1 gis^2 fis^1 e d cis) | \break
+    
+    b\downbow fis b cis d( e^4 cis) d\upbow b b d^1 e^2 fis^3( g^4 e) fis\upbow |
+    d^1 ais'^2\upbow b^2 cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
+    
+    cis16\downbow e, a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
+    cis\downbow  e^0 fis gis a^3( gis b^2 a^1) cis^3( b a^1 gis^2 fis^1 e d cis) | \break
+    
+    b\downbow fis b cis d( e^4 cis) d\upbow b b d^1 e^2 fis^3( g^4 e) fis\upbow |
+    d^1 ais'^2\upbow b^2 cis d( cis b a) gis^2( fis e d cis b e^4 d) | \break
+    
+    cis d e fis gis a^1 b cis e,^2(_\markup{ \italic cresc. } a,^0) cis^2 d e^4( a,) cis e^0 |
+    fis d a fis d fis a d fis( b,) dis e^0 fis( b,) dis fis | \break
+    
+    gis e^0 b gis e gis b e^0 gis^2( cis,) eis^1 fis^1 gis( cis,) eis^1 gis^2 |
+    a fis cis a fis a cis fis b( e,) gis a^1 b^2( e,^0) b'^1 d | \pageBreak
+    
+    cis(\f e d cis) b( d cis b) a^1( cis b a) g^2( b a g) |
+    fis( a g fis) e( g fis e) d^1( fis e d) cis^2( e d cis) | \break
+    
+    c( a) fis-- d-- fis( a) c-- fis-- b( a gis a) b( a fis d) |
+    c( a) fis-- d-- fis( a) c-- fis-- b( a gis a) b( a fis d) | \break
+    
+    c( a) fis-- dis-- fis( a) c-- fis-- a( fis c'^4 a) fis( dis^3 c a) |
+    c( a) fis-- dis-- fis( a) c-- fis-- a( fis c'^4 a) fis( dis^3 c a) | \break
+    
+    e'( fis)\< gis-- a-- gis( a^1) b-- cis-- a( b) cis^1-- d-- cis( d) e-- fis-- |
+    e8 fis16-- e-- dis-- e-- fis-- e-- \! e'2^0^3\fermata\ff | \break
+    
+    a,,,16^0\f( <cis e>) <cis e> <cis e> <fis cis>( <cis e>) <cis e> <cis e> gis^4( <d' e>) <d e> <d e> <d fis>( <d e>) <d e> <d e> |
+    a16( <cis e>) <cis e> <cis e> <fis cis>( <cis e>) <cis e> <cis e> gis^4( <d' e>) <d e> <d e> <d fis>( <d e>) <d e> <d e> | \break
+    
+    a16( <cis e>) <cis e> <cis e> <cis b'>( <cis a'>) <cis a'> <cis a'> <d gis>( <d fis>) <d fis> <d fis> <d gis>( <d fis>) <d fis> <d fis> |
+    <cis fis>( <cis e>) <cis e> <cis e> <cis fis>( <cis e>) <cis e> <cis e> <cis e>( <b e>) <b e> <b e> <b e>( <d e>) <cis e> <b e> | \break
+    
+    a16( <cis e>) <cis e> <cis e> <fis cis>( <cis e>) <cis e> <cis e> gis^4( <d' e>) <d e> <d e> <d fis>( <d e>) <d e> <d e> |
+    a16( <cis e>) <cis e> <cis e> <fis cis>( <cis e>) <cis e> <cis e> gis^4( <d' e>) <d e> <d e> <d fis>( <d e>) <d e> <d e> | \break
+    
+    a16( <cis e>) <cis e> <cis e> <cis b'>( <cis a'>) <cis a'> <cis a'> <d gis>( <d fis>) <d fis> <d fis> <d gis>( <d fis>) <d fis> <d fis> |
+    <cis fis>( <cis e>) <cis e> <cis e> <cis fis>( <cis e>) <cis e> <cis e> <cis e>( <b e>) <b e> <b e> <b e>( <d e>) <cis e> <b e> | \break
+    
+    a_\markup{ \italic cresc. }( <cis e>) <cis e> <cis e> e,( <b' e>) <b e> <b e> a( <cis e>) <cis e> <cis e> <b e>( <d e>) <cis e> <b e> |
+    a( <cis e>) <cis e> <cis e> e,( <b' e>) <b e> <b e> a( <cis e>) <cis e> <cis e> <b e>( <d e>) <cis e> <b e> | \break
+    
+    a\ff( <cis e>) <cis e> <cis e> <cis a'>( <cis e>) <cis e> <cis e> <cis e>( <a cis>) <a cis> <a cis> <a cis>( <e a>) <e a> <e a> |
+    <e a>( <a cis>) <a cis> <a cis> <cis e>( <a cis>) <a cis> <a cis> <a cis>( <e a>) <e a> <e a> <e a>( <cis e>) <cis e> <cis e> | \break
+    
+    <a e' a>4\downbow <e' b'>4\downbow <a cis>4\downbow <b e>4\downbow |
+    <cis a'>4\downbow r8. <e cis'>16_2^3\upbow <e cis'>4\downbow r8. a,,16\upbow | 
+    a1\downbow\fermata |
+    \bar "|."
   }
 }

@@ -9,4 +9,5 @@
   composer = "Ferdinand Küchler"
   opus = "Op. 15"
   instrument = "Violino"
+  tagline = \markup { \composer - \title \subtitle }
 }

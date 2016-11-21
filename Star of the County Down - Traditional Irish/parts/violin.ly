@@ -11,9 +11,9 @@
 
 \score {
   <<
-    %\new ChordNames { \germanChords \guitarChords }    
+    \new ChordNames { \germanChords \guitarChords }    
     \new Staff \with { instrumentName = "Violine" shortInstrumentName = "Vln." } { \new Voice = "melody" { \violin } }
-    \lyr
+    %\lyr
   >>
   \layout {
     indent = 1.5 \cm
