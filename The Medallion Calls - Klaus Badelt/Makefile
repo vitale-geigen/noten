@@ -18,6 +18,7 @@ all: 	clean \
 		violinThree \
 		trumpet \
 		piano \
+		guitar \
 		meta
 
 meta: output
@@ -55,6 +56,8 @@ trumpet: output
 piano: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Piano\) $(PARTS_DIR)/piano.ly
 
+guitar: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
 
 output:
 	@if [ ! -d "$(OUTPUT_DIR)" ]; then \
