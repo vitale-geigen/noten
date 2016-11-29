@@ -2,14 +2,31 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Drowsey Maggie"
+header-subtitle = ""
+header-subsubtitle = ""
+header-composer = "Trad. Irish"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Drowsey Maggie"
-  subtitle= ""
-  composer = "Trad. Irish"
-  opus = ""
-  %instrument = "Violino"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }    
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings = {

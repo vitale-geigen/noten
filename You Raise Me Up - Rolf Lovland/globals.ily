@@ -1,12 +1,30 @@
 \version "2.18.2"
 
+header-title = "You Raise Me Up"
+header-subtitle = ""
+header-subsubtitle = ""
+header-composer = "Rolf Lovland"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "You Raise Me Up"
-  subtitle = ""
-  composer = "Rolf Lovland"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer    
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings= {

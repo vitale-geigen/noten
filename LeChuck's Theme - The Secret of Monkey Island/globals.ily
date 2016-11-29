@@ -1,16 +1,34 @@
 \version "2.18.2"
 
-%#(set-default-paper-size "a4")
-%#(set-global-staff-size 16)
+#(set-default-paper-size "a4")
+
+header-title = "LeChuck's Theme"
+header-subtitle = "The Secret of Monkey Island"
+header-subsubtitle = ""
+header-composer = "M.Z.Land, B.Jones, A.Newell, P.Mundy"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
 
 \header {
-  title = "LeChuck's Theme"
-  subtitle = "The Secret of Monkey Island"
-  composer = "Michael Z. Land, Barney Jones, Andy Newell, Patrick Mundy"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \title - \subtitle }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer  
+  opus = \header-opus  
+  instrument = ""  
 }
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
 
 globalSettings= {
   \key bes \major

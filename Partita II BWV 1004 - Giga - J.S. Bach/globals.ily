@@ -2,12 +2,29 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Partita II"
+header-subtitle = "Giga"
+header-subsubtitle = ""
+header-composer = "J.S. Bach"
+header-opus = "BWV 1004"
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Partita II"
-  subtitle= "Giga"
-  composer = "J.S. Bach"
-  opus = "BWV 1004"
-  %instrument = "Violino"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title - \opus }    
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer  
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \concat { \header-title " - " \header-opus " - " \header-subtitle } }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }

@@ -2,12 +2,27 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Concertino"
+header-subtitle = "in G major"
+header-composer = "Oskar Rieding"
+header-opus = "Op.24"
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Concertino"
-  subtitle = "in G major"
-  subsubtitle = ""
-  composer = "O. Rieding"
-  opus = "Op.24"
-  instrument = "Violino"
-  tagline = \markup { \composer - \title \subtitle }
+  title = \header-title
+  subtitle = \header-subtitle  
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = "Violino"  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \concat { \header-title " " \header-subtitle " (" \header-opus ")" } } 
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }

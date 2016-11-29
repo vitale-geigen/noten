@@ -1,12 +1,30 @@
 \version "2.18.2"
 
+header-title = "Two Hornpipes"
+header-subtitle = "Tortuga"
+header-subsubtitle = ""
+header-composer = "Hans Zimmer"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Two Hornpipes"
-  subtitle = "Tortuga"
-  composer = "Hans Zimmer"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer    
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 

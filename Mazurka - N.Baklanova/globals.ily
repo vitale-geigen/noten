@@ -2,12 +2,31 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "МАЗУРКА"
+header-subtitle = "Mazurka"
+header-subsubtitle = ""
+header-composer = "N. Baklanova"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "МАЗУРКА"
-  subtitle = "Mazurka"
-  composer = "N. Baklanova"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \title - (\subtitle) - \composer }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer  
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings= {

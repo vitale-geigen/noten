@@ -2,12 +2,29 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Concertino"
+header-subtitle = "im Stil von Antonio Vivaldi (1680-1743)"
+header-subsubtitle = "I. & III. Position"
+header-composer = "Ferdinand Küchler"
+header-opus = "Op.15"
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "CONCERTINO"
-  subtitle = "im Stil von Antonio Vivaldi (1680-1743)"
-  subsubtitle = "I. & III. Position"
-  composer = "Ferdinand Küchler"
-  opus = "Op. 15"
-  instrument = "Violino"
-  tagline = \markup { \composer - \title \subtitle }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \concat { \header-title " " \header-subtitle " (" \header-opus ")" } } 
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }

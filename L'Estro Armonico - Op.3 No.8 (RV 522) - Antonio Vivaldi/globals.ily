@@ -2,15 +2,33 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "L'Estro Armonico"
+header-subtitle = "Concerto a due violini"
+header-subsubtitle = ""
+header-composer = "Antonio Vivaldi"
+header-opus = "Op.3 No.8 (RV 522)"
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "L'Estro Armonico"
-  subtitle = "Concerto a due violini"
-  composer = "Antonio Vivaldi"
-  opus = "Op.3 No.8 (RV 522)"
-  instrument = "Violino II"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title - \opus }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer  
+  opus = \header-opus  
+  instrument = ""  
 }
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \concat { \header-title " - " \header-subtitle " - " \header-opus } }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
 
 #(define (override-color-for-all-grobs color)
   (lambda (context)

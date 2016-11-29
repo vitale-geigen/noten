@@ -1,13 +1,33 @@
 \version "2.18.2"
 
+header-title = "Shalom Aleichem"
+header-subtitle = ""
+header-subsubtitle = ""
+header-composer = "Trad. Klezmer"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Shalom Aleichem"
-  subtitle = ""
-  composer = "Traditional"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer  
+  opus = \header-opus  
+  instrument = ""  
 }
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
+
 
 globalSettings= {
   \key c \major

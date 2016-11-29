@@ -2,15 +2,35 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Joy"
+header-subtitle = ""
+header-subsubtitle = ""
+header-composer = "J.S. Bach"
+header-arranger = "Arranged by Tom Parker"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Joy"
-  subtitle = ""
-  composer = "J.S. Bach"
-  arranger = "Arranged by Tom Parker"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
-  instrument = ""
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer
+  arranger = \header-arranger
+  opus = \header-opus  
+  instrument = ""  
 }
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
 
 globalSettings= {
   \key g \major

@@ -1,13 +1,32 @@
 \version "2.18.2"
 
+header-title = "The Black Pearl"
+header-subtitle = ""
+header-subsubtitle = ""
+header-composer = "Klaus Badelt"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "The Black Pearl"
-  subtitle = ""
-  composer = "Klaus Badelt"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer  
+  opus = \header-opus  
+  instrument = ""  
 }
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
 
 globalSettings= {
   \key f \major

@@ -2,16 +2,31 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Palladio"
+header-subtitle = ""
+header-composer = "Karl Jenkins (1996)"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Palladio"
-  subtitle = ""
-  composer = "Karl Jenkins (1996)"  
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
-  instrument = ""
+  title = \header-title
+  subtitle = \header-subtitle  
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
 }
 
-  
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title } 
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
+}
+
 globalSettings= {
   \time 4/4
   \numericTimeSignature

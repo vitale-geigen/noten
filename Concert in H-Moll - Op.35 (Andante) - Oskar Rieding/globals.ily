@@ -1,12 +1,28 @@
 \version "2.18.2"
 
+header-title = "Concert in H-Moll"
+header-subtitle = ""
+header-composer = "Oskar Rieding"
+header-opus = "Op.35"
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Concert in H-Moll"
-  subtitle = ""
-  composer = "Oskar Rieding"
-  opus = "Op.35"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title } 
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings= {

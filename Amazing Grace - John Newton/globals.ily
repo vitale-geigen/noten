@@ -1,12 +1,28 @@
 \version "2.18.2"
 
+header-title = "Amazing Grace"
+header-subtitle = ""
+header-composer = "John Newton"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Amazing Grace"
-  subtitle = ""
-  composer = "John Newton"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title } 
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings= {

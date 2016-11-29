@@ -2,13 +2,31 @@
 
 #(set-default-paper-size "a4")
 
+header-title = "Die Vier Jahreszeiten"
+header-subtitle = "Winter"
+header-subsubtitle = ""
+header-composer = "Antonio Vivaldi"
+header-opus = "Op.8 No.2 (RV 297)"
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
+
 \header {
-  title = "Winter"
-  subtitle = "Die Vier Jahreszeiten"
-  composer = "Antonio Vivaldi"
-  opus = "Op.8 No.2 (RV 297)"
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \subtitle - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  subsubtitle = \header-subsubtitle
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \concat { \header-title " - " \header-subtitle " - " \header-opus } }
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings= {

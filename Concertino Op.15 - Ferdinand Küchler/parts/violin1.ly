@@ -4,12 +4,12 @@
 \include "../voices/violin1.ily"
 
 \header {
-  instrument = "Violine 1"
+  instrument = "Violino"
 }
 
 \score {
   <<
-    \new Staff \with { instrumentName = "Violine 1" shortInstrumentName = "Vln.1" } { \violinI }
+    \new Staff { \violinI }
   >>
   \layout {
     indent = 1.5\cm

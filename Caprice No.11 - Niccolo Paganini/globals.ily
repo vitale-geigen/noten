@@ -1,15 +1,30 @@
 \version "2.18.2"
 
 #(set-default-paper-size "a4")
-%#(set-global-staff-size 16)
+
+header-title = "Caprice No. 11"
+header-subtitle = ""
+header-composer = "Niccolo Paganini"
+header-opus = ""
+header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
 
 \header {
-  title = "Caprice No. 11"
-  subtitle = ""
-  composer = "Niccolo Paganini"
-  opus = ""
-  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
-  tagline = \markup { \composer - \title }
+  title = \header-title
+  subtitle = \header-subtitle  
+  composer = \header-composer
+  opus = \header-opus  
+  instrument = ""  
+}
+
+\paper {
+  oddFooterMarkup = \markup { 
+    \fill-line {
+      \left-align { \header-updated } 
+      \center-align { \header-title } 
+      \right-align { \header-composer } 
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 globalSettings= {
