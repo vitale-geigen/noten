@@ -20,7 +20,7 @@ header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
 }
 
 \paper {
-  oddFooterMarkup = \markup { 
+  oddFooterMarkup = \markup { \smaller 
     \fill-line {
       \left-align { \header-updated } 
       \center-align { \header-title }
