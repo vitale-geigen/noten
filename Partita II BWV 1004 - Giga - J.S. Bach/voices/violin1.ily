@@ -25,7 +25,7 @@ violinI = {
     e16 bes( a g f e  d cis b a) g' e  f d f a d cis  d a d f b a | \noBreak
     b f( e d c! b a gis fis e) d' b  c a c e a gis^2  a(^2 b c) gis^1 a c |
     f,(^1 g! a) e f a^3  d,(^1 e f) cis^1 d f  gis,8.^1 a16 b c d(^1 e f) d b'^2 d, | \noBreak
-    c(^1 d e) c a'^2 c,  b(^1 c d) b fis'^2 b,  c(^1 d e) c a'^2 c,  d(^1 e f) d b'^2 d, |
+    c(^1 d e) c a'^2 c,  b(^1 c d) b gis'^2 b,  c(^1 d e) c a'^2 c,  d(^1 e f) d b'^2 d, |
     c(^1 d e) b c a  b(^1 c d) a b gis  a a, cis e g8~  g16 e cis a cis e | \noBreak
     f d f a d cis  d a d f a gis  a e^0 cis a^0 e cis a4 s8 |
     \bar ":|."
