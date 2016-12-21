@@ -189,7 +189,7 @@ violinI = {
     
     cis4.^2\p \< d8^3( dis^4 e^0 a gis) \! |
     b4.^2( \> gis8^4) e4^2( \! d^1) |
-    cis4^2( a'^0^4) eis16^2( fis gis fis eis fis d b) |
+    cis4^1( a'^0^4) eis16^2( fis gis fis eis fis d b) |
     a2( gis4) r | \break
     
     b2^3\downbow(_\markup { \italic cresc. } ais8) g'8^4( fis e) |
