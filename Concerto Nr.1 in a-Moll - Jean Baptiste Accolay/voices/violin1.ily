@@ -39,7 +39,7 @@ violinI = {
     a2(^2 \tuplet 3/2 4 { gis8)^1 b,(^2 d^0 e^1 gis^1 b)^3 } \break
     
     b2(^3 \tuplet 3/2 4 { a8)^2 c,(^1 e^3 gis^1 a^2 c)^4 } |
-    c2(^4 \! \tuplet 3/2 4 { b8)^3 d,(^0 f^3 gis^4 b d) } |
+    c2(^4 \! \tuplet 3/2 4 { b8)^3 d,(^0 f^2 gis^4 b d) } |
     d2( \tuplet 3/2 4 { cis8) a(\f cis e^0 a g } | \break
     
     \tuplet 3/2 4 { f8) d'(\downbow^4 cis^3 d^4 a^1 f^3 d)^1 g,(^1 b^3 d^1 g^4 f^3 } |
@@ -68,8 +68,8 @@ violinI = {
     f'4.^3\downbow g16(\upbow f e8 f d'^4 b) | \break
     
     c4.\downbow g8(^2 fis\< g a^1 b)^2 \! | 
-    c8^2\downbow( e4)^4 d8(\upbow c) g^3 f(^2 \> e)^2 |
-    g4.(^4 e8^2 d4)^1 \! r |
+    c8^2\downbow( e4)^4 d8(\upbow c) g^3 f(^2 \> e)^1 |
+    g4.(^3 e8^1 d4)^1 \! r |
     e4.^2\downbow f8(^3 gis^4 a^1 b d) | \break
     
     c2( a8) e'4(^4 c8)^2 |
@@ -131,9 +131,9 @@ violinI = {
     a2( \tuplet 3/2 4 { gis8) b,( c d gis^2 b^2 ) } |
     b2( \tuplet 3/2 4 { a8) c,^2(\mp d e^0 \< a^1 c) \! } | 
     c2( \tuplet 3/2 4 { b8) d,^1(\mf e f \< b d^2) \! } |
-    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1\upbow d^1 e } | \break
+    d2^2( \tuplet 3/2 4 { cis8) a,^0 a'^3 \f cis^1\upbow d^1 e^2 } | \break
     
-    g4.(^4 \ff _\markup { \italic "ritenuto" } f8)^3 e^3( d cis d) | 
+    g4.(^3 \ff _\markup { \italic "ritenuto" } f8)^2 e^2( d^1 cis^1 d^2) | 
     f^4( e^3) b^1([ c)] a^1( bes) f^3([ d^3)] |
     c16( e,) f e gis^3 a b c e^4 e,\< c'4^3\fermata( \! \> b8^3) \! | \break
     
@@ -168,9 +168,9 @@ violinI = {
     \time 4/4
     
     cis4.^2\p ^\markup { MAJEUR } ^\markup { \bold "a tempo" } \< d8^3( dis^4 e^0 a gis) \! | \noBreak
-    b4.^4( \> gis8) e4( \! d) | \noBreak
-    cis4^2( a'^0^4) eis16^2( fis gis fis eis fis d b) | \noBreak
-    a2( gis4) r | \pageBreak
+    b4.^2( \> gis8^4) e4^2( \! d^1) | \noBreak
+    cis4^1( a'^0^4) eis16^2( fis gis fis eis fis d b) | \noBreak
+    a2^2( gis4^1) r | \pageBreak
     
     d'4.^3\downbow e16\upbow( d cis8 d b' gis) |
     a4.^1\downbow e8^2( dis e fis gis) |
@@ -188,13 +188,13 @@ violinI = {
     e2^2 dis16^1(\upbow e^2 dis e gis^4 fis^3 e^2 d^1) | \break
     
     cis4.^2\p \< d8^3( dis^4 e^0 a gis) \! |
-    b4.^4( \> gis8) e4( \! d) |
+    b4.^2( \> gis8^4) e4^2( \! d^1) |
     cis4^2( a'^0^4) eis16^2( fis gis fis eis fis d b) |
     a2( gis4) r | \break
     
     b2^3\downbow(_\markup { \italic cresc. } ais8) g'8^4( fis e) |
-    e8(\f d) d' _\markup { \italic largamente } cis b a gis^2 fis |
-    fis e^0 cis a^0 gis16 e d^4 b d8^2\fermata( cis^1) | \break
+    e8(\f d) d'^4 _\markup { \italic largamente } cis^3 b^2 a^1 gis^4 fis^3 |
+    fis^3 e^2 cis^2 a^0 gis16 e d^4 b d8^2\fermata( cis^1) | \break
     
     a16\fp\downbow^\markup { \bold "a tempo" } e' a b cis( d b) cis\upbow a a cis d e^0( fis d) e^4\upbow |
     cis\downbow  e^0 fis gis a^3( gis b^2 a^1) cis^3( b a^1 gis^2 fis^1 e d cis) | \break
