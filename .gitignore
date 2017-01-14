@@ -5,3 +5,4 @@
 *.log
 meta.dat
 publish/*
+.DS_Store
