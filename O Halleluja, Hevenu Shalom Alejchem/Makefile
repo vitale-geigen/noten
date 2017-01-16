@@ -16,6 +16,7 @@ all: 	clean \
 		midi \
 		violinOne \
 		violinTwo \
+		tenorSax \
 		piano
 
 meta: output
@@ -47,6 +48,9 @@ violinOne: output
 
 violinTwo: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 2\) $(PARTS_DIR)/violin2.ly
+
+tenorSax: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Tenor\ Sax.\) $(PARTS_DIR)/tenor_sax.ly
 
 piano: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Piano\) $(PARTS_DIR)/piano.ly
