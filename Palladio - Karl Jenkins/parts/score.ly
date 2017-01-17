@@ -6,8 +6,6 @@
 \include "../voices/violin3.ily"
 \include "../voices/violin4.ily"
 \include "../voices/cello.ily"
-\include "../voices/sopran.ily"
-\include "../voices/alto.ily"
 
 \header {
   instrument = "Partitur"
@@ -20,8 +18,6 @@
     \new Staff \with { instrumentName = "Violine 3" shortInstrumentName = "Vln.3" } { \violin_III_I }    
     \new Staff \with { instrumentName = "Violine 4" shortInstrumentName = "Vln.4" } { \violin_IV_I }    
     \new Staff \with { instrumentName = "Violoncello" shortInstrumentName = "Vlc." } { \cello_I } 
-    \new Staff \with { instrumentName = "Sopransax." shortInstrumentName = "Sop." } { \sopran_I }
-    \new Staff \with { instrumentName = "Altosax." shortInstrumentName = "Alt." } { \alto_I }
   >>
   \layout {
     indent = 1.5\cm

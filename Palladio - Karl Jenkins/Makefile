@@ -21,8 +21,7 @@ all: 	clean \
 		violinFour \
 		violinFive \
 		cello \
-		alto \
-		sopran \
+		tenorSax \
 		guitar
 
 meta: output
@@ -73,11 +72,8 @@ cello: output
 guitar: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Gitarre\) $(PARTS_DIR)/guitar.ly
 	
-alto: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Altsaxophon\) $(PARTS_DIR)/alto.ly
-	
-sopran: output
-	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Sopransaxophon\) $(PARTS_DIR)/sopran.ly
+tenorSax: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Tenor\ Sax.\) $(PARTS_DIR)/tenor_sax.ly
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
