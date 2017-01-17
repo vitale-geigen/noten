@@ -2,16 +2,6 @@
 
 \include "../globals.ily"
 
-
-globalSettings= {
-  \key g \major
-  \time 4/4
-  \tempo Lebhaft 4=120
-  \partial 4
-  \mergeDifferentlyHeadedOn 
-  \mergeDifferentlyDottedOn
-}
-
 tenorChords = \chordmode {
   \transpose bes c' {
     s4 | e1:m | d2 e:m | e:m c | \break
