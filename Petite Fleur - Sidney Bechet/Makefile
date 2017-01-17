@@ -19,7 +19,8 @@ all: 	clean \
 		violinThree \
 		piano \
 		guitar \
-		cello
+		cello \
+		tenorSax
 
 meta: output
 	@echo $(UUID) > $(OUTPUT_DIR)/meta.dat; \
@@ -62,6 +63,9 @@ guitar: output
 
 cello: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violoncello\) $(PARTS_DIR)/cello.ly
+	
+tenorSax: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Tenor\ Sax.\) $(PARTS_DIR)/tenor_sax.ly
 
 clean:
 	@if [ -d "$(OUTPUT_DIR)" ]; then \
