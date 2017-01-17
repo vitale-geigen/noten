@@ -17,6 +17,7 @@ all: 	clean \
 		violinOne \
 		violinTwo \
 		violinThree \
+		tenorSax \
 		piano
 
 meta: output
@@ -52,6 +53,9 @@ violinTwo: output
 
 violinThree: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Violine\ 3\) $(PARTS_DIR)/violin3.ly
+
+tenorSax: output
+	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Tenor\ Sax.\) $(PARTS_DIR)/tenor_sax.ly
 
 piano: output
 	@$(LY) -o $(OUTPUT_DIR)/$(PIECE)\ \(Piano\) $(PARTS_DIR)/piano.ly
