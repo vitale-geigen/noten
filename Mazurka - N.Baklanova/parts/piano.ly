@@ -3,6 +3,7 @@
 \include "../globals.ily"
 \include "../voices/violin1.ily"
 \include "../voices/piano.ily"
+\include "../voices/guitar.ily"
 
 \header {
   instrument = "Piano"
@@ -14,6 +15,7 @@
       \applyContext #(override-color-for-all-grobs (x11-color 'gray))
       \violinI 
     }
+    \new ChordNames { \germanChords \guitarChords }
     \new PianoStaff \with { instrumentName = "Piano" shortInstrumentName = "Pno." } { << \new Staff { \pianoTreble } \new Staff { \pianoBass } >> }        
   >>
   \layout {
