@@ -9,17 +9,28 @@
 guitarChords = \chordmode {
   d1 |
   d:m |
+  
   d:sus2 |
   d:sus4 |
+  
+  d:dim |   
+  d:aug |  
+  
   d:maj7 |
   d:7 |
-  d:m7 |
-  d:aug |  
-  d:dim |   
-  d:7.5+ |
-  d:m7.5- |
   d:6 |
+  
+  d:m7+ |  
+  d:m7 |
   d:m6
+  
+  d:aug7+ |
+  d:7.5+ |
+  d:aug6 |
+  
+  d:m7+.5- |
+  d:m7.5- |
+  d:dim7 |
   
   g |
   g:m |
@@ -51,24 +62,37 @@ guitar = {
   \globalSettings
   \clef tab
   {
-    <d\5 a\4 d'\3 fis'\2>1_"Dur-Akkord:"_"gr. Terz (h-Saite)"_"Oktave (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
-    <d\5 a\4 d'\3 f'\2>1_"Moll-Akkord:"_"kl. Terz (h-Saite)"_"Oktave (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
+    <d\5 a\4 d'\3 fis'\2>1_"Dur-Akkord:"_"1 5 1 3" |
+    <d\5 a\4 d'\3 f'\2>1_"Moll-Akkord:"_"1 5 1 b3" |
     \break
-    <d\5 a\4 d'\3 e'\2>1_"sus2-Akkord:"_"Sekunde (h-Saite)"_"Oktave (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
-    <d\5 a\4 d'\3 g'\2>1_"sus4-Akkord:"_"Quarte (h-Saite)"_"Oktave (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
-    <d\5 a\4 cis'\3 fis'\2>1_"maj7-Akkord:"_"gr. Terz (h-Saite)"_"gr. Septime (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
+    
+    <d\5 a\4 d'\3 e'\2>1_"sus2-Akkord:"_"1 5 1 2" |
+    <d\5 a\4 d'\3 g'\2>1_"sus4-Akkord:"_"1 5 1 4" |
     \break
-    <d\5 a\4 c'\3 fis'\2>1_"Dur-Septakkord:"_"gr. Terz (h-Saite)"_"kl. Septime (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
-    <d\5 a\4 c'\3 fis'\2>1_"Moll-Septakkord:"_"kl. Terz (h-Saite)"_"kl. Septime (G-Saite)"_"Quinte (D-Saite)"_"Gundton (A-Saite)" |
+    
+    <d\5 as\4 d'\3 f'\2>1_"Verminderter Akkord:"_"1 b5 1 b3" |    
+    <d\5 ais\4 d'\3 fis'\2>1_"Übermäßiger Akkord:"_"1 #5 1 3" |    
+    \break
+    
+    <d\5 a\4 cis'\3 fis'\2>1_"Dur-maj7-Akkord:"_"1 5 7 3" |
+    <d\5 a\4 c'\3 fis'\2>1_"Dominantseptakkord:"_"1 5 b7 3" |
+    <d\4 a\3 b\2 fis'\1>1_"Dur-Sext-Akkord:"_"1 5 6 3"    
+    \break
+    
+    <d\5 a\4 cis'\3 f'\2>1_"Moll-maj7-Akkord:"_"1 5 7 b3" |
+    <d\5 a\4 c'\3 f'\2>1_"Moll-Septakkord:"_"1 5 b7 b3" |
+    <d\4 a\3 b\2 f'\1>1_"Moll-Sext-Akkord:"_"1 5 6 b3"
     \break    
-    <d\5 ais\4 d'\3 fis'\2>1_"Übermäßiger Akkord (augmented):"_"gr. Terz (h-Saite)"_"Oktave (G-Saite)"_"überm. Quinte (D-Saite)"_"Gundton (A-Saite)"_"auch: aug" |
-    <d\5 as\4 d'\3 f'\2>1_"Verminderter Akkord (diminished):"_"kl. Terz (h-Saite)"_"Oktave (G-Saite)"_"verm. Quinte (auf D-Saite)"_"Grundton (A-Saite)"_"auch: dim" |    
+
+    <d\5 ais\4 cis'\3 fis'\2>1_"Überm. maj7-Akkord:"_"1 #5 7 3" |
+    <d\5 ais\4 c'\3 fis'\2>1_"Überm. Septakkord:"_"1 #5 b7 3" |
+    <d\4 ais\3 b\2 fis'\1>1_"Überm. Sext-Akkord:"_"1 #5 6 3"    
     \break
-    <d\5 ais\4 c'\3 fis'\2>1_"Übermäßiger Septakkord:"_"gr. Terz (h-Saite)"_"kl. Septime (G-Saite)"_"überm. Quinte (D-Saite)"_"Gundton (A-Saite)"_"auch: aug7" |
-    <d\5 as\4 c'\3 f'\2>1_"Verminderter Septakkord:"_"kl. Terz (h-Saite)"_"kl. Septime (G-Saite)"_"verm. Quinte (D-Saite)"_"Gundton (A-Saite)"_"auch: m7b5, dim7" |         
+    
+    <d\5 as\4 cis'\3 f'\2>1_"Verm. maj7-Akkord:"_"1 b5 7 b3" |
+    <d\5 as\4 c'\3 f'\2>1_"Verm. Septakkord:"_"1 b5 b7 b3" |
+    <d\4 as\3 b\2 f'\1>1_"Verm. Sext-Akkord:"_"1 b5 bb7 b3"
     \break
-    <d\4 a\3 b\2 fis'\1>1_"Sext-Dur-Akkord:"_"gr. Terz (e-Saite)"_"Sexte (h-Saite)"_"Quinte (G-Saite)"_"Gundton (D-Saite)"
-    <d\4 a\3 b\2 f'\1>1_"Sext-Moll-Akkord:"_"kl. Terz (e-Saite)"_"Sexte (h-Saite)"_"Quinte (G-Saite)"_"Gundton (D-Saite)"
     
     \pageBreak
     
