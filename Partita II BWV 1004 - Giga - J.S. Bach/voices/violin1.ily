@@ -24,7 +24,7 @@ violinI = {
     bes a bes c d bes  g f g a bes g  e d e f g e  c e g c e8~^4 |
     e16 bes( a g f e  d cis b a) g' e  f d f a d cis  d a d f b a | \noBreak
     b f( e d c! b a gis fis e) d' b  c a c e a gis^2  a(^2 b c) gis^1 a c |
-    f,(^1 g! a) e f a^3  d,(^1 e f) cis^1 d f  gis,8.^1 a16 b c d(^1 e f) d b'^2 d, | \noBreak
+    f,(^1 g! a) e f a^3  d,(^1 e f) cis^1 d f^4  gis,8.^1 a16 b c d(^1 e f) d b'^2 d, | \noBreak
     c(^1 d e) c a'^2 c,  b(^1 c d) b gis'^2 b,  c(^1 d e) c a'^2 c,  d(^1 e f) d b'^2 d, |
     c(^1 d e) b c a  b(^1 c d) a b gis  a a, cis e g8~  g16 e cis a cis e | \noBreak
     f d f a d cis  d a d f a gis  a e^0 cis a^0 e cis a4 s8 |
@@ -48,7 +48,7 @@ violinI = {
     g^1 f'(^3 e^2 d^1 cis^2 b)^1  a b cis d e g, f a d a f a  d, f a f d f |
     bes,(^2 f'^2 d') f^1 e^0 cis^3  a,(^1 f'^2 d')^3 f^1 e^0 cis^3  g,(^0 f'^2 d')^3 f^1 e^0 d^3  bes' a( g f e d) | \noBreak
     cis e f g a e  d( cis b a) e'( g,)  f( g a) f d' f,  e( f g) e c' e, |
-    d( e f) d bes'! d,  c(^1 d^2 e) c a' c,  bes(^1 c^2 d)^3 bes g'^2 d^0  g(^2 a^3 bes)^4 g^2 es'^3 g,^2 | \noBreak
+    d^2( e f) d^2 bes'!^3 d,  c(^1 d^2 e) c a' c,  bes(^1 c^2 d)^3 bes g'^2 d^0  g(^2 a^3 bes)^4 g^2 es'^3 g,^2 | \noBreak
     a,(^1 b^2 cis)^3 a^1 g'^3 a,^1  g'(^2 a^3 bes)^4 g^2 cis^1 g^2  f(^1 g^2 a)^3 f^1 d'^2 a^0  d(^2 e^3 f)^4 d^2 b'^3 d,^2 |
     gis,^3 a^0 b cis d e  f( e d cis d)^3 gis,^4  a^0 cis d e f g!  a bes! e,( f g)^2 cis,^3 | \noBreak
     d^3 d, f a d^1 e  f d f a d^4 cis^3  d^4 a^1 f^3 d^1 a^2 f^4 d4^2 s8\fermata |
