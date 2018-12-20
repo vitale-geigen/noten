@@ -2,7 +2,7 @@
 
 
 violinI = { 
-  \tempo Allegro 4=120
+  \tempo Allegro 4=80
   \key d \minor
   \time 12/8  
   \relative a' {
