@@ -1,7 +1,7 @@
 LY = lilypond
 
-UUID = 2F30A1FB-46EC-4F11-8D94-7BD66703D29C
-TITLE = Partita\ II\ BWV\ 1004\ -\ Giga
+UUID = D44E58C2-047D-11E9-802B-34F39AF478DD
+TITLE = Sonata\ I\ -\ Presto\ -\ BMV\ 1001
 COMPOSER = J.S.\ Bach
 PIECE = $(TITLE)\ -\ $(COMPOSER)
 
@@ -12,8 +12,8 @@ OUTPUT_DIR = target
 
 all: 	clean \
 		meta \
-		violinOne \
 		midi \
+		violinOne \
 
 meta: output
 	@echo $(UUID) > $(OUTPUT_DIR)/meta.dat; \
