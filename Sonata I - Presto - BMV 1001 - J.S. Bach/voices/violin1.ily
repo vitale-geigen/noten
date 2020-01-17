@@ -30,7 +30,7 @@ violin_I = {
       << { a d, a8 cis^1 ^3 ^2\upbow }  \\ { s8 s  a, } \\ { } \\ { s8 a' g } >> | << { d'4.^4^2^3 \downbow } \\ { d,4. } \\ { fis4. } \\ { } >> |  
     }
     \repeat volta 2 {
-      d16^4 a d^0 fis d fis | a fis a d^1 a d | fis d fis a^1 fis a | d^4 a^1 fis^3 d^1 a^0 fis | \break
+      d16^4 a d^0 fis d fis | a^4 fis a^0 d^1 a d | fis d fis a^1 fis a | d^4 a^1 fis^3 d^1 a^0 fis | \break
       %59
       d ( e fis g a bes | c) es c a c a | fis d fis a d c | bes d bes g d bes | g( a bes c d es | f) as f d f d | \pageBreak
       %65
