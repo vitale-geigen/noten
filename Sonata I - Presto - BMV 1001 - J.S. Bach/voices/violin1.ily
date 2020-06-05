@@ -46,15 +46,15 @@ violin_I = {
       %95
       bes^2 d,^1 g^4 bes^2 c,^1 es^3 | a^2 f^4 d^2 bes^1 d^3 f^1 |  g^2 bes,^1 es^4 g^2 a, c^1 | f^4 d^2 bes^1 g^3 bes^1 d^3 | es^3 g,^2 c^1 es^3 f,^1 a^3 | d^2 bes^1 g^3 e g bes | \break
       %101
-      c( a) bes( g) fis a | d,( e fis g a bes) |  c( es) d( g) fis( bes) | a( g fis e! d c) | bes es d( bes) c( a) | f d' c( a) bes( g) | \break
+      c( a) bes( g) fis a | d,( e fis g a bes) | c\upbow( es) d( g) fis( bes) | a( g fis e! d c) | bes\upbow es d( bes) c( a) | f d' c( a) bes( g) | \break
       %107
-      es^1 c'^4 bes(^3 g)^1 a(^2 fis^1) | d^0 bes'^4 a^3( fis^1) g^2( es^1) | c^3^"I." a'^4 g^3( e!^1) fis^2( d^0) | bes d'( c bes a g) | es'( d c) bes'( a g) | fis( g a) d, es c | \break
+      es^1 c'^4 bes(^3 g)^1 a(^2 fis^1) | d^0 bes'^4 a^3( fis^1) g^2( es^1) | c^3^"I." a'^4 g^3( e!^1) fis^2( d^0) | bes d'( c bes a g) | es'( d c) bes'( a g) | fis( g a) d, es^.( c^.) | \break
       %113
-      f,!( b d) as g f | e! g^1 c^4 e^2 g bes,!^3 | es,(^3 a^1 c)^4 g^1 f^4 es^3 | d^2 f^4 bes^3 d^1 f^3 as,^2 | g^1 es'^2 bes^3 g^1 es(^3 d^2 | c)^1 es'^2 c(^4 bes^3 a^2 g^1 | \break
+      f,!( b d) as g f | e! g^1 c^4 e^2 g bes,!^3 | es,(^3 a^2 c)^4 g^1 f^4 es^3 | d^2 f^4 bes^3 d^1 f^3 as,^2 | g^1 es'^2 bes^3 g^1 es(^3 d^2 | c)^1 es'^2 c(^4 bes^3 a^2 g^1 | \break
       %119
-      fis)^1 d'^1 a^2 fis^1 d(^3 c^2 | bes)^1 d'^2 bes(^4 a^3 g^2 f!^1 | e)^1 c g' bes, a g' | fis d a'^3 c,^2 bes^1 a'^3 | g^2 es^4 bes'^4 d,^3 c^2 bes'^4 | a^3 f^1 c'^4 es,^3 d^2 c'^1 | \break
+      fis)^1 d'^2 a^3 fis^1 d(^3 c^2 | bes)^1 d'^2 bes(^4 a^3 g^2 f!^1 | e)^1^"I." c g' bes, a g' | fis d a'^4 c,^3 bes^2 a'^4 | g^3 es^1 bes'^4 d,^3 c^2 bes'^4 | a^3 f^1 c'^4 es,^3 d^2 c'^4 | \break
       %125
-      bes^3 g^1 d'^1 f,^2 e!^1 d'^3 | c a es'^3 g,^2 fis^1 es'^2 | d^1 bes^3 g'^4 bes,^3 a^2 c^4 | bes^3 g^1 fis^1 a^3 d,^3 c^2 | bes^1 g'^2 fis(^1 a)^2 g(^2 bes)^4 | c,^1 a'^2 g(^1 bes)^3 a(^2 c)^4 | \break
+      bes^3 g^1 d'^1 f,^2^"I." e! d' | c a es' g, fis es' | d  bes g' bes, a c | bes g fis a d, c | bes g' fis(^2 a)^2 g(^1 bes)^3 | c,^1 a'^2 g(^1 bes)^3 a(^2 c)^4 | \break
       %131
       d,^0 bes'^1 a( c) bes( d) | es, c' b( d) c( es) | fis, es'( d c bes! a) | bes d g bes g d | 
       << {bes g d8 fis' } \\ { s4 < c d, >8 } >> |
