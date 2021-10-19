@@ -54,7 +54,7 @@ violinI = \relative c'' {
     | b'8\downbow a16 g fis e dis fis e8-.^4 e,-. r b''16^2(\upbow c) %45
     | d8^4\downbow d d d e,^0 b'16 c d8-.(\upbow d-.) 
     | e,8^0\downbow b'16 c d8 c16 b c8 a,-.^0 a-. a'16\upbow( b) 
-    | b8^3\downbow b b b d,^1 a'16 b c8-.(\upbow c-.) 
+    | c8^3\downbow c c c d,^1 a'16 b c8-.(\upbow c-.) 
     | d,8^1 \downbow a'16 b c8 b16 a b8 g,,-.\upbow g-.\downbow g''16^2(\upbow a) 
     | bes8\downbow bes bes bes e, g16 a bes8-.(\upbow bes-.) %50
     | cis,16\downbow e f g a(\downbow g) f e f8-.(\upbow d-.) d,-.\downbow d'16(\upbow e) 
