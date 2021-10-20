@@ -6,7 +6,7 @@ header-title = "Concerto in D Minor"
 header-subtitle = "for 2 Violins"
 header-subsubtitle = ""
 header-composer = "J.S. Bach"
-header-opus = ""
+header-opus = "BWV 1043"
 header-updated = #(strftime "%d.%m.%Y" (localtime (current-time)))
 
 \header {

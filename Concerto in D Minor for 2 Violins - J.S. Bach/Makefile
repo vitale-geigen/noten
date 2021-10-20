@@ -1,7 +1,7 @@
 LY = lilypond
 
 UUID = 70214A19-655D-4D8A-9D2F-13F541F5A9A9
-TITLE = Concerto\ in\ D\ Minor\ for\ 2\ Violins
+TITLE = Concerto\ in\ D\ Minor\ for\ 2\ Violins\ -\ BWV\ 1043
 COMPOSER = J.S.\ Bach
 PIECE = $(TITLE)\ -\ $(COMPOSER)
 
