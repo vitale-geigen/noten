@@ -2,4 +2,4 @@
 
 import uuid
 
-print (uuid.uuid4().hex)
+print (str(uuid.uuid4()).upper())
